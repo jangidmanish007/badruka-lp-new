@@ -1,0 +1,4854 @@
+/* Satoshi loaded via Fontshare CDN in index.html */
+
+/*==================================================
+  VARIABLES
+==================================================*/
+
+:root {
+  --primary: #f16625;
+  --primary-dark: #d4551a;
+  --secondary: #111111;
+  --white: #ffffff;
+  --text: #444444;
+  --heading: #1b1b1b;
+  --border: #ececec;
+  --bg: #fafafa;
+  --transition: 0.35s ease;
+  --shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  --radius: 10px;
+  --container: 1440px;
+}
+
+/*==================================================
+  RESET & BASE
+==================================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  background: #fff;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  transition: var(--transition);
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: var(--container);
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+.bg-primary {
+  background: var(--primary) !important;
+}
+.rounded-xl {
+  border-radius: 18px;
+}
+.shadow-custom {
+  box-shadow: var(--shadow);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+.section-padding-sm {
+  padding: 70px 0;
+}
+
+.zoom-hover {
+  overflow: hidden;
+  border-radius: 16px;
+}
+.zoom-hover img:hover {
+  transform: scale(1.08);
+}
+
+/*==================================================
+  SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f3f3f3;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+::selection {
+  background: var(--primary);
+  color: #fff;
+}
+
+/*==================================================
+  PERFORMANCE HINTS
+==================================================*/
+
+.hero-section video,
+.logo-track,
+.floating-admission,
+.outcome-card,
+.outcome-card::before {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/*==================================================
+  TYPOGRAPHY
+==================================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Satoshi', sans-serif;
+  color: var(--heading);
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.section-title span {
+  font-weight: 700;
+}
+.section-title span {
+  color: var(--primary);
+}
+
+.small-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-desc {
+  max-width: 740px;
+  margin: auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.8;
+}
+
+/*==================================================
+  TOP BAR
+==================================================*/
+
+.top-bar {
+  background: #f7e3bd;
+  padding: 8px 0;
+  font-size: 13px;
+  position: relative;
+  z-index: 1001;
+}
+
+.top-contact {
+  gap: 25px;
+}
+
+.top-contact a {
+  color: #333;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.top-contact i {
+  color: var(--primary);
+  font-size: 13px;
+}
+
+.top-right {
+  gap: 12px;
+  font-size: 13px;
+}
+
+.top-right span {
+  color: #444;
+}
+.top-right strong {
+  color: #000;
+  font-weight: 700;
+}
+
+.apply-btn-sm {
+  background: var(--primary);
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.apply-btn-sm:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+/*==================================================
+  NAVBAR
+==================================================*/
+
+.main-navbar {
+  background: #fff;
+  padding: 18px 0;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.navbar-brand img {
+  max-height: 47px;
+  width: auto;
+}
+
+.navbar-nav {
+  gap: 34px;
+}
+
+.nav-link {
+  color: #222;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  padding: 0 !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav-btn:hover {
+  background: var(--primary-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(245, 130, 32, 0.25);
+}
+
+.navbar-toggler {
+  border: none;
+  box-shadow: none !important;
+  padding: 0;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/*==================================================
+  STICKY NAVBAR
+==================================================*/
+
+.main-navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: stickyNav 0.35s ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes stickyNav {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/*==================================================
+  UTILITY BUTTONS
+==================================================*/
+
+/* Shared base for all primary orange CTA buttons */
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-theme {
+  background: var(--primary);
+  color: #fff;
+  padding: 16px 34px;
+  border-radius: 10px;
+}
+
+.btn-theme:hover {
+  color: #fff;
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+.blur-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/*==================================================
+  HERO SECTION
+==================================================*/
+
+.hero-section {
+  padding: 24px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  isolation: isolate;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.hero-section video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: -2;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.35), transparent 35%);
+  z-index: -1;
+}
+
+.hero-row {
+  min-height: 100vh;
+  padding: 130px 0 70px;
+}
+
+/*==================================================
+  HERO CONTENT
+==================================================*/
+
+.hero-content {
+  max-width: 670px;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 24px;
+}
+
+.hero-tag .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.hero-content h1 {
+  color: #fff;
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: -1.5px;
+}
+
+.hero-content p {
+  color: #fff;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 34px;
+}
+
+.aicte-wrapper {
+  margin-bottom: 34px;
+}
+
+.aicte-approved span {
+  color: #fff;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.aicte-approved p {
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.vertical-line {
+  margin-top: 6px;
+  width: 1px;
+  height: 34px;
+  background: #fff;
+}
+
+/*==================================================
+  ACCREDITATION MARQUEE
+==================================================*/
+
+.accreditation {
+  margin-bottom: 45px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 14px;
+  animation: marquee 30s linear infinite;
+}
+
+.reverse .marquee-content {
+  animation: marqueeReverse 30s linear infinite;
+}
+
+.marquee img {
+  height: 60px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-card {
+  width: 110px;
+  height: 60px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  transition: var(--transition);
+}
+
+.logo-card img {
+  max-width: 72%;
+  max-height: 60px;
+  object-fit: contain;
+}
+.logo-card:hover {
+  transform: translateY(-3px);
+}
+
+/*==================================================
+  HERO BUTTONS
+==================================================*/
+
+.hero-buttons {
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+/* Shared between both buttons */
+.btn-primary-custom,
+.btn-secondary-custom {
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 34px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-primary-custom {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 15px 30px rgba(245, 130, 32, 0.28);
+}
+
+.btn-primary-custom:hover,
+.pgdm-btn:hover,
+.career-cta-btn:hover,
+.final-cta-btn:hover,
+.footer-bsm-btn:hover {
+  background: var(--primary-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-4px);
+}
+
+.btn-secondary-custom {
+  background: #fff;
+  color: var(--primary);
+}
+
+.btn-secondary-custom:hover {
+  color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary-custom i,
+.btn-secondary-custom i {
+  font-size: 18px;
+}
+
+/*==================================================
+  ANIMATIONS
+==================================================*/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease both;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/*==================================================
+  OUTCOMES SECTION
+==================================================*/
+
+.outcomes-section {
+  padding: 80px 0;
+  background: #fefbf7;
+  position: relative;
+  overflow: hidden;
+}
+
+.outcome-card {
+  position: relative;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 2px;
+  transition: 0.4s ease;
+  isolation: isolate;
+  background: transparent;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.outcome-card::before {
+  content: '';
+  position: absolute;
+  inset: -150%;
+  z-index: 1;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 280deg,
+    #f58220 315deg,
+    #ffb06a 335deg,
+    #f58220 360deg
+  );
+  animation: rotateBorder 5s linear infinite;
+  will-change: transform;
+}
+
+.outcome-card::after {
+  content: '';
+  position: absolute;
+  inset: 2.4px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #fff9f5 100%);
+  z-index: 2;
+}
+
+@keyframes rotateBorder {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.outcome-card:hover {
+  transform: translateY(-10px);
+}
+
+.outcome-card:hover::before {
+  animation-duration: 2s;
+}
+
+.outcome-card:hover::after {
+  box-shadow:
+    0 15px 40px rgba(245, 130, 32, 0.12),
+    0 30px 70px rgba(0, 0, 0, 0.08);
+}
+
+.outcome-card:hover .card-content {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Content — single definition */
+.card-content {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  background: linear-gradient(180deg, #fff 0%, #fff9f5 100%);
+  border-radius: 22px;
+  padding: 42px 25px;
+  text-align: center;
+}
+
+.icon-box {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1.5px solid var(--primary);
+  margin: 0 auto 24px;
+  background: #fff;
+  transition: var(--transition);
+}
+
+.icon-box img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.outcome-card:hover .icon-box {
+  background: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(245, 130, 32, 0.2);
+}
+
+.outcome-card:hover .icon-box img {
+  filter: brightness(0) invert(1);
+}
+
+.outcome-card h3 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary);
+  margin-bottom: 14px;
+  transition: var(--transition);
+}
+
+.outcome-card:hover h3 {
+  transform: scale(1.03);
+}
+
+.divider {
+  width: 42px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 30px;
+  margin: 0 auto 16px;
+}
+
+.outcome-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.bottom-note {
+  margin-top: 45px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #000;
+  font-style: italic;
+}
+
+/*==================================================
+  AUDIENCE SECTION
+==================================================*/
+
+.audience-section {
+  position: relative;
+  padding: 90px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.audience-section .section-subtitle {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.audience-section .section-title {
+  font-size: 500;
+  font-weight: 700;
+  color: #151515;
+  margin-bottom: 12px;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.audience-section .section-desc {
+  font-size: 16px;
+  color: #666;
+}
+
+.audience-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #fff;
+  min-height: 280px;
+  isolation: isolate;
+  transition: 0.45s;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.card-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.audience-card .card-content {
+  /* Override outcome-section card-content for audience cards */
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+  padding: 55px;
+  max-width: 430px;
+}
+
+.audience-card .card-content h3 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.audience-card .card-content h3 span {
+  display: block;
+  font-size: 34px;
+  font-weight: 500;
+}
+
+.audience-card .card-content p {
+  font-family: 'Inter', sans-serif;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 22px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.highlight-text {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #efefef;
+  font-size: 15px;
+  color: #444;
+  font-family: 'Inter', sans-serif;
+}
+
+.highlight-text strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.theme-btn {
+  gap: 10px;
+  background: var(--primary);
+  color: #fff;
+  padding: 16px 30px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.theme-btn:hover {
+  background: var(--primary-dark);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.student-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+.student-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.audience-card-lg {
+  min-height: 420px;
+}
+.audience-card-lg .student-image {
+  right: 30px;
+  bottom: 0;
+  width: 48%;
+}
+.audience-card-lg .card-content {
+  padding-top: 65px;
+}
+
+.audience-card-sm {
+  min-height: 320px;
+}
+.audience-card-sm .student-image {
+  width: 42%;
+  right: 0;
+  bottom: 0;
+}
+.audience-card-sm h3 {
+  font-size: 34px;
+}
+.audience-card-sm small {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  color: #666;
+  margin-bottom: 18px;
+}
+.audience-card-sm h5 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+.audience-card-sm ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+}
+.audience-card-sm ul li::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.audience-card-blue {
+  min-height: 320px;
+}
+.audience-card-blue .card-content {
+  max-width: 380px;
+}
+.audience-card-blue h3 {
+  color: #fff;
+  font-size: 42px;
+}
+.audience-card-blue p {
+  color: rgba(255, 255, 255, 0.88);
+}
+.audience-card-blue .student-image {
+  width: 48%;
+  right: 0;
+  bottom: 0;
+}
+
+.pgdm-audience-section {
+  padding: 80px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.pgdm-title {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #151515;
+  margin-bottom: 16px;
+}
+
+.pgdm-title span {
+  color: #f58220;
+}
+
+.pgdm-subtitle {
+  font-family: 'Inter', sans-serif;
+  color: #666;
+  font-size: 18px;
+}
+
+/*=========================================
+CARD
+=========================================*/
+
+.pgdm-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  transition: 0.45s ease;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.pgdm-card:hover {
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+}
+
+/*=========================================
+BACKGROUND IMAGE
+=========================================*/
+
+.pgdm-card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.pgdm-card-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*=========================================
+CONTENT
+=========================================*/
+
+.pgdm-content {
+  position: relative;
+  z-index: 5;
+  width: 52%;
+  padding: 48px;
+}
+
+.pgdm-content h3 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #181818;
+  margin-bottom: 24px;
+}
+
+.pgdm-content h3 span {
+  display: block;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.pgdm-content h4 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.pgdm-content h4 span {
+  display: block;
+}
+
+.pgdm-content p {
+  font-family: 'Inter', sans-serif;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 22px 0;
+}
+
+.pgdm-highlight {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+  font-family: 'Inter';
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #fff;
+}
+
+.pgdm-highlight strong {
+  color: #f58220;
+}
+
+/*=========================================
+BUTTON
+=========================================*/
+
+.pgdm-btn {
+  gap: 10px;
+  background: #f58220;
+  color: #fff;
+  padding: 16px 28px;
+  border-radius: 10px;
+  font-family: 'Inter';
+  font-weight: 600;
+  transition: 0.35s;
+}
+
+.pgdm-btn svg {
+  transition: 0.35s;
+}
+
+.pgdm-btn:hover svg {
+  transform: translateX(5px);
+}
+
+/*=========================================
+STUDENT IMAGE
+=========================================*/
+
+.pgdm-student {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 48%;
+  z-index: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.pgdm-student img {
+  width: 100%;
+  transition: 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transform-origin: bottom center;
+}
+
+/*=========================================
+SMALL CARDS
+=========================================*/
+
+.pgdm-card-pink,
+.pgdm-card-blue {
+  min-height: 360px;
+}
+
+.pgdm-card-pink .pgdm-content {
+  width: 90%;
+}
+
+.pgdm-card-blue .pgdm-content {
+  width: 60%;
+}
+
+.pgdm-card-pink .pgdm-student {
+  width: 42%;
+}
+
+.pgdm-card-blue .pgdm-student {
+  width: 48%;
+}
+
+.pgdm-card-blue .pgdm-content h4,
+.pgdm-card-blue p {
+  color: #fff;
+}
+.card-2-content h4 {
+  font-size: 32px;
+}
+
+/*=========================================
+LIST
+=========================================*/
+
+.pgdm-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+}
+
+.pgdm-card ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 7px;
+  font-family: 'Inter';
+  color: #444;
+}
+
+.pgdm-card ul li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f58220;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.pgdm-card small {
+  display: block;
+  color: #666;
+  margin-bottom: 18px;
+  font-family: 'Inter';
+}
+
+.pgdm-card {
+  overflow: hidden;
+}
+
+.pgdm-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), transparent 60%);
+  opacity: 0;
+  transition: 0.45s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.pgdm-card:hover::after {
+  opacity: 1;
+}
+
+/*=========================================
+BACKGROUND IMAGE ZOOM
+=========================================*/
+
+.pgdm-card-bg {
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+
+.pgdm-card-bg img {
+  transition: transform 0.8s ease;
+}
+
+.pgdm-card:hover .pgdm-card-bg img {
+  transform: scale(1.06);
+}
+
+/*=========================================
+STUDENT IMAGE
+=========================================*/
+
+.pgdm-student {
+  pointer-events: none;
+}
+
+.pgdm-student img {
+  filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.18));
+}
+
+.pgdm-card:hover .pgdm-student img {
+  transform: scale(1.08);
+}
+
+/*=========================================
+BUTTON
+=========================================*/
+
+.pgdm-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.pgdm-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateX(-100%);
+  transition: 0.45s;
+}
+
+.pgdm-btn:hover::before {
+  transform: translateX(100%);
+}
+
+/*=========================================
+HEADING
+=========================================*/
+
+.pgdm-content h3,
+.pgdm-content h4 {
+  transition: 0.35s;
+}
+
+.pgdm-card:hover h3,
+.pgdm-card:hover h4 {
+  transform: translateY(-4px);
+}
+
+/*=========================================
+CARD COLORS
+=========================================*/
+
+.pgdm-card-yellow {
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: #fff0c6;
+}
+
+.pgdm-card-pink {
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: linear-gradient(0deg, #fee2e2 0%, #fee2e2 100%), #fff;
+}
+
+.pgdm-card-blue {
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: radial-gradient(290.58% 87.37% at 64.41% 59.03%, #1c3d98 0%, #1c3d72 100%);
+}
+
+/*=========================================
+IMAGE POSITION
+=========================================*/
+
+.pgdm-card-yellow .pgdm-student {
+  width: 47%;
+  right: 20px;
+  bottom: -2px;
+}
+
+.pgdm-card-pink .pgdm-student {
+  width: 44%;
+  right: 10px;
+  bottom: -2px;
+}
+
+.pgdm-card-blue .pgdm-student {
+  width: 48%;
+  right: 15px;
+  bottom: -2px;
+}
+
+/*=========================================================
+                CURRICULUM SECTION
+=========================================================*/
+
+.curriculum-section {
+  position: relative;
+  padding: 80px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.curriculum-state-main {
+  width: 100%;
+  max-width: 400px;
+}
+/*=========================================================
+                SECTION HEADING
+=========================================================*/
+
+.curriculum-title {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #171717;
+  margin-bottom: 12px;
+}
+
+.curriculum-title span {
+  color: #f58220;
+}
+
+.curriculum-subtitle {
+  max-width: 620px;
+  margin: auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+}
+
+.curriculum-status-box {
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: #fff;
+  padding: 34px 48px;
+  display: flex;
+}
+
+.other-stats-info {
+  gap: 74px;
+}
+
+.total-credits-box {
+  min-width: 260px;
+  padding-right: 70px;
+  border-right: 1px solid #d9d9d9;
+}
+
+.total-credits-box h3 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #121212;
+  line-height: 1;
+}
+
+.total-credits-box span {
+  margin-top: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/*=========================================================
+        RIGHT STATS
+=========================================================*/
+
+.other-stats-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding-left: 70px;
+}
+
+.other-stats-info > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Number */
+
+.other-stats-info > div > div:first-child {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Text */
+
+.other-stats-info h4 {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: #00000080;
+  line-height: 1.2;
+}
+
+.other-stats-info span {
+  display: block;
+  margin-top: 3px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.4;
+}
+
+/*=========================================================
+                CARD
+=========================================================*/
+
+.curriculum-card {
+  position: relative;
+  min-height: 399px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  transition: 0.45s ease;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.curriculum-card:hover {
+  transform: translateY(-8px);
+}
+
+/*=========================================================
+                BACKGROUND
+=========================================================*/
+
+.curriculum-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.curriculum-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.curriculum-content {
+  position: relative;
+  z-index: 5;
+  width: 70%;
+  padding: 40px;
+}
+
+.white-content-box {
+  width: 48%;
+}
+
+.curriculum-content h3 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #171717;
+  margin-bottom: 18px;
+}
+.curriculum-content h3 span {
+  font-weight: 700;
+}
+.curriculum-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.curriculum-card-blue .curriculum-content h3,
+.curriculum-card-blue .curriculum-content p {
+  color: #fff;
+}
+
+.curriculum-badge {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 6;
+  padding: 7px 16px;
+  background: #fff;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/*=========================================================
+                IMAGE
+=========================================================*/
+
+.curriculum-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 48%;
+  z-index: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.curriculum-image-1 {
+  width: 94%;
+}
+.curriculum-image-2 {
+  width: 60%;
+}
+
+.curriculum-image img {
+  width: 100%;
+  height: auto;
+  transition: 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.curriculum-card-yellow {
+  background: #fce8a8;
+}
+
+.curriculum-card-blue {
+  background: #1f3e93;
+}
+
+.bsm-campus-section {
+  position: relative;
+  padding: 80px 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+/*=========================================================
+                SECTION HEADING
+=========================================================*/
+
+.bsm-campus-title {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+.bsm-campus-title span {
+  color: #f58220;
+}
+
+.bsm-campus-subtitle {
+  max-width: 620px;
+  margin: auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/*=========================================================
+                CARD
+=========================================================*/
+
+.bsm-campus-card {
+  position: relative;
+  height: 100%;
+  min-height: 640px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.45s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bsm-campus-card:hover {
+  transform: translateY(-8px);
+}
+
+/*=========================================================
+                CARD COLORS
+=========================================================*/
+
+.bsm-campus-card-pink {
+  background: #f9dddd;
+}
+
+.bsm-campus-card-blue {
+  background: #21489b;
+}
+
+.bsm-campus-campus {
+  background: #ffe9a8;
+}
+
+/*=========================================================
+                BACKGROUND
+=========================================================*/
+
+.bsm-campus-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.bsm-campus-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*=========================================================
+                CONTENT
+=========================================================*/
+
+.bsm-campus-content {
+  position: relative;
+  z-index: 5;
+  padding: 36px;
+}
+
+.bsm-campus-content h3 {
+  margin: 0;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+  color: #111;
+}
+
+.bsm-campus-content h4 {
+  margin: 10px 0 18px;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #111;
+  line-height: 1.2;
+}
+
+.bsm-campus-content p {
+  margin: 0;
+  max-width: 270px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.8;
+}
+
+/* Blue Card */
+
+.bsm-campus-card-blue .bsm-campus-content h3,
+.bsm-campus-card-blue .bsm-campus-content h4,
+.bsm-campus-card-blue .bsm-campus-content p {
+  color: #fff;
+}
+
+/*=========================================================
+                STUDENT IMAGE
+=========================================================*/
+
+.bsm-campus-student {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bsm-campus-student img {
+  width: 100%;
+  transition: 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/*=========================================================
+                THIRD CARD
+=========================================================*/
+
+.campus-heading {
+  font-size: 40px !important;
+  line-height: 1.15 !important;
+  color: #111 !important;
+}
+
+.bsm-campus-campus p {
+  max-width: 240px;
+}
+
+.bsm-campus-image {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.bsm-campus-image img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+/*=========================================================
+                IMAGE POSITION
+=========================================================*/
+
+.bsm-campus-card-pink .bsm-campus-student {
+  bottom: -3px;
+}
+
+.bsm-campus-card-blue .bsm-campus-student {
+  bottom: -3px;
+}
+
+.bsm-campus-card {
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+
+  will-change: transform;
+}
+
+/*=========================================================
+BACKGROUND IMAGE
+=========================================================*/
+
+.bsm-campus-bg {
+  overflow: hidden;
+
+  border-radius: 22px;
+}
+
+.bsm-campus-bg img {
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.bsm-campus-card:hover .bsm-campus-bg img {
+  transform: scale(1.06);
+
+  filter: brightness(1.03);
+}
+
+/*=========================================================
+CARD GLOW
+=========================================================*/
+
+.bsm-campus-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: radial-gradient(
+    circle at top right,
+
+    rgba(255, 255, 255, 0.18),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: 0.45s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.bsm-campus-card:hover::after {
+  opacity: 1;
+}
+
+/*=========================================================
+STUDENT IMAGE
+=========================================================*/
+
+.bsm-campus-student {
+  pointer-events: none;
+}
+
+.bsm-campus-student img {
+  transform-origin: bottom center;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.18));
+  transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.bsm-campus-card:hover .bsm-campus-student img {
+  transform: scale(1.08);
+}
+
+/*=========================================================
+CAMPUS IMAGE
+=========================================================*/
+
+.bsm-campus-image {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.bsm-campus-image img {
+  transition: transform 0.8s ease;
+}
+
+.bsm-campus-campus:hover .bsm-campus-image img {
+  transform: scale(1.08);
+}
+
+/*=========================================================
+TEXT ANIMATION
+=========================================================*/
+
+.bsm-campus-content h3,
+.bsm-campus-content h4,
+.bsm-campus-content p {
+  transition: 0.35s;
+}
+
+.bsm-campus-card:hover h3,
+.bsm-campus-card:hover h4 {
+  transform: translateY(-4px);
+}
+
+.bsm-campus-card:hover p {
+  opacity: 0.95;
+}
+
+/*=========================================================
+EXACT IMAGE POSITION
+=========================================================*/
+
+.bsm-campus-card-pink .bsm-campus-student {
+  left: 0;
+
+  right: 0;
+
+  bottom: -3px;
+}
+
+.bsm-campus-card-pink .bsm-campus-student img {
+  width: 104%;
+}
+
+.bsm-campus-card-blue .bsm-campus-student {
+  left: 0;
+
+  right: 0;
+
+  bottom: -3px;
+}
+
+.bsm-campus-card-blue .bsm-campus-student img {
+  width: 104%;
+}
+
+/*=========================================================
+THIRD CARD
+=========================================================*/
+
+.bsm-campus-campus {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.bsm-campus-campus .bsm-campus-content {
+  padding-bottom: 12px;
+}
+
+.bsm-campus-image {
+  margin: 0 20px 20px;
+}
+
+.bsm-campus-image img {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+}
+
+/*==================================================
+CAREER CTA SECTION
+==================================================*/
+
+.career-cta-section {
+  padding: 80px 0;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.career-cta-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 430px;
+  transition: 0.45s;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff0c6;
+}
+
+.career-cta-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.career-cta-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.career-cta-card:hover .career-cta-bg img {
+  transform: scale(1.05);
+}
+
+/*==================================================
+CONTENT
+==================================================*/
+
+.career-cta-content {
+  position: relative;
+  z-index: 5;
+  padding: 65px 30px 65px 55px;
+}
+
+.career-cta-content h2 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #141414;
+  margin-bottom: 22px;
+  max-width: 450px;
+}
+
+.career-cta-content h2 span {
+  display: block;
+  font-weight: 700;
+}
+
+.career-cta-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #000000;
+  margin-bottom: 35px;
+}
+
+/*==================================================
+BUTTON
+==================================================*/
+
+.career-cta-btn {
+  gap: 10px;
+  padding: 14px 28px;
+  background: #f58220;
+  color: #fff;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.35s;
+}
+
+.career-cta-btn svg {
+  transition: 0.35s;
+}
+
+.career-cta-btn:hover svg {
+  transform: translateX(5px);
+}
+
+/*==================================================
+RIGHT SIDE
+==================================================*/
+
+.career-cta-right {
+  position: relative;
+  height: 430px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 5;
+}
+
+/*==================================================
+STUDENT
+==================================================*/
+
+.career-cta-student {
+  position: absolute;
+  bottom: 0;
+  right: 110px;
+  z-index: 3;
+}
+
+.career-cta-student img {
+  width: 430px;
+  transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.18));
+}
+
+.career-cta-card:hover .career-cta-student img {
+  transform: scale(1.06);
+}
+
+/*==================================================
+LOGO STRIP
+==================================================*/
+
+.career-company-strip {
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+  transform: translateX(-50%);
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  z-index: 6;
+}
+
+.career-company-logo {
+  width: 82px;
+  height: 48px;
+  background: #fff;
+  border-radius: 8px;
+  transition: 0.35s;
+}
+
+.career-company-logo img {
+  max-width: 70%;
+  max-height: 28px;
+  transition: 0.35s;
+}
+
+.career-company-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.career-company-logo:hover img {
+  transform: scale(1.08);
+}
+
+.career-cta-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.28), transparent 60%);
+  opacity: 0;
+  transition: 0.45s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.career-cta-card:hover::after {
+  opacity: 1;
+}
+
+.where-meet-marquee {
+  z-index: 99;
+  max-width: 698px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.where-meet-marquee .logo-card {
+  box-shadow: none;
+}
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media (max-width: 1199px) {
+  .bsm-campus-card {
+    min-height: 500px;
+  }
+
+  .bsm-campus-content h3 {
+    font-size: 56px;
+  }
+
+  .bsm-campus-content h4 {
+    font-size: 30px;
+  }
+
+  .curriculum-status-box {
+    flex-direction: column;
+    gap: 28px;
+    padding: 28px 32px;
+  }
+
+  .total-credits-box {
+    min-width: unset;
+    padding-right: 0;
+    padding-bottom: 24px;
+    border-right: none;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .other-stats-info {
+    flex-wrap: wrap;
+    gap: 28px;
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+}
+
+.bsm-testimonial-section {
+  position: relative;
+  padding: 80px 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+/*=========================================================
+            SECTION HEADING
+=========================================================*/
+
+.bsm-testimonial-title {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #151515;
+  margin-bottom: 12px;
+}
+
+.bsm-testimonial-title span {
+  color: #f58220;
+}
+
+.bsm-testimonial-subtitle {
+  max-width: 650px;
+  margin: auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/*=========================================================
+            SLIDER WRAPPER
+=========================================================*/
+
+.bsm-testimonial-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 55px;
+  padding: 10px 0;
+}
+
+/*=========================================================
+            TRACK
+=========================================================*/
+
+.bsm-testimonial-track {
+  display: flex;
+  align-items: stretch;
+  gap: 22px;
+  width: max-content;
+}
+
+/*=========================================================
+            CARD
+=========================================================*/
+
+.bsm-testimonial-card {
+  position: relative;
+  width: 372px;
+  min-height: 290px;
+  flex-shrink: 0;
+  padding: 24px;
+  background: #fff;
+  transition: 0.35s ease;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.bsm-testimonial-card:hover {
+  transform: translateY(-8px);
+}
+
+/*=========================================================
+            QUOTE
+=========================================================*/
+
+.bsm-quote-icon {
+  position: absolute;
+  right: 22px;
+  bottom: 40px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.bsm-quote-icon img {
+  width: 134px;
+}
+
+/*=========================================================
+            CONTENT
+=========================================================*/
+
+.bsm-testimonial-card p {
+  position: relative;
+  z-index: 2;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/*=========================================================
+            USER
+=========================================================*/
+
+.bsm-user {
+  margin-top: auto;
+  gap: 14px;
+}
+
+.bsm-user img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bsm-user h4 {
+  margin: 0;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+}
+
+.bsm-user span {
+  display: block;
+  margin-top: 2px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #888;
+}
+
+/*=========================================================
+            LEFT GRADIENT
+=========================================================*/
+
+.bsm-left-shadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 180px;
+  z-index: 20;
+  pointer-events: none;
+  background: linear-gradient(to right, #ffffff 5%, rgba(255, 255, 255, 0.95) 25%, rgba(255, 255, 255, 0));
+}
+
+/*=========================================================
+            RIGHT GRADIENT
+=========================================================*/
+
+.bsm-right-shadow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 180px;
+  z-index: 20;
+  pointer-events: none;
+  background: linear-gradient(to left, #ffffff 5%, rgba(255, 255, 255, 0.95) 25%, rgba(255, 255, 255, 0));
+}
+
+.bsm-testimonial-track {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  gap: 22px;
+  animation: testimonialMarquee 32s linear infinite;
+  will-change: transform;
+}
+
+/* Pause on Hover */
+
+.bsm-testimonial-slider:hover .bsm-testimonial-track {
+  animation-play-state: paused;
+}
+
+@keyframes testimonialMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.bsm-testimonial-card {
+  cursor: pointer;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.bsm-testimonial-card:hover {
+  transform: translateY(-8px);
+  border-color: #f58220;
+}
+
+/*==================================================
+LEADERS SECTION
+==================================================*/
+
+.leaders-section {
+  padding: 80px 0;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+/*==================================================
+HEADING
+==================================================*/
+
+.leaders-title {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #151515;
+  margin-bottom: 12px;
+}
+
+.leaders-title span {
+  color: #f58220;
+}
+
+.leaders-subtitle {
+  max-width: 620px;
+  margin: 0 auto 55px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/*==================================================
+SLIDER
+==================================================*/
+
+.leaders-slider-wrapper {
+  position: relative;
+  padding: 0 60px;
+}
+
+/*==================================================
+SWIPER
+==================================================*/
+
+.leadersSwiper {
+  overflow: hidden;
+  padding: 8px 0 20px;
+}
+
+.leadersSwiper .swiper-slide {
+  height: auto;
+}
+
+/*==================================================
+CARD
+==================================================*/
+
+.leader-card {
+  height: 100%;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.35s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  padding: 16px;
+}
+
+.leader-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+  border-color: #f58220;
+}
+
+/*==================================================
+IMAGE
+==================================================*/
+
+.leader-image {
+  background: #ffe9a8;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.leader-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.leader-card:hover .leader-image img {
+  transform: scale(1.06);
+}
+
+/*==================================================
+CONTENT
+==================================================*/
+
+.leader-content {
+  padding: 18px;
+}
+
+.leader-content h3 {
+  margin: 0 0 8px;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #151515;
+  transition: 0.3s;
+}
+
+.leader-card:hover h3 {
+  color: #f58220;
+}
+
+.leader-content h4 {
+  margin: 0 0 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #666;
+}
+
+.leader-content p {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #888;
+}
+
+/*==================================================
+ARROWS
+==================================================*/
+
+.leaders-prev,
+.leaders-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #f58220;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.35s;
+  z-index: 20;
+  box-shadow: 0 12px 25px rgba(245, 130, 32, 0.3);
+}
+
+.leaders-prev {
+  left: 0;
+}
+
+.leaders-next {
+  right: 0;
+}
+
+.leaders-prev:hover,
+.leaders-next:hover {
+  background: #df6e11;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.leaders-prev svg,
+.leaders-next svg {
+  width: 20px;
+  height: 20px;
+}
+
+/*==================================================
+SWIPER STATES
+==================================================*/
+
+.swiper-button-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.swiper-slide-active .leader-card {
+  opacity: 1;
+}
+
+.swiper-slide {
+  opacity: 1;
+  transition: 0.35s;
+}
+
+/*==================================================
+SCHOLARSHIP SECTION
+==================================================*/
+
+.scholarship-section {
+  padding: 80px 0;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.scholarship-title {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+.scholarship-title span {
+  color: #f58220;
+}
+
+.scholarship-subtitle {
+  max-width: 620px;
+  margin: auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/*==================================================
+CARD
+==================================================*/
+
+.scholarship-card {
+  position: relative;
+  height: 100%;
+  min-height: 255px;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 30px;
+  transition: 0.45s;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+}
+
+.scholarship-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+/*==================================================
+CARD COLORS
+==================================================*/
+
+.scholarship-card-pink {
+  background: #fee2e2;
+}
+
+.scholarship-card-blue {
+  background: radial-gradient(290.58% 87.37% at 64.41% 59.03%, #1c3d98 0%, #1c3d72 100%);
+}
+
+.scholarship-card-yellow {
+  background: #fff0c6;
+}
+
+/*==================================================
+BACKGROUND IMAGE
+==================================================*/
+
+.scholarship-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.scholarship-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.scholarship-card:hover .scholarship-bg img {
+  transform: scale(1.05);
+}
+
+/*==================================================
+CONTENT
+==================================================*/
+
+.scholarship-content {
+  position: relative;
+  z-index: 5;
+  max-width: 72%;
+  padding-right: 12px;
+}
+
+.scholarship-content h3 {
+  margin: 0 0 16px;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111;
+}
+
+.scholarship-content h3 span {
+  display: block;
+  font-weight: 400;
+}
+
+.scholarship-content p {
+  margin: 0 0 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #000000;
+}
+
+.scholarship-content strong {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #111;
+}
+
+/*==================================================
+BLUE CARD TEXT
+==================================================*/
+
+.scholarship-card-blue .scholarship-content h3,
+.scholarship-card-blue .scholarship-content p,
+.scholarship-card-blue .scholarship-content strong {
+  color: #fff;
+}
+
+/*==================================================
+ICON
+==================================================*/
+
+.scholarship-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  height: 100%;
+  width: 141px;
+  z-index: 5;
+}
+
+.scholarship-card-pink .scholarship-icon {
+  background: url('/images/bg-card-img-1.webp');
+  background-position: left bottom 0px;
+  background-size: cover;
+}
+
+.scholarship-card-blue .scholarship-icon {
+  background: url('/images/bg-card-img-2.webp');
+  background-position: left bottom 0px;
+  background-size: cover;
+}
+.scholarship-card-yellow .scholarship-icon {
+  background: url('/images/bg-card-img-3.webp');
+  background-position: left bottom 0px;
+  background-size: cover;
+}
+
+.scholarship-icon img {
+  width: 94px;
+  transition: transform 0.45s ease;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
+}
+
+.scholarship-card:hover .scholarship-icon img {
+  transform: scale(1.12) rotate(-6deg);
+}
+
+/*==================================================
+GLOW
+==================================================*/
+
+.scholarship-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.22), transparent 60%);
+  opacity: 0;
+  transition: 0.45s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.scholarship-card:hover::after {
+  opacity: 1;
+}
+
+/*==================================================
+BORDER
+==================================================*/
+
+.scholarship-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0));
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: 0.35s;
+  z-index: 3;
+}
+
+.scholarship-card:hover::before {
+  opacity: 1;
+}
+
+.final-cta-section {
+  padding: 80px 0;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.final-cta-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  min-height: 600px;
+  transition: 0.45s;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff0c6;
+}
+
+/*==================================================
+BACKGROUND
+==================================================*/
+
+.final-cta-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.final-cta-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.final-cta-card:hover .final-cta-bg img {
+  transform: scale(1.03);
+}
+
+/*==================================================
+CONTENT
+==================================================*/
+
+.final-cta-content {
+  position: relative;
+  z-index: 5;
+  padding: 55px 40px 0;
+}
+
+.final-cta-content h2 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000000;
+  margin-bottom: 14px;
+}
+
+.final-cta-content h2 span {
+  font-weight: 700;
+  display: inline;
+}
+
+.final-cta-content p {
+  max-width: 720px;
+  margin: 0 auto 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #505050;
+}
+
+/*==================================================
+BUTTON
+==================================================*/
+
+.final-cta-btn {
+  gap: 10px;
+  padding: 15px 34px;
+  background: #f58220;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.35s;
+}
+
+.final-cta-btn svg {
+  transition: 0.35s;
+}
+
+.final-cta-btn:hover svg {
+  transform: translateX(5px);
+}
+
+/*==================================================
+CIRCLE
+==================================================*/
+
+.final-cta-circle {
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  width: 701px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: 2;
+  transition: 0.6s;
+}
+
+.final-cta-card:hover .final-cta-circle {
+  transform: translateX(-50%) scale(1.05);
+}
+
+/*==================================================
+STUDENT IMAGE
+==================================================*/
+
+.final-cta-students {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 4;
+  width: 100%;
+}
+
+.final-cta-students img {
+  width: 100%;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.final-cta-card:hover .final-cta-students img {
+  transform: scale(1.05);
+}
+
+/*==================================================
+GLOW
+==================================================*/
+
+.final-cta-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top center, rgba(255, 255, 255, 0.35), transparent 60%);
+  opacity: 0;
+  transition: 0.45s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.final-cta-card:hover::after {
+  opacity: 1;
+}
+
+/*==================================================
+BSM FOOTER
+==================================================*/
+
+.footer-bsm {
+  background: #1c3d90;
+  padding: 48px 0 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-bsm-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/*==================================================
+LEFT
+==================================================*/
+
+.footer-bsm-left h2 {
+  margin: 0 0 14px;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: #fff;
+}
+
+.footer-bsm-left h2 span {
+  font-weight: 700;
+}
+
+.footer-bsm-left p {
+  max-width: 480px;
+  margin: 0 0 34px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/*==================================================
+ACTION
+==================================================*/
+
+.footer-bsm-action {
+  gap: 16px;
+}
+
+.footer-bsm-logo {
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.35s;
+}
+
+.footer-bsm-logo img {
+  display: block;
+  height: 38px;
+  width: auto;
+}
+
+.footer-bsm-btn {
+  gap: 10px;
+  padding: 14px 28px;
+  background: #f58220;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.35s;
+}
+
+.footer-bsm-btn svg {
+  transition: 0.35s;
+}
+
+.footer-bsm-btn:hover svg {
+  transform: translateX(5px);
+}
+
+/*==================================================
+ADDRESS
+==================================================*/
+
+.footer-bsm-address {
+  text-align: left;
+}
+
+.footer-bsm-address span {
+  display: block;
+  margin-bottom: 12px;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-bsm-address p {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/*==================================================
+DIVIDER
+==================================================*/
+
+.footer-bsm-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.16);
+  margin: 45px 0 25px;
+}
+
+/*==================================================
+BOTTOM
+==================================================*/
+
+.footer-bsm-copy,
+.footer-bsm-credit {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.footer-bsm-credit a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.35s;
+}
+
+.footer-bsm-credit a:hover {
+  color: #f58220;
+}
+
+@media (max-width: 1200px) {
+  .bsm-testimonial-card {
+    width: 310px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 32px;
+  }
+
+  .final-cta-students img {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 60px;
+  }
+  .navbar-nav {
+    gap: 24px;
+  }
+  .logo-track img {
+    margin: 0 35px;
+  }
+
+  .audience-card-lg .student-image {
+    width: 50%;
+  }
+  .audience-card .card-content {
+    padding: 45px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1440px;
+  }
+  .hero-content h1 {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Scholarship */
+  .scholarship-section {
+    padding: 70px 0;
+  }
+
+  .scholarship-card {
+    min-height: 220px;
+    padding: 28px;
+  }
+
+  .scholarship-content {
+    max-width: 65%;
+  }
+
+  .scholarship-content h3 {
+    font-size: 26px;
+  }
+
+  .scholarship-content p {
+    font-size: 15px;
+  }
+
+  .scholarship-icon {
+    width: 120px;
+  }
+
+  .scholarship-icon img {
+    width: 80px;
+  }
+
+  /* BSM Campus */
+  .bsm-campus-section {
+    padding: 80px 0;
+  }
+
+  .bsm-campus-title {
+    font-size: 42px;
+  }
+
+  .bsm-campus-card {
+    min-height: 500px;
+  }
+
+  /* Career CTA */
+  .career-cta-card {
+    min-height: auto;
+  }
+
+  .career-cta-right {
+    height: 400px;
+    margin-top: 20px;
+  }
+
+  .career-cta-content {
+    padding: 50px 40px 10px;
+    text-align: center;
+  }
+
+  .career-cta-content h2,
+  .career-cta-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .career-cta-student {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .career-cta-student img {
+    width: 330px;
+  }
+
+  .career-company-strip {
+    bottom: 20px;
+    flex-wrap: wrap;
+    max-width: 90%;
+    justify-content: center;
+  }
+
+  .top-bar {
+    display: none;
+  }
+  .main-navbar {
+    padding: 14px 0;
+  }
+  .floating-admission {
+    display: none;
+  }
+
+  .navbar-collapse {
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-nav {
+    gap: 18px;
+  }
+
+  .nav-btn {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .logo-slider {
+    padding: 20px 0;
+  }
+  .logo-track img {
+    height: 52px;
+    margin: 0 28px;
+  }
+
+  /* Hero */
+  .hero-section {
+    text-align: center;
+  }
+  .hero-row {
+    min-height: auto;
+    padding: 150px 0 90px;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero-content h1 {
+    font-size: 52px;
+  }
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+  }
+  .hero-pills {
+    justify-content: center;
+  }
+  .accreditation {
+    max-width: 100%;
+    justify-content: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  /* AICTE wrapper center on tablet */
+  .aicte-wrapper {
+    justify-content: center;
+  }
+
+  /* Outcomes */
+  .outcomes-section {
+    padding: 70px 0;
+  }
+  .section-title {
+    font-size: 40px;
+  }
+  .card-content {
+    padding: 36px 20px;
+  }
+  .outcome-card {
+    margin-bottom: 10px;
+  }
+
+  /* Audience */
+  .audience-section {
+    padding: 70px 0;
+  }
+  .audience-section .section-title {
+    font-size: 40px;
+  }
+  .audience-card {
+    min-height: auto;
+  }
+  .audience-card .card-content {
+    padding: 40px;
+    max-width: 100%;
+  }
+
+  .audience-card-lg .student-image,
+  .audience-card-blue .student-image,
+  .audience-card-sm .student-image {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    right: auto;
+    bottom: auto;
+  }
+
+  /* PGDM Cards */
+  .pgdm-card {
+    min-height: auto;
+    overflow: hidden;
+    flex-direction: column;
+  }
+
+  .pgdm-content {
+    width: 100% !important;
+    padding: 45px;
+  }
+
+  .pgdm-student {
+    position: relative;
+    width: 100% !important;
+    right: auto;
+    bottom: auto;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .pgdm-student img {
+    width: 70%;
+  }
+
+  .pgdm-card:hover .pgdm-student img {
+    transform: scale(1.04);
+  }
+
+  /* Curriculum Cards */
+  .curriculum-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .curriculum-content {
+    width: 100%;
+    padding: 35px;
+  }
+
+  .white-content-box {
+    width: 100%;
+  }
+
+  .curriculum-image {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .curriculum-image-1,
+  .curriculum-image-2 {
+    width: 100%;
+  }
+
+  .curriculum-image img {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  /* Curriculum status box */
+  .curriculum-status-box {
+    flex-direction: column;
+    gap: 28px;
+    padding: 24px;
+  }
+
+  .total-credits-box {
+    min-width: unset;
+    padding-right: 0;
+    padding-bottom: 20px;
+    border-right: none;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .other-stats-info {
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+
+  .leaders-section {
+    padding: 80px 0;
+  }
+
+  .leaders-title {
+    font-size: 42px;
+  }
+
+  .leaders-slider-wrapper {
+    padding: 0 50px;
+  }
+
+  .leaders-prev,
+  .leaders-next {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Gallery */
+  .bsm-gallery-section {
+    padding: 80px 0;
+  }
+
+  .bsm-gallery-item {
+    width: 300px;
+    height: 210px;
+  }
+
+  /* Testimonial */
+  .bsm-testimonial-section {
+    padding: 80px 0;
+  }
+
+  .bsm-testimonial-title {
+    font-size: 42px;
+  }
+
+  .bsm-testimonial-card {
+    width: 290px;
+    min-height: 225px;
+  }
+
+  /* Final CTA */
+  .final-cta-section {
+    padding: 80px 0;
+  }
+
+  .final-cta-card {
+    min-height: 500px;
+  }
+
+  .final-cta-content {
+    padding: 50px 30px 0;
+  }
+
+  .final-cta-content h2 {
+    font-size: 40px;
+  }
+
+  .final-cta-content p {
+    font-size: 15px;
+  }
+
+  .final-cta-students img {
+    width: 620px;
+  }
+
+  /* Footer */
+  .footer-bsm {
+    padding: 60px 0 28px;
+  }
+
+  .footer-bsm-left {
+    text-align: center;
+  }
+
+  .footer-bsm-left h2 {
+    font-size: 38px;
+  }
+
+  .footer-bsm-left p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-bsm-action {
+    justify-content: center;
+  }
+
+  .footer-bsm-address {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .footer-bsm-divider {
+    margin: 40px 0 25px;
+  }
+
+  .footer-bsm-copy,
+  .footer-bsm-credit {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Scholarship */
+  .scholarship-section {
+    padding: 60px 0;
+  }
+
+  .scholarship-card {
+    min-height: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .scholarship-content {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .scholarship-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .scholarship-content p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .scholarship-content strong {
+    font-size: 13px;
+  }
+
+  .scholarship-icon {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: none !important;
+  }
+
+  .scholarship-icon img {
+    width: 64px;
+  }
+
+  /* BSM Campus */
+  .bsm-campus-section {
+    padding: 70px 0;
+  }
+
+  .bsm-campus-title {
+    font-size: 34px;
+  }
+
+  .bsm-campus-subtitle {
+    font-size: 15px;
+  }
+
+  .bsm-campus-card {
+    min-height: 460px;
+  }
+
+  .bsm-campus-content {
+    padding: 28px;
+  }
+
+  .bsm-campus-content h3 {
+    font-size: 52px;
+  }
+
+  .bsm-campus-content h4 {
+    font-size: 28px;
+  }
+
+  .campus-heading {
+    font-size: 28px !important;
+  }
+
+  /* Career CTA */
+  .career-cta-section {
+    padding: 70px 0;
+  }
+
+  .career-cta-card {
+    border-radius: 18px;
+  }
+
+  .career-cta-content {
+    padding: 40px 25px 10px;
+  }
+
+  .career-cta-content h2 {
+    font-size: 28px;
+  }
+
+  .career-cta-content p {
+    font-size: 15px;
+  }
+
+  .career-cta-right {
+    height: 330px;
+  }
+
+  .career-cta-student {
+    width: 100%;
+  }
+
+  .career-cta-student img {
+    width: 100%;
+  }
+
+  .career-company-strip {
+    position: relative;
+    left: auto;
+    transform: none;
+    bottom: auto;
+    margin: 0 20px 20px;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .career-company-logo {
+    width: 64px;
+    height: 42px;
+  }
+
+  .career-company-logo img {
+    max-height: 22px;
+  }
+
+  .section-padding {
+    padding: 70px 0;
+  }
+
+  .logo-slider {
+    padding: 16px 0;
+  }
+  .logo-track {
+    animation-duration: 20s;
+  }
+  .logo-track img {
+    height: 42px;
+    margin: 0 20px;
+  }
+  .logo-slider::before,
+  .logo-slider::after {
+    width: 45px;
+  }
+
+  /* Hero */
+  .hero-section {
+    min-height: auto;
+    padding: 0px;
+  }
+  .hero-row {
+    padding: 60px 0 70px;
+  }
+  .hero-content h1 {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+  .hero-content p {
+    font-size: 17px;
+  }
+  .hero-tag {
+    font-size: 12px;
+    padding: 8px 16px;
+    margin-bottom: 0px;
+  }
+  .hero-pills {
+    gap: 10px;
+  }
+  .hero-pills span {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+  .logo-card {
+    width: 90px;
+    height: 70px;
+  }
+  .logo-card img {
+    max-width: 65%;
+  }
+  .hero-buttons {
+    flex-direction: column;
+  }
+  /* AICTE wrapper — stack on mobile */
+  .aicte-wrapper {
+    align-items: center;
+    gap: 12px !important;
+  }
+  .vertical-line {
+    width: 1px;
+    height: 41px;
+  }
+  .accreditation {
+    max-width: 100%;
+  }
+
+  .btn-primary-custom,
+  .btn-secondary-custom {
+    width: 100%;
+  }
+
+  /* Outcomes */
+  .section-title {
+    font-size: 32px;
+  }
+  .section-desc {
+    font-size: 15px;
+  }
+  .card-content {
+    padding: 32px 18px;
+  }
+  .icon-box {
+    width: 64px;
+    height: 64px;
+  }
+  .icon-box img {
+    width: 24px;
+    height: 24px;
+  }
+  .outcome-card h3 {
+    font-size: 36px;
+  }
+  .bottom-note {
+    font-size: 13px;
+    margin-top: 30px;
+  }
+  .outcome-card::before {
+    animation-duration: 6s;
+  }
+
+  /* Audience */
+  .audience-section {
+    padding: 60px 0;
+  }
+  .audience-section .section-title {
+    font-size: 32px;
+  }
+  .audience-card .card-content {
+    padding: 30px;
+  }
+  .audience-card .card-content h3 {
+    font-size: 30px;
+  }
+  .audience-card .card-content h3 span {
+    font-size: 24px;
+  }
+  .theme-btn {
+    width: 100%;
+  }
+  .highlight-text {
+    display: block;
+    line-height: 1.7;
+  }
+
+  /* PGDM Audience */
+  .pgdm-audience-section {
+    padding: 70px 0;
+  }
+
+  .pgdm-title {
+    font-size: 34px;
+  }
+
+  .pgdm-subtitle {
+    font-size: 15px;
+  }
+
+  .pgdm-content {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .pgdm-content h3 {
+    font-size: 32px;
+  }
+
+  .pgdm-content h3 span {
+    font-size: 24px;
+  }
+
+  .pgdm-content h4 {
+    font-size: 28px;
+  }
+
+  .pgdm-highlight {
+    justify-content: center;
+  }
+
+  .pgdm-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pgdm-card ul {
+    text-align: left;
+    display: inline-block;
+  }
+
+  .pgdm-student img {
+    width: 90%;
+  }
+
+  /* Curriculum */
+  .curriculum-section {
+    padding: 60px 0;
+  }
+
+  .curriculum-title {
+    font-size: 32px;
+  }
+
+  .leader-card {
+    margin-right: 2px;
+    box-shadow: none !important;
+  }
+
+  .curriculum-subtitle {
+    font-size: 15px;
+  }
+
+  .curriculum-status-box {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .other-stats-info {
+    gap: 20px;
+  }
+
+  .other-stats-info > div > div:first-child {
+    font-size: 26px;
+  }
+
+  .other-stats-info span {
+    font-size: 13px;
+  }
+
+  .curriculum-stats {
+    padding: 20px;
+  }
+
+  .curriculum-stat {
+    flex: 0 0 100%;
+  }
+
+  .curriculum-content {
+    text-align: center;
+    padding: 28px;
+  }
+  .curriculum-content img {
+    margin: auto;
+  }
+
+  .curriculum-content h3 {
+    font-size: 30px;
+  }
+
+  .curriculum-content p {
+    font-size: 14px;
+  }
+
+  .curriculum-image img {
+    width: 100%;
+  }
+
+  .leaders-section {
+    padding: 70px 0;
+  }
+
+  .leaders-title {
+    font-size: 34px;
+  }
+
+  .leaders-subtitle {
+    font-size: 15px;
+    margin-bottom: 35px;
+  }
+
+  .leaders-slider-wrapper {
+    padding: 0 42px;
+  }
+
+  .leader-content {
+    padding: 16px;
+  }
+
+  .leader-content h3 {
+    font-size: 17px;
+  }
+
+  .leader-content h4 {
+    font-size: 13px;
+  }
+
+  .leaders-prev,
+  .leaders-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Gallery */
+  .bsm-gallery-section {
+    padding: 70px 0;
+  }
+
+  .bsm-gallery-item {
+    width: 240px !important;
+    height: 170px !important;
+    border-radius: 12px;
+  }
+
+  .bsm-gallery-track {
+    gap: 12px;
+  }
+
+  /* Testimonial */
+  .bsm-testimonial-section {
+    padding: 70px 0;
+  }
+
+  .bsm-testimonial-title {
+    font-size: 34px;
+  }
+
+  .bsm-testimonial-subtitle {
+    font-size: 15px;
+  }
+
+  .bsm-testimonial-slider {
+    margin-top: 40px;
+  }
+
+  .bsm-testimonial-card {
+    width: 260px;
+    min-height: 220px;
+    padding: 22px;
+  }
+
+  .bsm-testimonial-card p {
+    font-size: 14px;
+  }
+
+  .bsm-user img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .bsm-left-shadow,
+  .bsm-right-shadow {
+    width: 30px;
+  }
+
+  /* Final CTA */
+  .final-cta-section {
+    padding: 70px 0;
+  }
+
+  .final-cta-card {
+    min-height: 430px;
+    border-radius: 18px;
+  }
+
+  .final-cta-content {
+    padding: 40px 20px 0;
+  }
+
+  .final-cta-content h2 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .final-cta-content p {
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+
+  .final-cta-btn {
+    padding: 13px 24px;
+    font-size: 14px;
+  }
+
+  .final-cta-students img {
+    width: 470px;
+  }
+  .final-cta-circle {
+    width: 369px;
+    height: 98px;
+  }
+
+  /* Footer */
+  .footer-bsm {
+    padding: 50px 0 24px;
+  }
+
+  .footer-bsm-left h2 {
+    font-size: 30px;
+  }
+
+  .footer-bsm-left p {
+    font-size: 15px;
+  }
+
+  .footer-bsm-action {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .footer-bsm-logo {
+    width: 170px;
+  }
+
+  .footer-bsm-logo img {
+    height: 34px;
+  }
+
+  .footer-bsm-btn {
+    width: 170px;
+    justify-content: center;
+    padding: 13px 18px;
+    font-size: 14px;
+  }
+
+  .footer-bsm-address span {
+    font-size: 17px;
+  }
+
+  .footer-bsm-address p {
+    font-size: 14px;
+  }
+
+  .footer-bsm-divider {
+    margin: 35px 0 20px;
+  }
+
+  .footer-bsm-copy,
+  .footer-bsm-credit {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Scholarship */
+  .scholarship-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .scholarship-content h3 {
+    font-size: 20px;
+  }
+
+  .scholarship-content p {
+    font-size: 13px;
+  }
+
+  .scholarship-icon img {
+    width: 56px;
+  }
+
+  /* BSM Campus */
+  .bsm-campus-title {
+    font-size: 28px;
+  }
+
+  .bsm-campus-card {
+    min-height: 490px;
+    border-radius: 18px;
+  }
+
+  .bsm-campus-content {
+    padding: 22px;
+  }
+
+  .bsm-campus-content h3 {
+    font-size: 42px;
+  }
+
+  .bsm-campus-content h4 {
+    font-size: 24px;
+  }
+
+  .bsm-campus-content p {
+    font-size: 14px;
+  }
+
+  .bsm-campus-image {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    margin: 0;
+  }
+
+  .navbar-brand img {
+    height: 44px;
+  }
+  .hero-row {
+    padding: 40px 0 60px;
+  }
+  .logo-track img {
+    height: 36px;
+    margin: 0 16px;
+  }
+
+  /* PGDM */
+  .pgdm-title {
+    font-size: 28px;
+  }
+
+  .pgdm-content {
+    padding: 24px;
+  }
+
+  .pgdm-content h3 {
+    font-size: 28px;
+  }
+
+  .pgdm-content h4 {
+    font-size: 24px;
+  }
+
+  .pgdm-content p {
+    font-size: 14px;
+  }
+
+  .pgdm-btn {
+    padding: 14px 20px;
+  }
+
+  .pgdm-student img {
+    width: 100%;
+  }
+
+  /* Curriculum */
+  .curriculum-title {
+    font-size: 28px;
+  }
+
+  .curriculum-content {
+    padding: 22px;
+  }
+
+  .curriculum-content h3 {
+    font-size: 26px;
+  }
+
+  .curriculum-badge {
+    left: 16px;
+    top: 16px;
+  }
+
+  .curriculum-status-box {
+    padding: 18px;
+  }
+
+  .other-stats-info > div {
+    flex: 0 0 calc(50% - 10px);
+  }
+
+  .other-stats-info > div > div:first-child {
+    font-size: 22px;
+  }
+
+  .leaders-title {
+    font-size: 28px;
+  }
+
+  .leaders-slider-wrapper {
+    padding: 0 34px;
+  }
+
+  .leaders-prev,
+  .leaders-next {
+    width: 36px;
+    height: 36px;
+  }
+
+  .leaders-prev svg,
+  .leaders-next svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .leader-content {
+    padding: 14px;
+  }
+
+  .leader-content h3 {
+    font-size: 16px;
+  }
+
+  .leader-content h4 {
+    font-size: 12px;
+  }
+
+  .leader-content p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .hero-row {
+    padding: 40px 0 50px;
+  }
+
+  .btn-primary-custom,
+  .btn-secondary-custom {
+    padding: 15px 20px;
+    font-size: 15px;
+  }
+
+  .outcomes-section {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+  .section-desc {
+    font-size: 14px;
+  }
+  .card-content {
+    padding: 28px 16px;
+  }
+  .outcome-card h3 {
+    font-size: 32px;
+  }
+
+  /* PGDM */
+  .pgdm-content h3 {
+    font-size: 24px;
+  }
+  .pgdm-content h4 {
+    font-size: 20px;
+  }
+
+  /* Curriculum */
+  .curriculum-content h3 {
+    font-size: 22px;
+  }
+  .other-stats-info > div {
+    flex: 0 0 100%;
+  }
+
+  /* Gallery */
+  .bsm-gallery-item {
+    width: 200px;
+    height: 140px;
+  }
+
+  /* Testimonial */
+  .bsm-testimonial-title {
+    font-size: 28px;
+  }
+
+  .bsm-testimonial-card {
+    width: 320px;
+  }
+
+  .bsm-quote-icon img {
+    width: 56px;
+  }
+
+  /* Final CTA */
+  .final-cta-card {
+    min-height: 490px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 26px;
+  }
+
+  .final-cta-content p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .final-cta-btn {
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+
+  .final-cta-students img {
+    width: 360px;
+  }
+
+  /* Footer */
+  .footer-bsm-left h2 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .footer-bsm-left p {
+    font-size: 14px;
+  }
+
+  .footer-bsm-logo {
+    width: 160px;
+  }
+
+  .footer-bsm-btn {
+    width: 160px;
+    font-size: 13px;
+    padding: 12px 16px;
+  }
+
+  .footer-bsm-address p {
+    font-size: 13px;
+  }
+
+  .footer-bsm-copy,
+  .footer-bsm-credit {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .outcome-card::before {
+    animation: none;
+  }
+}
+
+/*==================================================
+  GALLERY MARQUEE SECTION
+==================================================*/
+
+.bsm-gallery-section {
+  padding: 80px 0;
+}
+
+.bsm-gallery-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 6px 0;
+}
+
+/*==================================================
+  TRACK — shared base
+==================================================*/
+
+.bsm-gallery-track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+  will-change: transform;
+}
+
+/*==================================================
+  ROW 1 — scroll left
+==================================================*/
+
+.bsm-gallery-track--left {
+  animation: galleryLeft 40s linear infinite;
+}
+
+.bsm-gallery-slider:hover .bsm-gallery-track--left {
+  animation-play-state: paused;
+}
+
+@keyframes galleryLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/*==================================================
+  ROW 2 — scroll right
+==================================================*/
+
+.bsm-gallery-track--right {
+  animation: galleryRight 40s linear infinite;
+}
+
+.bsm-gallery-slider:hover .bsm-gallery-track--right {
+  animation-play-state: paused;
+}
+
+@keyframes galleryRight {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/*==================================================
+  ITEM
+==================================================*/
+
+.bsm-gallery-item {
+  flex-shrink: 0;
+  width: 466px;
+  height: 467px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.bsm-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.bsm-gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+}
+
+.bsm-gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+/*==================================================
+  ADMISSIONS ENQUIRY SIDE PANEL
+==================================================*/
+
+/*
+  .enq-unit  — the whole unit (tab + panel), fixed right center.
+               It starts fully off-screen (translateX = panel+tab width)
+               and slides in when .enq--open is added.
+  .enq-tab   — orange vertical tab, glued to LEFT edge of panel.
+  .enq-panel — 400px white card.
+  On mobile   — entire unit is hidden; .enq-mobile-bar shown instead.
+*/
+
+/* ── UNIT (tab + panel together) ── */
+.enq-unit {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(400px); /* panel width, fully hidden */
+  z-index: 9999;
+  display: flex;
+  align-items: stretch;
+  /* transition moves the whole unit including the tab */
+  transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+  pointer-events: none;
+}
+
+/* Visible: slide unit in so panel right-edge is flush with viewport */
+.enq-unit.enq--open {
+  transform: translateY(-50%) translateX(0);
+}
+
+/* ── TAB ── */
+.enq-tab {
+  pointer-events: all;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 40px;
+  padding: 40px 16px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  box-shadow: -5px 0 18px rgba(0, 0, 0, 0.22);
+  transition: background 0.3s ease;
+  order: 0; /* tab on the LEFT of panel */
+  align-self: center; /* vertically center tab relative to panel */
+}
+
+.enq-tab:hover {
+  background: var(--primary-dark);
+}
+
+.enq-tab span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+}
+
+.enq-tab-arrow {
+  writing-mode: horizontal-tb;
+  transform: rotate(90deg);
+  flex-shrink: 0;
+  transition: transform 0.35s ease;
+}
+
+/* When panel is open, flip arrow to point left (close direction) */
+.enq-unit.enq--open .enq-tab-arrow {
+  transform: rotate(-90deg);
+}
+
+/* ── PANEL ── */
+.enq-panel {
+  pointer-events: all;
+  order: 1; /* panel on the RIGHT of tab */
+  width: 400px;
+  max-height: 88vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── PANEL HEADER ── */
+.enq-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #ececec;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+.enq-panel-header h3 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.enq-close {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #555;
+  transition:
+    background 0.25s,
+    color 0.25s;
+  flex-shrink: 0;
+}
+
+.enq-close:hover {
+  background: #ffe0cc;
+  color: var(--primary);
+}
+
+/* ── PANEL BODY ── */
+.enq-panel-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.enq-placeholder-note {
+  color: #888;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ── PANEL SCROLLBAR ── */
+.enq-panel-body::-webkit-scrollbar {
+  width: 4px;
+}
+.enq-panel-body::-webkit-scrollbar-track {
+  background: #f3f3f3;
+}
+.enq-panel-body::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 20px;
+}
+
+/* ── MOBILE BOTTOM BAR ── */
+.enq-mobile-bar {
+  display: none; /* hidden on desktop */
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 767px) {
+  /* Hide desktop side panel entirely on mobile */
+  .enq-unit {
+    display: none !important;
+  }
+
+  /* Show fixed bottom bar */
+  .enq-mobile-bar {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+
+  .enq-mobile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 20px;
+    background: var(--primary);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.18);
+    transition: background 0.3s;
+  }
+
+  .enq-mobile-btn:hover,
+  .enq-mobile-btn:focus {
+    background: var(--primary-dark);
+    color: #fff;
+  }
+
+  .enq-mobile-btn svg {
+    flex-shrink: 0;
+  }
+
+  /* Give the page bottom padding so content isn't hidden behind the bar */
+  body {
+    padding-bottom: 56px;
+  }
+}
+
+/*==================================================
+  HERO INLINE FORM CARD
+==================================================*/
+
+/*
+  Desktop (lg+): right column inside hero row, vertically centered.
+  Tablet (md):   full-width below hero content, still inside hero.
+  Mobile (<768): shown as a regular in-page block below hero content;
+                 the fixed bottom bar links down to it.
+*/
+
+/* ── Column wrapper ── */
+.hero-form-col {
+  display: none; /* hidden on desktop — side panel is used instead */
+}
+
+/* ── Card ── */
+.hero-form-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* ── Header band ── */
+.hero-form-header {
+  background: var(--primary);
+  padding: 18px 24px 16px;
+}
+
+.hero-form-header h3 {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.hero-form-header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Body ── */
+.hero-form-body {
+  padding: 20px 24px 24px;
+  max-height: 65vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.hero-form-body::-webkit-scrollbar {
+  width: 4px;
+}
+.hero-form-body::-webkit-scrollbar-track {
+  background: #f3f3f3;
+}
+.hero-form-body::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 20px;
+}
+
+/* placeholder text until Merito form is embedded */
+.hero-form-placeholder {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+  margin: 0;
+}
+
+/*==================================================
+  RESPONSIVE — hero form col
+==================================================*/
+
+/* Large desktop: form sits in right half of hero */
+@media (min-width: 992px) {
+  .hero-form-card {
+    max-width: 400px;
+  }
+}
+
+/* Mobile (<768px): full-width card, no side margins, natural flow */
+@media (max-width: 767px) {
+  .hero-form-col {
+    display: flex; /* show inline form only on mobile */
+    padding-top: 28px;
+    padding-bottom: 40px;
+    justify-content: center;
+  }
+
+  .hero-form-card {
+    max-width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+  }
+
+  .hero-form-header {
+    padding: 16px 18px 14px;
+  }
+
+  .hero-form-header h3 {
+    font-size: 16px;
+  }
+
+  .hero-form-body {
+    padding: 16px 18px 20px;
+    max-height: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-form-header h3 {
+    font-size: 15px;
+  }
+
+  .hero-form-header p {
+    font-size: 12px;
+  }
+}
