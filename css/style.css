@@ -416,8 +416,8 @@ h6 {
 }
 
 .hero-row {
-  min-height: 740px;
-  padding: 130px 0 70px;
+  /* min-height: 740px; */
+  padding: 60px 0 60px;
 }
 
 /*==================================================
@@ -3332,7 +3332,7 @@ BOTTOM
   }
   .hero-row {
     min-height: auto;
-    padding: 150px 0 90px;
+    padding: 40px 0 40px;
   }
   .hero-content {
     max-width: 100%;
