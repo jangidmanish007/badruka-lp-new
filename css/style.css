@@ -4008,7 +4008,7 @@ BOTTOM
   }
 
   .bsm-testimonial-card {
-    width: 260px;
+    width: 360px;
     min-height: 220px;
     padding: 22px;
   }
@@ -4142,7 +4142,7 @@ BOTTOM
   }
 
   .bsm-campus-card {
-    min-height: 490px;
+    min-height: 518px;
     border-radius: 18px;
   }
 
@@ -4262,7 +4262,9 @@ BOTTOM
   .leader-content {
     padding: 14px;
   }
-
+  .career-cta-student {
+    width: 83%;
+  }
   .leader-content h3 {
     font-size: 16px;
   }
@@ -4316,7 +4318,9 @@ BOTTOM
   .pgdm-content h4 {
     font-size: 20px;
   }
-
+  .career-cta-student {
+    width: 94%;
+  }
   /* Curriculum */
   .curriculum-content h3 {
     font-size: 22px;
