@@ -24,6 +24,134 @@
     </noscript>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script defer>
+      // Load scripts on interaction
+      function load3rdPartyScripts() {
+        if (window._scriptsLoaded) return;
+        window._scriptsLoaded = true;
+
+        // GTM
+        const gtm = document.createElement('script');
+        gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-WDDM47GH';
+        gtm.async = true;
+        document.body.appendChild(gtm);
+
+        // NoPaperForms
+        const npf = document.createElement('script');
+        npf.src = 'https://widgets.in6.nopaperforms.com/emwgts.js';
+        npf.async = true;
+        document.body.appendChild(npf);
+
+        // Show form wrapper after scripts
+        const form = document.getElementById('slideForm');
+        if (form) form.style.display = 'block';
+      }
+
+      ['scroll', 'click', 'touchstart'].forEach((ev) => {
+        window.addEventListener(ev, load3rdPartyScripts, { once: true, passive: true });
+      });
+
+      // Show download button after 5% scroll
+      window.addEventListener('scroll', () => {
+        const btn = document.getElementById('downloadBrochure');
+        if (!btn) return;
+        const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        btn.style.display = scrolled > 5 ? 'block' : 'none';
+      });
+    </script>
+
+    <!--DTC-->
+    <script type="text/javascript">
+      var npf_d = 'https://application.bsm.edu.in';
+      var npf_c = '6294';
+      var npf_m = '1';
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = 'https://track.nopaperforms.com/js/track.js';
+      document.body.appendChild(s);
+    </script>
+
+    <!--Bing-->
+    <script>
+      (function (w, d, t, r, u) {
+        var f, n, i;
+        ((w[u] = w[u] || []),
+          (f = function () {
+            var o = { ti: '97227936', enableAutoSpaTracking: true };
+            ((o.q = w[u]), (w[u] = new UET(o)), w[u].push('pageLoad'));
+          }),
+          (n = d.createElement(t)),
+          (n.src = r),
+          (n.async = 1),
+          (n.onload = n.onreadystatechange =
+            function () {
+              var s = this.readyState;
+              (s && s !== 'loaded' && s !== 'complete') || (f(), (n.onload = n.onreadystatechange = null));
+            }),
+          (i = d.getElementsByTagName(t)[0]),
+          i.parentNode.insertBefore(n, i));
+      })(window, document, 'script', '//bat.bing.com/bat.js', 'uetq');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WDDM47GH');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16741304463"></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16741304463');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '411384081799302');
+      fbq('track', 'PageView');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=411384081799302&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <div class="top-bar">
@@ -530,7 +658,9 @@
                 <p>Learn, collaborate, and grow in an immersive community.</p>
               </div>
               <div class="bsm-campus-image">
-                <img src="images/card-img-13.webp" alt="Residential Campus" />
+                <img src="images/card-img-13.webp" alt="Residential Campus" class="campus-slide active" />
+                <img src="images/residentials-img-2.webp" alt="Residential Campus" class="campus-slide" />
+                <img src="images/residentials-img-3.webp" alt="Residential Campus" class="campus-slide" />
               </div>
             </div>
           </div>
@@ -1628,6 +1758,20 @@
             closePopup();
           });
       });
+    })();
+  </script>
+
+  <!-- Campus fade slider -->
+  <script>
+    (function () {
+      var slides = document.querySelectorAll('.bsm-campus-image .campus-slide');
+      if (slides.length < 2) return;
+      var current = 0;
+      setInterval(function () {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 3500);
     })();
   </script>
 </html>
