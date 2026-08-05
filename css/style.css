@@ -381,7 +381,7 @@ h6 {
 .hero-section {
   padding: 24px;
   position: relative;
-  min-height: 100vh;
+  min-height: 740px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -416,7 +416,7 @@ h6 {
 }
 
 .hero-row {
-  min-height: 100vh;
+  min-height: 740px;
   padding: 130px 0 70px;
 }
 
