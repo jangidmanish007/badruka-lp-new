@@ -148,7 +148,7 @@
                     Apply Now
                     <i class="bi bi-arrow-right"></i>
                   </a>
-                  <a href="#" class="btn-secondary-custom d-inline-flex align-items-center" data-enq-trigger>
+                  <a href="#" class="btn-secondary-custom d-inline-flex align-items-center" id="openBrochurePopup">
                     Download Brochure
                     <i class="bi bi-download"></i>
                   </a>
@@ -374,7 +374,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
             <h2 class="section-title">
-              The Practademic
+              The Pracademic
               <span>PGDM</span>
             </h2>
             <p class="section-desc">Every project and experience prepares you to be a confident, AI-native leader.</p>
@@ -1204,6 +1204,101 @@
     </a>
   </div>
 
+  <!-- ====================================================
+       BROCHURE DOWNLOAD POPUP
+  ===================================================== -->
+  <div
+    class="brochure-overlay"
+    id="brochureOverlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="brochureModalTitle"
+  >
+    <div class="brochure-modal">
+      <!-- Close -->
+      <button class="brochure-close" id="brochureClose" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+          <path d="M6 6L18 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <!-- Left decorative panel -->
+      <div class="brochure-modal-left" aria-hidden="true">
+        <div class="brochure-modal-glow"></div>
+        <img src="images/bsm-logo.webp" alt="BSM Logo" class="brochure-logo" />
+        <p class="brochure-tagline">AI-Native Business Education<br /><span>Backed by a 70+ Year Legacy</span></p>
+        <ul class="brochure-highlights">
+          <li><i class="bi bi-check-circle-fill"></i> AICTE Approved PGDM</li>
+          <li><i class="bi bi-check-circle-fill"></i> Fully Residential Campus</li>
+          <li><i class="bi bi-check-circle-fill"></i> 15.5 LPA Highest Package</li>
+          <li><i class="bi bi-check-circle-fill"></i> 100% Placement Support</li>
+        </ul>
+      </div>
+
+      <!-- Right form panel -->
+      <div class="brochure-modal-right">
+        <h2 class="brochure-form-title" id="brochureModalTitle">PGDM at BSM | Admissions Open</h2>
+        <p class="brochure-form-sub">An AI-native, industry-aligned management program for future-ready leaders.</p>
+
+        <form id="home-brochure-form" name="email-form" data-name="Email Form" method="get" novalidate>
+          <div class="brochure-field-group">
+            <input
+              class="brochure-input"
+              maxlength="256"
+              name="fullName"
+              placeholder="Full Name"
+              type="text"
+              id="fullName"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="brochure-field-group">
+            <input
+              class="brochure-input"
+              maxlength="256"
+              name="email"
+              placeholder="Email Address"
+              type="email"
+              id="brochureEmail"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="brochure-field-group">
+            <input
+              class="brochure-input"
+              maxlength="15"
+              name="phone"
+              placeholder="Phone Number"
+              type="tel"
+              id="brochurePhone"
+              required
+              autocomplete="tel"
+            />
+          </div>
+
+          <button type="submit" class="brochure-submit" id="brochureSubmit">
+            <span class="brochure-submit-text">
+              Download Brochure
+              <i class="bi bi-download ms-2"></i>
+            </span>
+            <span class="brochure-submit-loading" hidden>
+              <span class="brochure-spinner"></span>
+              Please wait…
+            </span>
+          </button>
+
+          <p class="brochure-privacy">
+            <i class="bi bi-shield-lock-fill"></i>
+            Your information is safe with us. No spam, ever.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     const leadersSwiper = new Swiper('.leadersSwiper', {
@@ -1394,6 +1489,102 @@
         } else if (inHero && !manualClose) {
           openPanel();
         }
+      });
+    })();
+  </script>
+  <!-- Brochure Popup Script -->
+  <script>
+    (function () {
+      var overlay = document.getElementById('brochureOverlay');
+      var openBtn = document.getElementById('openBrochurePopup');
+      var closeBtn = document.getElementById('brochureClose');
+      var form = document.getElementById('home-brochure-form');
+      var submitBtn = document.getElementById('brochureSubmit');
+      var submitText = submitBtn.querySelector('.brochure-submit-text');
+      var submitLoading = submitBtn.querySelector('.brochure-submit-loading');
+
+      var SCRIPT_URL =
+        'https://script.google.com/macros/s/AKfycbzZtoqzWg4wDmUxaqT8Ir3LUp23srsZqwu-DJg7P6NoocH8xwu02eqskcZ2YHZA24CE/exec';
+      var PDF_URL = 'https://www.bsm.edu.in/wp-content/uploads/2026/01/Print-File-Brochure-BSM.pdf';
+
+      function openPopup() {
+        overlay.classList.add('brochure--active');
+        document.body.classList.add('brochure-no-scroll');
+        overlay.querySelector('.brochure-modal').focus();
+      }
+
+      function closePopup() {
+        overlay.classList.remove('brochure--active');
+        document.body.classList.remove('brochure-no-scroll');
+        form.reset();
+        setLoading(false);
+      }
+
+      function setLoading(state) {
+        submitBtn.disabled = state;
+        submitText.hidden = state;
+        submitLoading.hidden = !state;
+      }
+
+      /* Open on Download Brochure click */
+      if (openBtn) {
+        openBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          openPopup();
+        });
+      }
+
+      /* Close on X button */
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closePopup);
+      }
+
+      /* Close on overlay backdrop click */
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closePopup();
+      });
+
+      /* Close on Escape */
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && overlay.classList.contains('brochure--active')) {
+          closePopup();
+        }
+      });
+
+      /* Form submission */
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var fullName = form.elements['fullName'].value.trim();
+        var email = form.elements['email'].value.trim();
+        var phone = form.elements['phone'].value.trim();
+
+        if (!fullName || !email || !phone) return;
+
+        setLoading(true);
+
+        var fd = new FormData();
+        fd.append('form_type', 'brochure');
+        fd.append('full_name', fullName);
+        fd.append('email', email);
+        fd.append('mobile', phone);
+        fd.append('page_url', window.location.href);
+
+        fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: fd,
+        })
+          .then(function () {
+            window.open(PDF_URL, '_blank');
+            closePopup();
+          })
+          .catch(function (err) {
+            console.error('Brochure form error:', err);
+            /* Still open PDF so user isn't blocked */
+            window.open(PDF_URL, '_blank');
+            closePopup();
+          });
       });
     })();
   </script>
