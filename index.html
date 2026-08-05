@@ -1291,6 +1291,33 @@
             />
           </div>
 
+          <div class="brochure-field-row">
+            <div class="brochure-field-group">
+              <input
+                class="brochure-input"
+                maxlength="100"
+                name="city"
+                placeholder="City"
+                type="text"
+                id="brochureCity"
+                required
+                autocomplete="address-level2"
+              />
+            </div>
+            <div class="brochure-field-group">
+              <input
+                class="brochure-input"
+                maxlength="100"
+                name="state"
+                placeholder="State"
+                type="text"
+                id="brochureState"
+                required
+                autocomplete="address-level1"
+              />
+            </div>
+          </div>
+
           <button type="submit" class="brochure-submit" id="brochureSubmit">
             <span class="brochure-submit-text">
               Download Brochure
@@ -1570,8 +1597,10 @@
         var fullName = form.elements['fullName'].value.trim();
         var email = form.elements['email'].value.trim();
         var phone = form.elements['phone'].value.trim();
+        var city = form.elements['city'].value.trim();
+        var state = form.elements['state'].value.trim();
 
-        if (!fullName || !email || !phone) return;
+        if (!fullName || !email || !phone || !city || !state) return;
 
         setLoading(true);
 
@@ -1580,6 +1609,8 @@
         fd.append('full_name', fullName);
         fd.append('email', email);
         fd.append('mobile', phone);
+        fd.append('city', city);
+        fd.append('state', state);
         fd.append('page_url', window.location.href);
 
         fetch(SCRIPT_URL, {
@@ -1593,7 +1624,6 @@
           })
           .catch(function (err) {
             console.error('Brochure form error:', err);
-            /* Still open PDF so user isn't blocked */
             window.open(PDF_URL, '_blank');
             closePopup();
           });
