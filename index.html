@@ -1664,13 +1664,15 @@
       }
 
       function openPanel() {
-        if (isMobile()) return; // panel not used on mobile
+        if (isMobile()) return;
+        if (isOpen) return; // already open — no flicker
         isOpen = true;
         unit.classList.add('enq--open');
         tab.setAttribute('aria-expanded', 'true');
       }
 
       function closePanel() {
+        if (!isOpen) return; // already closed — no flicker
         isOpen = false;
         unit.classList.remove('enq--open');
         tab.setAttribute('aria-expanded', 'false');
@@ -1687,12 +1689,15 @@
       var observer = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
+            var wasInHero = inHero;
             inHero = entry.isIntersecting;
-            if (isMobile()) return; // panel not used on mobile
-            if (inHero) {
-              manualClose = false;
-              openPanel();
-            } else {
+            if (isMobile()) return;
+
+            if (inHero && !wasInHero) {
+              // Hero just came into view — open only if not manually closed
+              if (!manualClose) openPanel();
+            } else if (!inHero && wasInHero) {
+              // Hero left view — close and reset manualClose for next entry
               closePanel();
               manualClose = false;
             }
@@ -1703,15 +1708,22 @@
 
       if (heroEl) observer.observe(heroEl);
 
-      /* ── Scroll: close on scroll, reopen after idle ── */
+      /* ── Scroll: close only when scrolled > 600px from top ── */
       var scrollTimer = null;
       window.addEventListener(
         'scroll',
         function () {
-          if (!isMobile() && isOpen) closePanel();
+          if (isMobile()) return;
+
+          var scrollY = window.scrollY || window.pageYOffset;
+
+          // Only collapse on scroll when we're deep (past 600px)
+          if (scrollY > 600 && isOpen) closePanel();
+
+          // After scroll settles, reopen if still inside hero and not manually closed
           clearTimeout(scrollTimer);
           scrollTimer = setTimeout(function () {
-            if (!isMobile() && inHero && !manualClose) openPanel();
+            if (!isMobile() && inHero && !manualClose && !isOpen) openPanel();
           }, 600);
         },
         { passive: true },

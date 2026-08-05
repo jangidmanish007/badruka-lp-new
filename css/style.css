@@ -5294,6 +5294,8 @@ body.brochure-no-scroll {
 
 .slb-item:hover {
   transform: translateX(6px);
+  background: #fefbf7;
+  box-shadow: 0 7px 29px 0 rgba(100, 100, 111, 0.1);
 }
 
 /* ── ICON ── */
