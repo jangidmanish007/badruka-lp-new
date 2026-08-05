@@ -4305,7 +4305,7 @@ BOTTOM
     font-size: 16px;
   }
   .hero-row {
-    padding: 40px 0 50px;
+    padding: 40px 0 20px;
   }
 
   .btn-primary-custom,
@@ -4842,7 +4842,7 @@ BOTTOM
   .hero-form-col {
     display: flex; /* show inline form only on mobile */
     padding-top: 28px;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
     justify-content: center;
   }
 

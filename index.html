@@ -163,7 +163,7 @@
                 <i class="bi bi-telephone-fill"></i>
                 +91 7878 XXXX XX
               </a>
-              <a href="#" class="d-flex align-items-center">
+              <a href="mailto:admissions@bsm.edu.in" class="d-flex align-items-center">
                 <i class="bi bi-envelope-fill"></i>
                 admissions@bsm.edu.in
               </a>
@@ -1734,6 +1734,7 @@
 
         setLoading(true);
 
+        /* ── Lead sheet integration (uncomment this block to re-enable) ──
         var fd = new FormData();
         fd.append('form_type', 'brochure');
         fd.append('full_name', fullName);
@@ -1757,6 +1758,12 @@
             window.open(PDF_URL, '_blank');
             closePopup();
           });
+        ── End lead sheet integration ── */
+
+        /* Direct download — remove this block when lead sheet is re-enabled */
+        window.open(PDF_URL, '_blank');
+        closePopup();
+        /* ── End direct download ── */
       });
     })();
   </script>
