@@ -261,8 +261,8 @@ h6 {
   background: #fff;
 }
 .navbar-brand img {
-  max-height: 35px;
-  width: auto;
+  width: 100%;
+  max-width: 142px;
 }
 
 .navbar-nav {
