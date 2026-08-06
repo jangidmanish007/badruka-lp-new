@@ -1864,12 +1864,16 @@
         })
           .then(function () {
             window.open(PDF_URL, '_blank');
-            window.location.href = 'thank-you.html';
+            setTimeout(function () {
+              window.location.href = 'thank-you.html';
+            }, 300);
           })
           .catch(function (err) {
             console.error('Brochure form error:', err);
             window.open(PDF_URL, '_blank');
-            window.location.href = 'thank-you.html';
+            setTimeout(function () {
+              window.location.href = 'thank-you.html';
+            }, 300);
           });
       });
     })();
