@@ -141,7 +141,7 @@
         s = b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t, s);
       })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '411384081799302');
+      fbq('init', '2119251019020776');
       fbq('track', 'PageView');
     </script>
     <noscript
@@ -149,7 +149,7 @@
         height="1"
         width="1"
         style="display: none"
-        src="https://www.facebook.com/tr?id=411384081799302&ev=PageView&noscript=1"
+        src="https://www.facebook.com/tr?id=2119251019020776&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
   </head>
@@ -1787,7 +1787,7 @@
       var submitLoading = submitBtn.querySelector('.brochure-submit-loading');
 
       var SCRIPT_URL =
-        'https://script.google.com/macros/s/AKfycbzZtoqzWg4wDmUxaqT8Ir3LUp23srsZqwu-DJg7P6NoocH8xwu02eqskcZ2YHZA24CE/exec';
+        'https://script.google.com/macros/s/AKfycby-WVBwzlHikSq5UztcJPAtnuu0xfprUaMioMbR2I8RHshMS_F7rK0gMo6EKTww_K67/exec';
       var PDF_URL = 'https://www.bsm.edu.in/wp-content/uploads/2026/01/Print-File-Brochure-BSM.pdf';
 
       function openPopup() {
@@ -1848,7 +1848,6 @@
 
         setLoading(true);
 
-        /* ── Lead sheet integration (uncomment this block to re-enable) ──
         var fd = new FormData();
         fd.append('form_type', 'brochure');
         fd.append('full_name', fullName);
@@ -1865,19 +1864,13 @@
         })
           .then(function () {
             window.open(PDF_URL, '_blank');
-            closePopup();
+            window.location.href = 'thank-you.html';
           })
           .catch(function (err) {
             console.error('Brochure form error:', err);
             window.open(PDF_URL, '_blank');
-            closePopup();
+            window.location.href = 'thank-you.html';
           });
-        ── End lead sheet integration ── */
-
-        /* Direct download — remove this block when lead sheet is re-enabled */
-        window.open(PDF_URL, '_blank');
-        closePopup();
-        /* ── End direct download ── */
       });
     })();
   </script>
