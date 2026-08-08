@@ -2517,8 +2517,6 @@ CARD
   border-radius: 8px;
   overflow: hidden;
   transition: 0.35s;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-  padding: 16px;
 }
 
 .leader-card:hover {
@@ -2534,7 +2532,6 @@ IMAGE
 .leader-image {
   background: #ffe9a8;
   overflow: hidden;
-  border-radius: 8px;
 }
 
 .leader-image img {
@@ -2552,7 +2549,7 @@ CONTENT
 ==================================================*/
 
 .leader-content {
-  padding: 18px 0px;
+  padding: 24px 24px;
 }
 
 .leader-content h3 {
@@ -2581,10 +2578,10 @@ CONTENT
 .leader-content p {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.6;
   font-weight: 400;
-  color: #00000080;
+  color: #000000bf;
 }
 
 /*==================================================
@@ -3985,7 +3982,7 @@ BOTTOM
   }
 
   .leader-content {
-    padding: 16px 0px;
+    padding: 16px 16px;
   }
 
   .leader-content h3 {
@@ -4287,7 +4284,7 @@ BOTTOM
   }
 
   .leader-content {
-    padding: 14px 0px;
+    padding: 14px 14px;
   }
   .career-cta-student {
     width: 83%;
@@ -5629,5 +5626,178 @@ body.brochure-no-scroll {
   .slb-cta-btn {
     padding: 12px 18px;
     font-size: 13px;
+  }
+}
+
+/*==================================================
+  STUDENT STORIES SECTION
+==================================================*/
+
+.student-stories-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+/* Thumbnail area — warm yellow like leader-image */
+.story-thumb {
+  position: relative;
+  background: #ffe9a8;
+  overflow: hidden;
+  aspect-ratio: 16 / 22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Clickable overlay covers the whole thumb */
+.story-play-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 2;
+}
+
+/* Play button circle */
+.story-play-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(241, 102, 37, 0.45);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: none;
+  position: relative;
+}
+
+/* YouTube play icon inside the button */
+.story-play-icon {
+  width: 56px;
+  height: 56px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+/* Ripple / pulse ring animation */
+@keyframes story-pulse {
+  0% {
+    box-shadow:
+      0 8px 24px rgba(241, 102, 37, 0.45),
+      0 0 0 0 rgba(241, 102, 37, 0.55);
+  }
+  50% {
+    box-shadow:
+      0 8px 24px rgba(241, 102, 37, 0.45),
+      0 0 0 14px rgba(241, 102, 37, 0);
+  }
+  100% {
+    box-shadow:
+      0 8px 24px rgba(241, 102, 37, 0.45),
+      0 0 0 0 rgba(241, 102, 37, 0);
+  }
+}
+
+/* Hover states */
+.story-play-wrap:hover .story-play-btn {
+  transform: scale(1.12);
+  box-shadow: 0 12px 32px rgba(241, 102, 37, 0.55);
+  animation: story-pulse 2.2s ease-in-out infinite;
+}
+
+.story-card:hover .story-play-btn {
+  transform: scale(1.12);
+  box-shadow: 0 12px 32px rgba(241, 102, 37, 0.55);
+  animation: story-pulse 2.2s ease-in-out infinite;
+}
+
+.story-play-wrap:hover .story-play-icon {
+  transform: scale(1.1);
+}
+
+/* leader-card hover already handles the card lift —
+   make sure story-card thumb border follows brand colour */
+.story-card:hover .story-thumb {
+  /* thumbnail tint on hover */
+}
+
+/* Quote mark after student name */
+.story-quote {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  margin-left: 2px;
+}
+
+/*==================================================
+  RESPONSIVE — STUDENT STORIES
+==================================================*/
+
+/* Large tablets */
+@media (max-width: 1199px) {
+  .student-stories-section {
+    padding: 70px 0;
+  }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+  .student-stories-section {
+    padding: 60px 0;
+  }
+
+  /* 2-column grid on tablets */
+  .student-stories-section .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Large phones */
+@media (max-width: 767px) {
+  .student-stories-section {
+    padding: 50px 0;
+  }
+
+  .story-play-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .story-play-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Small phones — single column */
+@media (max-width: 575px) {
+  .student-stories-section {
+    padding: 44px 0;
+  }
+
+  .student-stories-section .col-lg-3,
+  .student-stories-section .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .story-play-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .story-play-icon {
+    width: 36px;
+    height: 36px;
   }
 }
