@@ -2055,14 +2055,14 @@
           .then(function () {
             window.open(PDF_URL, '_blank');
             setTimeout(function () {
-              window.location.href = '/thank-you.html';
+              window.location.href = 'thank-you.html';
             }, 700);
           })
           .catch(function (err) {
             console.error('Brochure form error:', err);
             window.open(PDF_URL, '_blank');
             setTimeout(function () {
-              window.location.href = '/thank-you.html';
+              window.location.href = 'thank-you.html';
             }, 700);
           });
       });
