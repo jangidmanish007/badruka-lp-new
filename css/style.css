@@ -80,12 +80,15 @@ p {
 .text-primary {
   color: var(--primary) !important;
 }
+
 .bg-primary {
   background: var(--primary) !important;
 }
+
 .rounded-xl {
   border-radius: 18px;
 }
+
 .shadow-custom {
   box-shadow: var(--shadow);
 }
@@ -93,6 +96,7 @@ p {
 .section-padding {
   padding: 80px 0;
 }
+
 .section-padding-sm {
   padding: 70px 0;
 }
@@ -101,6 +105,7 @@ p {
   overflow: hidden;
   border-radius: 16px;
 }
+
 .zoom-hover img:hover {
   transform: scale(1.08);
 }
@@ -112,13 +117,16 @@ p {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f3f3f3;
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 20px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-dark);
 }
@@ -169,6 +177,7 @@ h6 {
 .section-title span {
   font-weight: 700;
 }
+
 .section-title span {
   color: var(--primary);
 }
@@ -223,6 +232,7 @@ h6 {
 .top-right span {
   color: #444;
 }
+
 .top-right strong {
   color: #000;
   font-weight: 700;
@@ -260,6 +270,7 @@ h6 {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #fff;
 }
+
 .navbar-brand img {
   width: 100%;
   max-width: 142px;
@@ -318,6 +329,7 @@ h6 {
   box-shadow: none !important;
   padding: 0;
 }
+
 .navbar-toggler:focus {
   box-shadow: none;
 }
@@ -339,6 +351,7 @@ h6 {
   from {
     transform: translateY(-100%);
   }
+
   to {
     transform: translateY(0);
   }
@@ -541,6 +554,7 @@ h6 {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -560,6 +574,7 @@ h6 {
   max-height: 60px;
   object-fit: contain;
 }
+
 .logo-card:hover {
   transform: translateY(-3px);
 }
@@ -628,6 +643,7 @@ h6 {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -638,10 +654,12 @@ h6 {
 }
 
 @keyframes floating {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -679,14 +697,12 @@ h6 {
   position: absolute;
   inset: -150%;
   z-index: 1;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    transparent 280deg,
-    #f58220 315deg,
-    #ffb06a 335deg,
-    #f58220 360deg
-  );
+  background: conic-gradient(from 0deg,
+      transparent 0deg,
+      transparent 280deg,
+      #f58220 315deg,
+      #ffb06a 335deg,
+      #f58220 360deg);
   animation: rotateBorder 5s linear infinite;
   will-change: transform;
 }
@@ -704,6 +720,7 @@ h6 {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -854,6 +871,7 @@ h6 {
   inset: 0;
   z-index: 1;
 }
+
 .card-bg img {
   width: 100%;
   height: 100%;
@@ -934,6 +952,7 @@ h6 {
   z-index: 4;
   pointer-events: none;
 }
+
 .student-image img {
   display: block;
   width: 100%;
@@ -943,11 +962,13 @@ h6 {
 .audience-card-lg {
   min-height: 420px;
 }
+
 .audience-card-lg .student-image {
   right: 30px;
   bottom: 0;
   width: 48%;
 }
+
 .audience-card-lg .card-content {
   padding-top: 65px;
 }
@@ -955,25 +976,30 @@ h6 {
 .audience-card-sm {
   min-height: 320px;
 }
+
 .audience-card-sm .student-image {
   width: 42%;
   right: 0;
   bottom: 0;
 }
+
 .audience-card-sm h3 {
   font-size: 34px;
 }
+
 .audience-card-sm small {
   display: block;
   font-family: 'Inter', sans-serif;
   color: #666;
   margin-bottom: 18px;
 }
+
 .audience-card-sm h5 {
   font-family: 'Satoshi', sans-serif;
   font-size: 20px;
   margin-bottom: 18px;
 }
+
 .audience-card-sm ul li {
   position: relative;
   padding-left: 22px;
@@ -982,6 +1008,7 @@ h6 {
   color: #333;
   font-family: 'Inter', sans-serif;
 }
+
 .audience-card-sm ul li::before {
   content: '';
   width: 7px;
@@ -996,16 +1023,20 @@ h6 {
 .audience-card-blue {
   min-height: 320px;
 }
+
 .audience-card-blue .card-content {
   max-width: 380px;
 }
+
 .audience-card-blue h3 {
   color: #fff;
   font-size: 42px;
 }
+
 .audience-card-blue p {
   color: rgba(255, 255, 255, 0.88);
 }
+
 .audience-card-blue .student-image {
   width: 48%;
   right: 0;
@@ -1207,6 +1238,7 @@ SMALL CARDS
 .pgdm-card-blue p {
   color: #fff;
 }
+
 .card-2-content h4 {
   font-size: 32px;
 }
@@ -1396,6 +1428,7 @@ IMAGE POSITION
   width: 100%;
   max-width: 400px;
 }
+
 /*=========================================================
                 SECTION HEADING
 =========================================================*/
@@ -1473,7 +1506,7 @@ IMAGE POSITION
   padding-left: 70px;
 }
 
-.other-stats-info > div {
+.other-stats-info>div {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1481,7 +1514,7 @@ IMAGE POSITION
 
 /* Number */
 
-.other-stats-info > div > div:first-child {
+.other-stats-info>div>div:first-child {
   font-family: 'Satoshi', sans-serif;
   font-size: 32px;
   font-weight: 700;
@@ -1565,9 +1598,11 @@ IMAGE POSITION
   color: #171717;
   margin-bottom: 18px;
 }
+
 .curriculum-content h3 span {
   font-weight: 700;
 }
+
 .curriculum-content p {
   font-family: 'Inter', sans-serif;
   font-size: 15px;
@@ -1614,6 +1649,7 @@ IMAGE POSITION
 .curriculum-image-1 {
   width: 94%;
 }
+
 .curriculum-image-2 {
   width: 60%;
 }
@@ -1883,12 +1919,10 @@ CARD GLOW
   position: absolute;
   inset: 0;
   border-radius: 22px;
-  background: radial-gradient(
-    circle at top right,
+  background: radial-gradient(circle at top right,
 
-    rgba(255, 255, 255, 0.18),
-    transparent 65%
-  );
+      rgba(255, 255, 255, 0.18),
+      transparent 65%);
   opacity: 0;
   transition: 0.45s;
   pointer-events: none;
@@ -2810,6 +2844,7 @@ ICON
   background-position: left bottom 0px;
   background-size: cover;
 }
+
 .scholarship-card-yellow .scholarship-icon {
   background: url('/images/bg-card-img-3.webp');
   background-position: left bottom 0px;
@@ -3190,9 +3225,11 @@ BOTTOM
   .hero-content h1 {
     font-size: 60px;
   }
+
   .navbar-nav {
     gap: 24px;
   }
+
   .logo-track img {
     margin: 0 35px;
   }
@@ -3200,6 +3237,7 @@ BOTTOM
   .audience-card-lg .student-image {
     width: 50%;
   }
+
   .audience-card .card-content {
     padding: 45px;
   }
@@ -3209,12 +3247,14 @@ BOTTOM
   .container {
     max-width: 1440px;
   }
+
   .hero-content h1 {
     font-size: 72px;
   }
 }
 
 @media (max-width: 991px) {
+
   /* Scholarship */
   .scholarship-section {
     padding: 70px 0;
@@ -3298,9 +3338,11 @@ BOTTOM
   .top-bar {
     display: none;
   }
+
   .main-navbar {
     padding: 14px 0;
   }
+
   .floating-admission {
     display: none;
   }
@@ -3326,6 +3368,7 @@ BOTTOM
   .logo-slider {
     padding: 20px 0;
   }
+
   .logo-track img {
     height: 52px;
     margin: 0 28px;
@@ -3335,31 +3378,39 @@ BOTTOM
   .hero-section {
     text-align: center;
   }
+
   .hero-row {
     min-height: auto;
     padding: 40px 0 40px;
   }
+
   .hero-content {
     max-width: 100%;
   }
+
   .hero-content h1 {
     font-size: 52px;
   }
+
   .hero-content p {
     margin-left: auto;
     margin-right: auto;
     font-size: 20px;
   }
+
   .hero-pills {
     justify-content: center;
   }
+
   .accreditation {
     max-width: 100%;
     justify-content: center;
   }
+
   .hero-buttons {
     justify-content: center;
   }
+
   /* AICTE wrapper center on tablet */
   .aicte-wrapper {
     justify-content: center;
@@ -3369,12 +3420,15 @@ BOTTOM
   .outcomes-section {
     padding: 70px 0;
   }
+
   .section-title {
     font-size: 40px;
   }
+
   .card-content {
     padding: 36px 20px;
   }
+
   .outcome-card {
     margin-bottom: 10px;
   }
@@ -3383,12 +3437,15 @@ BOTTOM
   .audience-section {
     padding: 70px 0;
   }
+
   .audience-section .section-title {
     font-size: 40px;
   }
+
   .audience-card {
     min-height: auto;
   }
+
   .audience-card .card-content {
     padding: 40px;
     max-width: 100%;
@@ -3593,6 +3650,7 @@ BOTTOM
 }
 
 @media (max-width: 767px) {
+
   /* Scholarship */
   .scholarship-section {
     padding: 60px 0;
@@ -3733,13 +3791,16 @@ BOTTOM
   .logo-slider {
     padding: 16px 0;
   }
+
   .logo-track {
     animation-duration: 20s;
   }
+
   .logo-track img {
     height: 42px;
     margin: 0 20px;
   }
+
   .logo-slider::before,
   .logo-slider::after {
     width: 45px;
@@ -3750,47 +3811,59 @@ BOTTOM
     min-height: auto;
     padding: 0px;
   }
+
   .hero-row {
     padding: 60px 0 70px;
   }
+
   .hero-content h1 {
     font-size: 42px;
     line-height: 1.15;
   }
+
   .hero-content p {
     font-size: 17px;
   }
+
   .hero-tag {
     font-size: 12px;
     padding: 8px 16px;
     margin-bottom: 0px;
   }
+
   .hero-pills {
     gap: 10px;
   }
+
   .hero-pills span {
     font-size: 12px;
     padding: 10px 16px;
   }
+
   .logo-card {
     width: 90px;
     height: 70px;
   }
+
   .logo-card img {
     max-width: 65%;
   }
+
   .hero-buttons {
     flex-direction: column;
   }
+
   /* AICTE wrapper — stack on mobile */
   .aicte-wrapper {
     align-items: center;
     gap: 12px !important;
   }
+
   .vertical-line {
     width: 1px;
     height: 41px;
   }
+
   .accreditation {
     max-width: 100%;
   }
@@ -3804,27 +3877,34 @@ BOTTOM
   .section-title {
     font-size: 32px;
   }
+
   .section-desc {
     font-size: 15px;
   }
+
   .card-content {
     padding: 32px 18px;
   }
+
   .icon-box {
     width: 64px;
     height: 64px;
   }
+
   .icon-box img {
     width: 24px;
     height: 24px;
   }
+
   .outcome-card h3 {
     font-size: 36px;
   }
+
   .bottom-note {
     font-size: 13px;
     margin-top: 30px;
   }
+
   .outcome-card::before {
     animation-duration: 6s;
   }
@@ -3833,21 +3913,27 @@ BOTTOM
   .audience-section {
     padding: 60px 0;
   }
+
   .audience-section .section-title {
     font-size: 32px;
   }
+
   .audience-card .card-content {
     padding: 30px;
   }
+
   .audience-card .card-content h3 {
     font-size: 30px;
   }
+
   .audience-card .card-content h3 span {
     font-size: 24px;
   }
+
   .theme-btn {
     width: 100%;
   }
+
   .highlight-text {
     display: block;
     line-height: 1.7;
@@ -3928,7 +4014,7 @@ BOTTOM
     gap: 20px;
   }
 
-  .other-stats-info > div > div:first-child {
+  .other-stats-info>div>div:first-child {
     font-size: 26px;
   }
 
@@ -3948,6 +4034,7 @@ BOTTOM
     text-align: center;
     padding: 28px;
   }
+
   .curriculum-content img {
     margin: auto;
   }
@@ -4083,6 +4170,7 @@ BOTTOM
   .final-cta-students img {
     width: 470px;
   }
+
   .final-cta-circle {
     width: 369px;
     height: 98px;
@@ -4142,6 +4230,7 @@ BOTTOM
 }
 
 @media (max-width: 576px) {
+
   /* Scholarship */
   .scholarship-card {
     padding: 20px;
@@ -4196,9 +4285,11 @@ BOTTOM
   .navbar-brand img {
     height: 44px;
   }
+
   .hero-row {
     padding: 40px 0 60px;
   }
+
   .logo-track img {
     height: 36px;
     margin: 0 16px;
@@ -4255,11 +4346,11 @@ BOTTOM
     padding: 18px;
   }
 
-  .other-stats-info > div {
+  .other-stats-info>div {
     flex: 0 0 calc(50% - 10px);
   }
 
-  .other-stats-info > div > div:first-child {
+  .other-stats-info>div>div:first-child {
     font-size: 22px;
   }
 
@@ -4286,9 +4377,11 @@ BOTTOM
   .leader-content {
     padding: 14px 14px;
   }
+
   .career-cta-student {
     width: 83%;
   }
+
   .leader-content h3 {
     font-size: 16px;
   }
@@ -4306,9 +4399,11 @@ BOTTOM
   .hero-content h1 {
     font-size: 30px;
   }
+
   .hero-content p {
     font-size: 16px;
   }
+
   .hero-row {
     padding: 40px 0 20px;
   }
@@ -4322,15 +4417,19 @@ BOTTOM
   .outcomes-section {
     padding: 60px 0;
   }
+
   .section-title {
     font-size: 28px;
   }
+
   .section-desc {
     font-size: 14px;
   }
+
   .card-content {
     padding: 28px 16px;
   }
+
   .outcome-card h3 {
     font-size: 32px;
   }
@@ -4339,17 +4438,21 @@ BOTTOM
   .pgdm-content h3 {
     font-size: 24px;
   }
+
   .pgdm-content h4 {
     font-size: 20px;
   }
+
   .career-cta-student {
     width: 94%;
   }
+
   /* Curriculum */
   .curriculum-content h3 {
     font-size: 22px;
   }
-  .other-stats-info > div {
+
+  .other-stats-info>div {
     flex: 0 0 100%;
   }
 
@@ -4474,6 +4577,7 @@ BOTTOM
   0% {
     transform: translate3d(0, 0, 0);
   }
+
   100% {
     transform: translate3d(-50%, 0, 0);
   }
@@ -4495,6 +4599,7 @@ BOTTOM
   0% {
     transform: translate3d(-50%, 0, 0);
   }
+
   100% {
     transform: translate3d(0, 0, 0);
   }
@@ -4551,7 +4656,8 @@ BOTTOM
   position: fixed;
   right: 0;
   top: 50%;
-  transform: translateY(-50%) translateX(400px); /* panel width, fully hidden */
+  transform: translateY(-50%) translateX(400px);
+  /* panel width, fully hidden */
   z-index: 9999;
   display: flex;
   align-items: stretch;
@@ -4588,8 +4694,10 @@ BOTTOM
   text-transform: uppercase;
   box-shadow: -5px 0 18px rgba(0, 0, 0, 0.22);
   transition: background 0.3s ease;
-  order: 0; /* tab on the LEFT of panel */
-  align-self: center; /* vertically center tab relative to panel */
+  order: 0;
+  /* tab on the LEFT of panel */
+  align-self: center;
+  /* vertically center tab relative to panel */
 }
 
 .enq-tab:hover {
@@ -4617,7 +4725,8 @@ BOTTOM
 /* ── PANEL ── */
 .enq-panel {
   pointer-events: all;
-  order: 1; /* panel on the RIGHT of tab */
+  order: 1;
+  /* panel on the RIGHT of tab */
   width: 400px;
   max-height: 88vh;
   background: #fff;
@@ -4686,9 +4795,11 @@ BOTTOM
 .enq-panel-body::-webkit-scrollbar {
   width: 4px;
 }
+
 .enq-panel-body::-webkit-scrollbar-track {
   background: #f3f3f3;
 }
+
 .enq-panel-body::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 20px;
@@ -4696,11 +4807,13 @@ BOTTOM
 
 /* ── MOBILE BOTTOM BAR ── */
 .enq-mobile-bar {
-  display: none; /* hidden on desktop */
+  display: none;
+  /* hidden on desktop */
 }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 767px) {
+
   /* Hide desktop side panel entirely on mobile */
   .enq-unit {
     display: none !important;
@@ -4764,7 +4877,8 @@ BOTTOM
 
 /* ── Column wrapper ── */
 .hero-form-col {
-  display: none; /* hidden on desktop — side panel is used instead */
+  display: none;
+  /* hidden on desktop — side panel is used instead */
 }
 
 /* ── Card ── */
@@ -4814,9 +4928,11 @@ BOTTOM
 .hero-form-body::-webkit-scrollbar {
   width: 4px;
 }
+
 .hero-form-body::-webkit-scrollbar-track {
   background: #f3f3f3;
 }
+
 .hero-form-body::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 20px;
@@ -4845,7 +4961,8 @@ BOTTOM
 /* Mobile (<768px): full-width card, no side margins, natural flow */
 @media (max-width: 767px) {
   .hero-form-col {
-    display: flex; /* show inline form only on mobile */
+    display: flex;
+    /* show inline form only on mobile */
     padding-top: 28px;
     padding-bottom: 0px;
     justify-content: center;
@@ -5389,10 +5506,12 @@ body.brochure-no-scroll {
 }
 
 @keyframes pulse-star {
+
   0%,
   100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.08);
   }
@@ -5694,11 +5813,13 @@ body.brochure-no-scroll {
       0 8px 24px rgba(241, 102, 37, 0.45),
       0 0 0 0 rgba(241, 102, 37, 0.55);
   }
+
   50% {
     box-shadow:
       0 8px 24px rgba(241, 102, 37, 0.45),
       0 0 0 14px rgba(241, 102, 37, 0);
   }
+
   100% {
     box-shadow:
       0 8px 24px rgba(241, 102, 37, 0.45),
@@ -5736,6 +5857,168 @@ body.brochure-no-scroll {
   font-weight: 700;
   line-height: 1;
   margin-left: 2px;
+}
+
+.image-wrapper {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+/* Background Orange Corner Box */
+.orange-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background-color: #eb5a28;
+  border-top-left-radius: 20px;
+  z-index: 0;
+}
+
+.main-image-container {
+  z-index: 1;
+}
+
+.main-image-container img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  border-radius: 18px !important;
+  transition: opacity 0.35s ease-in-out;
+}
+
+.max-height-800 {
+  max-height: 800px !important;
+}
+
+.aspect-ratio-36-37 {
+  aspect-ratio: 36 / 37 !important;
+}
+
+/* Image Fade Animation */
+.img-fade-out {
+  opacity: 0.2;
+}
+
+/* Floating Bottom Banner */
+.floating-banner {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 86%;
+  background-color: #FFF0C6;
+  border: 1px solid #f8e3b6;
+  z-index: 2;
+  padding: 20px;
+}
+
+.banner-text {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.sparkle-icon {
+  color: #d89311;
+  font-size: 1.1rem;
+}
+
+.btn-orange {
+  background-color: var(--primary-orange);
+  border: none;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-orange:hover {
+  background-color: #d95011;
+}
+
+/* --- Right Tabs Styling --- */
+.tab-item {
+  background: #FFFBF0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tab-num {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555555;
+  min-width: 24px;
+}
+
+.pill-badge {
+  display: inline-block;
+  border-radius: 50px;
+  background: rgba(241, 102, 37, 0.10);
+  color: #F16625;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+}
+
+.tab-title {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.tab-desc {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+  /* 157.143% */
+}
+
+/* Inactive State: Hide Paragraph Description */
+.tab-item:not(.active) .tab-desc {
+  display: none;
+}
+
+/* Active Tab State */
+.tab-item.active {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: #FFF;
+  box-shadow: 0 7px 29px 0 rgba(100, 100, 111, 0.10);
+}
+
+.tab-item.active .tab-num {
+  color: var(--primary-orange);
+}
+
+/* Responsive Rules */
+@media (max-width: 991px) {
+  .banner-text {
+    font-size: 16px;
+  }
+
+  .tab-title {
+    font-size: 18px;
+  }
+
+  .main-image-container img {
+    height: 380px;
+  }
+
+  .floating-banner {
+    width: 92%;
+    font-size: 0.85rem;
+  }
 }
 
 /*==================================================
