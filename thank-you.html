@@ -523,5 +523,16 @@
       <p class="ty-footer-address">Dabilpur Village, Medchal, Hyderabad, Telangana 501401</p>
       <p class="ty-footer-copy">© 2026 Badruka School of Management. All Rights Reserved.</p>
     </footer>
+    <script>
+      // Auto-download the brochure PDF on every page load (including refresh)
+      window.addEventListener('load', function () {
+        var a = document.createElement('a');
+        a.href = 'images/bsm-lp-file.pdf';
+        a.download = 'bsm-lp-file.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      });
+    </script>
   </body>
 </html>

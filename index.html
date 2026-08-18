@@ -1,1096 +1,1133 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badruka - School of Management LP</title>
+    <link rel="icon" href="images/favicon.webp" sizes="32x32" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Badruka - School of Management LP</title>
-  <link rel="icon" href="images/favicon.webp" sizes="32x32" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet" />
+    <link rel="preload" as="image" href="images/banner-mob.webp" media="(max-width: 767px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="images/bsm-logo.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="images/banner-top.webp" media="(min-width: 768px)" fetchpriority="high" />
 
-  <link rel="preload" as="image" href="images/banner-mob.webp" media="(max-width: 767px)" fetchpriority="high" />
-  <link rel="preload" as="image" href="images/bsm-logo.webp" fetchpriority="high" />
-  <link rel="preload" as="image" href="images/banner-top.webp" media="(min-width: 768px)" fetchpriority="high" />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <noscript>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    </noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  </noscript>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+    <script defer>
+      // Load scripts on interaction
+      function load3rdPartyScripts() {
+        if (window._scriptsLoaded) return;
+        window._scriptsLoaded = true;
 
-  <script defer>
-    // Load scripts on interaction
-    function load3rdPartyScripts() {
-      if (window._scriptsLoaded) return;
-      window._scriptsLoaded = true;
+        // GTM
+        const gtm = document.createElement('script');
+        gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KKS7F6DF';
+        gtm.async = true;
+        document.body.appendChild(gtm);
 
-      // GTM
-      const gtm = document.createElement('script');
-      gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KKS7F6DF';
-      gtm.async = true;
-      document.body.appendChild(gtm);
+        // NoPaperForms
+        const npf = document.createElement('script');
+        npf.src = 'https://widgets.in6.nopaperforms.com/emwgts.js';
+        npf.async = true;
+        document.body.appendChild(npf);
 
-      // NoPaperForms
-      const npf = document.createElement('script');
-      npf.src = 'https://widgets.in6.nopaperforms.com/emwgts.js';
-      npf.async = true;
-      document.body.appendChild(npf);
+        // Show form wrapper after scripts
+        const form = document.getElementById('slideForm');
+        if (form) form.style.display = 'block';
+      }
 
-      // Show form wrapper after scripts
-      const form = document.getElementById('slideForm');
-      if (form) form.style.display = 'block';
-    }
+      ['scroll', 'click', 'touchstart'].forEach((ev) => {
+        window.addEventListener(ev, load3rdPartyScripts, { once: true, passive: true });
+      });
 
-    ['scroll', 'click', 'touchstart'].forEach((ev) => {
-      window.addEventListener(ev, load3rdPartyScripts, { once: true, passive: true });
-    });
+      // Show download button after 5% scroll
+      window.addEventListener('scroll', () => {
+        const btn = document.getElementById('downloadBrochure');
+        if (!btn) return;
+        const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        btn.style.display = scrolled > 5 ? 'block' : 'none';
+      });
+    </script>
 
-    // Show download button after 5% scroll
-    window.addEventListener('scroll', () => {
-      const btn = document.getElementById('downloadBrochure');
-      if (!btn) return;
-      const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      btn.style.display = scrolled > 5 ? 'block' : 'none';
-    });
-  </script>
+    <!--DTC-->
+    <script type="text/javascript">
+      var npf_d = 'https://application.bsm.edu.in';
+      var npf_c = '6294';
+      var npf_m = '1';
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = 'https://track.nopaperforms.com/js/track.js';
+      document.body.appendChild(s);
+    </script>
 
-  <!--DTC-->
-  <script type="text/javascript">
-    var npf_d = 'https://application.bsm.edu.in';
-    var npf_c = '6294';
-    var npf_m = '1';
-    var s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = 'https://track.nopaperforms.com/js/track.js';
-    document.body.appendChild(s);
-  </script>
-
-  <!--Bing-->
-  <script>
-    (function (w, d, t, r, u) {
-      var f, n, i;
-      ((w[u] = w[u] || []),
-        (f = function () {
-          var o = { ti: '97227936', enableAutoSpaTracking: true };
-          ((o.q = w[u]), (w[u] = new UET(o)), w[u].push('pageLoad'));
-        }),
-        (n = d.createElement(t)),
-        (n.src = r),
-        (n.async = 1),
-        (n.onload = n.onreadystatechange =
-          function () {
-            var s = this.readyState;
-            (s && s !== 'loaded' && s !== 'complete') || (f(), (n.onload = n.onreadystatechange = null));
+    <!--Bing-->
+    <script>
+      (function (w, d, t, r, u) {
+        var f, n, i;
+        ((w[u] = w[u] || []),
+          (f = function () {
+            var o = { ti: '97227936', enableAutoSpaTracking: true };
+            ((o.q = w[u]), (w[u] = new UET(o)), w[u].push('pageLoad'));
           }),
-        (i = d.getElementsByTagName(t)[0]),
-        i.parentNode.insertBefore(n, i));
-    })(window, document, 'script', '//bat.bing.com/bat.js', 'uetq');
-  </script>
+          (n = d.createElement(t)),
+          (n.src = r),
+          (n.async = 1),
+          (n.onload = n.onreadystatechange =
+            function () {
+              var s = this.readyState;
+              (s && s !== 'loaded' && s !== 'complete') || (f(), (n.onload = n.onreadystatechange = null));
+            }),
+          (i = d.getElementsByTagName(t)[0]),
+          i.parentNode.insertBefore(n, i));
+      })(window, document, 'script', '//bat.bing.com/bat.js', 'uetq');
+    </script>
 
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-KKS7F6DF');
-  </script>
-  <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KKS7F6DF');
+    </script>
+    <!-- End Google Tag Manager -->
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16741304463"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16741304463"></script>
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-    gtag('config', 'AW-16741304463');
-  </script>
+      gtag('config', 'AW-16741304463');
+    </script>
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !(function (f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function () {
-        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s);
-    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2119251019020776');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display: none"
-      src="https://www.facebook.com/tr?id=2119251019020776&ev=PageView&noscript=1" /></noscript>
-  <!-- End Meta Pixel Code -->
-</head>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2119251019020776');
+      fbq('track', 'PageView');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=2119251019020776&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKS7F6DF" height="0" width="0"
-      style="display: none; visibility: hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <div class="top-bar">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-4">
-          <div class="top-contact d-flex align-items-center">
-            <a href="tel:+91 91543 11647" class="d-flex align-items-center">
-              <i class="bi bi-telephone-fill"></i>
-              +91 91543 11647
-            </a>
-            <a href="mailto:admissions@bsm.edu.in" class="d-flex align-items-center">
-              <i class="bi bi-envelope-fill"></i>
-              admissions@bsm.edu.in
-            </a>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KKS7F6DF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4">
+            <div class="top-contact d-flex align-items-center">
+              <a href="tel:+91 91543 11647" class="d-flex align-items-center">
+                <i class="bi bi-telephone-fill"></i>
+                +91 91543 11647
+              </a>
+              <a href="mailto:admissions@bsm.edu.in" class="d-flex align-items-center">
+                <i class="bi bi-envelope-fill"></i>
+                admissions@bsm.edu.in
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-8">
-          <div class="top-right d-flex justify-content-end align-items-center">
-            <span>Step Into a Legacy.</span>
-            <strong>Deliver From Day One.</strong>
-            <a href="#heroFormCol" class="apply-btn-sm d-inline-flex align-items-center" data-enq-trigger>
-              Apply Now
-              <svg width="18" class="ms-1" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 9h8"></path>
-                <path d="M10 4l5 5-5 5"></path>
-              </svg>
-            </a>
+          <div class="col-lg-8">
+            <div class="top-right d-flex justify-content-end align-items-center">
+              <span>Step Into a Legacy.</span>
+              <strong>Deliver From Day One.</strong>
+              <a href="#heroFormCol" class="apply-btn-sm d-inline-flex align-items-center" data-enq-trigger>
+                Apply Now
+                <svg width="18" class="ms-1" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 9h8"></path>
+                  <path d="M10 4l5 5-5 5"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <nav class="navbar navbar-expand-lg main-navbar">
-    <div class="container">
-      <a class="navbar-brand mx-lg-0 mx-auto" href="#">
-        <img src="images/header-logo.png" class="img-fluid" alt="Logo" />
-      </a>
-      <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#why-bsm">Why BSM</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#campus-life">Campus Life</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#scholarships">Scholarships</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#student-stories">Student Stories</a>
-          </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg main-navbar">
+      <div class="container">
+        <a class="navbar-brand mx-lg-0 mx-auto" href="#">
+          <img src="images/header-logo.png" class="img-fluid" alt="Logo" />
+        </a>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#why-bsm">Why BSM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#campus-life">Campus Life</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scholarships">Scholarships</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#student-stories">Student Stories</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <section class="p-lg-4 p-2">
-    <div class="hero-section" id="enq-form-anchor">
-      <video autoplay muted loop playsinline style="object-position: top;">
-        <source src="images/badruka-lp-hero-video.mkv" type="video/mp4" />
-      </video>
-      <div class="hero-overlay"></div>
-      <div class="container position-relative">
-        <div class="row align-items-center hero-row">
-          <div class="col-xl-6 col-lg-7">
-            <div class="hero-content">
-              <span class="hero-tag">
-                <span class="dot"></span>
-                STEP INTO A LEGACY
-              </span>
-              <h1>AI-Native Business Education</h1>
-              <p>Backed by a 70+ Year Legacy</p>
-              <div class="d-flex align-items-center mb-4 aicte-wrapper" style="gap: 24px">
-                <div class="aicte-approved">
-                  <span>AICTE APPROVED</span>
-                  <p>PGDM Program</p>
+    </nav>
+    <section class="p-lg-4 p-2">
+      <div class="hero-section" id="enq-form-anchor">
+        <video autoplay muted loop playsinline style="object-position: top">
+          <source src="images/badruka-lp-hero-video.mkv" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container position-relative">
+          <div class="row align-items-center hero-row">
+            <div class="col-xl-6 col-lg-7">
+              <div class="hero-content">
+                <span class="hero-tag">
+                  <span class="dot"></span>
+                  STEP INTO A LEGACY
+                </span>
+                <h1>AI-Native Business Education</h1>
+                <p>Backed by a 70+ Year Legacy</p>
+                <div class="d-flex align-items-center mb-4 aicte-wrapper" style="gap: 24px">
+                  <div class="aicte-approved">
+                    <span>AICTE APPROVED</span>
+                    <p>PGDM Program</p>
+                  </div>
+                  <div class="vertical-line"></div>
+                  <div class="aicte-approved">
+                    <span>FULLY RESIDENTIAL</span>
+                    <p>Future-Ready Campus</p>
+                  </div>
                 </div>
-                <div class="vertical-line"></div>
-                <div class="aicte-approved">
-                  <span>FULLY RESIDENTIAL</span>
-                  <p>Future-Ready Campus</p>
+                <div class="accreditation marquee">
+                  <div class="marquee-content">
+                    <div class="logo-card d-flex align-items-center justify-content-center">
+                      <img src="images/Logo-1.webp" alt="" />
+                    </div>
+                    <div class="logo-card d-flex align-items-center justify-content-center">
+                      <img src="images/Logo-2.webp" alt="" />
+                    </div>
+                    <div class="logo-card d-flex align-items-center justify-content-center">
+                      <img src="images/Logo-3.webp" alt="" />
+                    </div>
+                    <div class="logo-card d-flex align-items-center justify-content-center">
+                      <img src="images/Logo-4.webp" alt="" />
+                    </div>
+                    <div class="logo-card d-flex align-items-center justify-content-center">
+                      <img src="images/Logo-5.webp" alt="" />
+                    </div>
+                    <div class="logo-card d-flex align-items-center justify-content-center">
+                      <img src="images/Logo-6.webp" alt="" />
+                    </div>
+                    <div class="logo-card d-flex align-items-center justify-content-center">
+                      <img src="images/Logo-1.webp" alt="" />
+                    </div>
+                    <div class="logo-card d-flex align-items-center justify-content-center">
+                      <img src="images/Logo-2.webp" alt="" />
+                    </div>
+                    <div class="logo-card d-flex align-items-center justify-content-center">
+                      <img src="images/Logo-3.webp" alt="" />
+                    </div>
+                    <div class="logo-card d-flex align-items-center justify-content-center">
+                      <img src="images/Logo-4.webp" alt="" />
+                    </div>
+                    <div class="logo-card d-flex align-items-center justify-content-center">
+                      <img src="images/Logo-5.webp" alt="" />
+                    </div>
+                    <div class="logo-card d-flex align-items-center justify-content-center">
+                      <img src="images/Logo-6.webp" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="hero-buttons d-flex flex-wrap">
+                  <a href="#" class="btn-primary-custom d-inline-flex align-items-center" data-enq-trigger>
+                    Apply Now
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 9h8"></path>
+                      <path d="M10 4l5 5-5 5"></path>
+                    </svg>
+                  </a>
                 </div>
               </div>
-              <div class="accreditation marquee">
-                <div class="marquee-content">
-                  <div class="logo-card d-flex align-items-center justify-content-center">
-                    <img src="images/Logo-1.webp" alt="" />
-                  </div>
-                  <div class="logo-card d-flex align-items-center justify-content-center">
-                    <img src="images/Logo-2.webp" alt="" />
-                  </div>
-                  <div class="logo-card d-flex align-items-center justify-content-center">
-                    <img src="images/Logo-3.webp" alt="" />
-                  </div>
-                  <div class="logo-card d-flex align-items-center justify-content-center">
-                    <img src="images/Logo-4.webp" alt="" />
-                  </div>
-                  <div class="logo-card d-flex align-items-center justify-content-center">
-                    <img src="images/Logo-5.webp" alt="" />
-                  </div>
-                  <div class="logo-card d-flex align-items-center justify-content-center">
-                    <img src="images/Logo-6.webp" alt="" />
-                  </div>
-                  <div class="logo-card d-flex align-items-center justify-content-center">
-                    <img src="images/Logo-1.webp" alt="" />
-                  </div>
-                  <div class="logo-card d-flex align-items-center justify-content-center">
-                    <img src="images/Logo-2.webp" alt="" />
-                  </div>
-                  <div class="logo-card d-flex align-items-center justify-content-center">
-                    <img src="images/Logo-3.webp" alt="" />
-                  </div>
-                  <div class="logo-card d-flex align-items-center justify-content-center">
-                    <img src="images/Logo-4.webp" alt="" />
-                  </div>
-                  <div class="logo-card d-flex align-items-center justify-content-center">
-                    <img src="images/Logo-5.webp" alt="" />
-                  </div>
-                  <div class="logo-card d-flex align-items-center justify-content-center">
-                    <img src="images/Logo-6.webp" alt="" />
+            </div>
+
+            <!-- Inline enquiry form — visible on desktop (lg+), stacks below on mobile -->
+            <div id="heroFormCol"></div>
+            <div class="col-xl-5 col-lg-5 offset-xl-1 hero-form-col">
+              <div class="hero-form-card">
+                <div class="hero-form-header">
+                  <h3>Admissions Enquiry</h3>
+                  <p>Take the first step — fill in your details below.</p>
+                </div>
+                <div class="hero-form-body" id="heroFormBody">
+                  <div class="npf_wgts" data-height="500px" data-w="2c523b7f72c9ddba16bab6282227217b"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="outcomes-section" id="why-bsm">
+      <div class="container">
+        <!-- Heading -->
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="section-title">
+              Delivering
+              <span>Outcomes</span>
+              That Matter
+            </h2>
+            <p class="section-desc">BSM's PGDM equips you with skills and experience to create impact.</p>
+          </div>
+        </div>
+        <!-- Cards -->
+        <div class="row gy-4 justify-content-center mt-4">
+          <!-- Card 1 -->
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <div class="outcome-card">
+              <div class="animated-border"></div>
+              <div class="card-content">
+                <div class="icon-box d-flex justify-content-center align-items-center">
+                  <img src="images/order_approve.svg" alt="Package" />
+                </div>
+                <h3>
+                  15.5
+                  <span>LPA</span>
+                </h3>
+                <div class="divider"></div>
+                <p>Highest Package</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <div class="outcome-card">
+              <div class="animated-border"></div>
+              <div class="card-content">
+                <div class="icon-box d-flex justify-content-center align-items-center">
+                  <img src="images/school.svg" alt="Average" />
+                </div>
+                <h3>
+                  8
+                  <span>LPA</span>
+                </h3>
+                <div class="divider"></div>
+                <p>Average Package</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <div class="outcome-card">
+              <div class="animated-border"></div>
+              <div class="card-content">
+                <div class="icon-box d-flex justify-content-center align-items-center">
+                  <img src="images/book_icon.svg" alt="Courses" />
+                </div>
+                <h3>18</h3>
+                <div class="divider"></div>
+                <p>Core Courses</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <div class="outcome-card">
+              <div class="animated-border"></div>
+              <div class="card-content">
+                <div class="icon-box d-flex justify-content-center align-items-center">
+                  <img src="images/home-2.svg" alt="Internship" />
+                </div>
+                <h3>14</h3>
+                <div class="divider"></div>
+                <p>Acre Campus</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Text -->
+
+        <div class="row">
+          <div class="col-12">
+            <p class="bottom-note text-center">
+              At BSM, your PGDM is designed to help you graduate with the skills and experience to create impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slb-section section-padding">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 d-flex align-items-center justify-content-center flex-column text-center mb-4">
+            <h2 class="section-title mb-2">What Sets <span>BSM</span> Apart</h2>
+            <p class="slb-subtitle">The Six Bsm Differentiators</p>
+          </div>
+        </div>
+        <div class="row align-items-stretch g-4 g-md-5">
+          <!-- Left Side Image Area -->
+          <div class="col-lg-6 d-flex flex-column justify-content-center mb-3">
+            <div class="image-wrapper position-relative w-100">
+              <!-- Orange Backing Accent (Top-Left Corner) -->
+              <div class="orange-accent"></div>
+
+              <!-- Main Image -->
+              <div class="main-image-container position-relative aspect-ratio-36-37">
+                <img
+                  id="active-tab-img"
+                  src="images/Image.webp"
+                  alt="Badruka Campus"
+                  class="img-fluid rounded-4 max-height-800 h-100"
+                />
+
+                <!-- Bottom Floating Card -->
+                <div
+                  class="floating-banner d-flex flex-column flex-md-row align-items-center justify-content-between rounded-3 px-3 py-2 shadow-sm"
+                >
+                  <span class="banner-text fw-semibold d-flex align-items-center gap-3 gap-md-2">
+                    <span class="sparkle-icon"
+                      ><svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+                        <path
+                          d="M14.1618 0.655216C14.4828 -0.21827 15.7182 -0.218271 16.0391 0.655216L19.5089 10.0985C19.6101 10.3739 19.8272 10.591 20.1026 10.6922L29.5459 14.1619C30.4193 14.4829 30.4193 15.7183 29.5459 16.0392L20.1026 19.509C19.8272 19.6102 19.6101 19.8273 19.5089 20.1027L16.0391 29.546C15.7182 30.4194 14.4828 30.4194 14.1618 29.546L10.6921 20.1027C10.5909 19.8273 10.3738 19.6102 10.0984 19.509L0.655125 16.0392C-0.218362 15.7183 -0.218362 14.4829 0.655124 14.1619L10.0984 10.6922C10.3738 10.591 10.5909 10.3739 10.6921 10.0985L14.1618 0.655216Z"
+                          fill="#FFE29A"
+                        />
+                      </svg>
+                    </span>
+                    Ready to Experience Badruka?
+                  </span>
+                  <a href="#heroFormCol" class="apply-btn-sm d-inline-flex align-items-center text-md gap-2"
+                    >Apply Now
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <mask
+                        id="mask0_811_202"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="20"
+                        height="20"
+                      >
+                        <rect width="20" height="20" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_811_202)">
+                        <path
+                          d="M13.479 10.8332H4.16646C3.93035 10.8332 3.73244 10.7533 3.57271 10.5936C3.41299 10.4339 3.33313 10.236 3.33313 9.99985C3.33313 9.76374 3.41299 9.56582 3.57271 9.4061C3.73244 9.24637 3.93035 9.16651 4.16646 9.16651H13.479L9.39563 5.08318C9.22896 4.91651 9.1491 4.72207 9.15605 4.49985C9.16299 4.27762 9.2498 4.08318 9.41646 3.91651C9.58313 3.76374 9.77757 3.68387 9.9998 3.67693C10.222 3.66999 10.4165 3.74985 10.5831 3.91651L16.0831 9.41651C16.1665 9.49985 16.2255 9.59012 16.2602 9.68735C16.2949 9.78457 16.3123 9.88874 16.3123 9.99985C16.3123 10.111 16.2949 10.2151 16.2602 10.3123C16.2255 10.4096 16.1665 10.4998 16.0831 10.5832L10.5831 16.0832C10.4304 16.236 10.2394 16.3123 10.0102 16.3123C9.78105 16.3123 9.58313 16.236 9.41646 16.0832C9.2498 15.9165 9.16646 15.7186 9.16646 15.4894C9.16646 15.2603 9.2498 15.0623 9.41646 14.8957L13.479 10.8332Z"
+                          fill="white"
+                        />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="tabs-container d-flex flex-column gap-3" id="customTabList">
+              <!-- Tab 01 -->
+              <div class="tab-item active rounded-3 p-3" data-index="0" data-img="images/Image.webp">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="tab-num">01</span>
+                  <div class="flex-grow-1">
+                    <span class="pill-badge mb-2 mb-md-3">STRONG ROI</span>
+                    <h5 class="tab-title fw-bold text-dark mb-2 mb-md-3">Value For Money</h5>
+                    <p class="tab-desc text-secondary mb-0 mt-1 pb-2 pb-md-3">
+                      A management programme must create value beyond the classroom. BSM focuses on ROI, career
+                      outcomes, and employability, ensuring value for money in the PGDM.
+                    </p>
                   </div>
                 </div>
               </div>
-              <div class="hero-buttons d-flex flex-wrap">
-                <a href="#" class="btn-primary-custom d-inline-flex align-items-center" data-enq-trigger>
-                  Apply Now
+
+              <!-- Tab 02 -->
+              <div class="tab-item rounded-3 p-3" data-index="1" data-img="images/Image-1.webp">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="tab-num">02</span>
+                  <div>
+                    <span class="pill-badge mb-2 mb-md-3">FUTURE-READY</span>
+                    <h5 class="tab-title fw-bold text-dark mb-2 mb-md-3">AI-powered PGDM</h5>
+                    <p class="tab-desc text-secondary mb-0 mt-1 pb-2 pb-md-3">
+                      Artificial Intelligence is not treated as a standalone elective. It is integrated into the
+                      learning experience so students develop the ability to understand and apply AI across business
+                      functions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab 03 -->
+              <div class="tab-item rounded-3 p-3" data-index="2" data-img="images/Image-5.webp">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="tab-num">03</span>
+                  <div>
+                    <span class="pill-badge mb-2 mb-md-3">OWNERSHIP</span>
+                    <h5 class="tab-title fw-bold text-dark mb-2 mb-md-3">A Student-driven Ecosystem</h5>
+                    <p class="tab-desc text-secondary mb-0 mt-1 pb-2 pb-md-3">
+                      Students are active contributors to campus life. Clubs, committees, events and student-led
+                      initiatives create opportunities to take ownership, make decisions, collaborate and lead
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab 04 -->
+              <div class="tab-item rounded-3 p-3" data-index="3" data-img="images/Image-3.webp">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="tab-num">04</span>
+                  <div>
+                    <span class="pill-badge mb-2 mb-md-3">APPLIED LEARNING</span>
+                    <h5 class="tab-title fw-bold text-dark mb-2 mb-md-3">Pracademic, Block-taught Pedagogy</h5>
+                    <p class="tab-desc text-secondary mb-0 mt-1 pb-2 pb-md-3">
+                      BSM combines practitioner-led teaching with an intensive block format, enabling deeper engagement
+                      with subjects and connecting concepts to real business contexts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab 05 -->
+              <div class="tab-item rounded-3 p-3" data-index="4" data-img="images/Image-2.webp">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="tab-num">05</span>
+                  <div>
+                    <span class="pill-badge mb-2 mb-md-3">ENVIRONMENT</span>
+                    <h5 class="tab-title fw-bold text-dark mb-2 mb-md-3">14-acre, Lush-green Campus</h5>
+                    <p class="tab-desc text-secondary mb-0 mt-1 pb-2 pb-md-3">
+                      The residential BSM campus provides an immersive setting for learning, collaboration and student
+                      life, with a 14-acre green environment designed to support focus and interaction.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab 06 -->
+              <div class="tab-item rounded-3 p-3" data-index="5" data-img="images/Image-4.webp">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="tab-num">06</span>
+                  <div>
+                    <span class="pill-badge mb-2 mb-md-3">ACCESS TO INDUSTRY</span>
+                    <h5 class="tab-title fw-bold text-dark mb-2 mb-md-3">The Hyderabad Advantage</h5>
+                    <p class="tab-desc text-secondary mb-0 mt-1 pb-2 pb-md-3">
+                      Located in one of India's leading technology and business hubs, BSM offers proximity to a growing
+                      ecosystem of GCCs, technology companies, startups and established businesses.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pgdm-audience-section">
+      <div class="container">
+        <!-- Heading -->
+
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <h2 class="section-title">Who This <span>PGDM</span> Is For</h2>
+            <p class="section-desc">Wherever You're Starting From, Your Future Starts Here.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="pgdm-card pgdm-card-yellow">
+              <!-- Background Image -->
+              <div class="pgdm-card-bg">
+                <img src="images/bg-image-1.webp" alt="Background" />
+              </div>
+              <div class="pgdm-content">
+                <h3>
+                  Final-Year Student
+                  <span><b>or</b> Recent Graduate?</span>
+                </h3>
+                <div class="pgdm-highlight">
+                  You're Looking For
+                  <strong> More Than Just Your First Job. </strong>
+                </div>
+
+                <p>
+                  Seek a career with growth, industry exposure, and a business school that prepares you for the real
+                  world.
+                </p>
+
+                <a href="#heroFormCol" class="pgdm-btn d-inline-flex align-items-center" data-enq-trigger>
+                  Save Your Spot
                   <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 9h8"></path>
                     <path d="M10 4l5 5-5 5"></path>
                   </svg>
                 </a>
-                <a href="#" class="btn-secondary-custom d-inline-flex align-items-center" id="openBrochurePopup">
-                  Download Brochure
-                  <i class="bi bi-download"></i>
+              </div>
+              <div class="pgdm-student">
+                <img src="images/students-1.webp" alt="Students" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 mt-1">
+          <div class="col-lg-5">
+            <div class="pgdm-card pgdm-card-pink">
+              <div class="pgdm-card-bg">
+                <img src="images/bg-image-2.webp" alt="" />
+              </div>
+              <div class="pgdm-content card-2-content">
+                <h4>Early Career Professional?</h4>
+                <small> Ready to grow beyond execution? </small>
+                <h5>You'll Benefit From</h5>
+                <ul>
+                  <li>Leadership-focused Learning</li>
+                  <li>AI & Business Strategy Integration</li>
+                  <li>Corporate Mentorship</li>
+                  <li>Practical Business Frameworks</li>
+                </ul>
+              </div>
+              <div class="pgdm-student">
+                <img src="images/students-2.webp" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="pgdm-card pgdm-card-blue">
+              <div class="pgdm-card-bg">
+                <img src="images/bg-image-3.webp" alt="" />
+              </div>
+              <div class="pgdm-content text-white card-2-content">
+                <h4>
+                  Gain More Than Just a
+                  <span> Management Degree </span>
+                </h4>
+                <p>
+                  Seek a career with growth, industry exposure, and a business school that prepares you for the real
+                  world.
+                </p>
+
+                <a href="#heroFormCol" class="pgdm-btn d-inline-flex align-items-center" data-enq-trigger>
+                  Know More
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 9h8"></path>
+                    <path d="M10 4l5 5-5 5"></path>
+                  </svg>
                 </a>
               </div>
-            </div>
-          </div>
-
-          <!-- Inline enquiry form — visible on desktop (lg+), stacks below on mobile -->
-          <div id="heroFormCol"></div>
-          <div class="col-xl-5 col-lg-5 offset-xl-1 hero-form-col">
-            <div class="hero-form-card">
-              <div class="hero-form-header">
-                <h3>Admissions Enquiry</h3>
-                <p>Take the first step — fill in your details below.</p>
-              </div>
-              <div class="hero-form-body" id="heroFormBody">
-                <div class="npf_wgts" data-height="500px" data-w="2c523b7f72c9ddba16bab6282227217b"></div>
+              <div class="pgdm-student">
+                <img src="images/students-3.webp" alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="outcomes-section" id="why-bsm">
-    <div class="container">
-      <!-- Heading -->
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="section-title">
-            Delivering
-            <span>Outcomes</span>
-            That Matter
-          </h2>
-          <p class="section-desc">BSM's PGDM equips you with skills and experience to create impact.</p>
-        </div>
-      </div>
-      <!-- Cards -->
-      <div class="row gy-4 justify-content-center mt-4">
-        <!-- Card 1 -->
-        <div class="col-xl-3 col-lg-3 col-md-6">
-          <div class="outcome-card">
-            <div class="animated-border"></div>
-            <div class="card-content">
-              <div class="icon-box d-flex justify-content-center align-items-center">
-                <img src="images/order_approve.svg" alt="Package" />
-              </div>
-              <h3>
-                15.5
-                <span>LPA</span>
-              </h3>
-              <div class="divider"></div>
-              <p>Highest Package</p>
-            </div>
+    </section>
+    <section class="curriculum-section" style="background: #fefbf7">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="section-title">
+              The Pracademic
+              <span>PGDM</span>
+            </h2>
+            <p class="section-desc">Every project and experience prepares you to be a confident, AI-native leader.</p>
           </div>
         </div>
-
-        <!-- Card 2 -->
-
-        <div class="col-xl-3 col-lg-3 col-md-6">
-          <div class="outcome-card">
-            <div class="animated-border"></div>
-            <div class="card-content">
-              <div class="icon-box d-flex justify-content-center align-items-center">
-                <img src="images/school.svg" alt="Average" />
+        <div class="row g-4 mt-2">
+          <div class="col-lg-6">
+            <div class="curriculum-card curriculum-card-yellow">
+              <div class="curriculum-bg">
+                <img src="images/card-img-1.webp" alt="Year 1 Background" />
               </div>
-              <h3>
-                8
-                <span>LPA</span>
-              </h3>
-              <div class="divider"></div>
-              <p>Average Package</p>
+              <div class="curriculum-content">
+                <img
+                  src="images/year-tag-1.webp"
+                  alt="Year 2 Background"
+                  class="img-fluid mb-3"
+                  style="max-width: 80px"
+                />
+
+                <h3>Build Your <span> Foundation</span></h3>
+                <p>
+                  Develop a strong understanding of business, management, strategy and emerging technologies while
+                  building the mindset required to solve real-world business challenges.
+                </p>
+              </div>
+              <div class="curriculum-image curriculum-image-1">
+                <img src="images/stundens-5.webp" alt="Year 1 Student" />
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- Card 3 -->
-
-        <div class="col-xl-3 col-lg-3 col-md-6">
-          <div class="outcome-card">
-            <div class="animated-border"></div>
-            <div class="card-content">
-              <div class="icon-box d-flex justify-content-center align-items-center">
-                <img src="images/book_icon.svg" alt="Courses" />
+          <div class="col-lg-6">
+            <div class="curriculum-card curriculum-card-blue">
+              <div class="curriculum-bg">
+                <img src="images/card-img-2.webp" alt="Year 2 Background" />
               </div>
-              <h3>18</h3>
-              <div class="divider"></div>
-              <p>Core Courses</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-
-        <div class="col-xl-3 col-lg-3 col-md-6">
-          <div class="outcome-card">
-            <div class="animated-border"></div>
-            <div class="card-content">
-              <div class="icon-box d-flex justify-content-center align-items-center">
-                <img src="images/home-2.svg" alt="Internship" />
+              <div class="curriculum-content text-white white-content-box">
+                <img
+                  src="images/year-tag-2.webp"
+                  alt="Year 2 Background"
+                  class="img-fluid mb-3"
+                  style="max-width: 80px"
+                />
+                <h3>Build Your <span> Expertise </span></h3>
+                <p>
+                  Choose your specialization, deepen your industry knowledge and apply your learning through advanced
+                  electives, practical exposure and corporate experiences.
+                </p>
               </div>
-              <h3>14</h3>
-              <div class="divider"></div>
-              <p>Acre Campus</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom Text -->
-
-      <div class="row">
-        <div class="col-12">
-          <p class="bottom-note text-center">
-            At BSM, your PGDM is designed to help you graduate with the skills and experience to create impact.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="slb-section section-padding">
-    <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-12 d-flex align-items-center justify-content-center flex-column text-center mb-4">
-          <h2 class="section-title mb-2">What Sets <span>BSM</span> Apart</h2>
-          <p class="slb-subtitle">The Six Bsm Differentiators</p>
-        </div>
-      </div>
-      <div class="row align-items-stretch g-4 g-md-5">
-
-        <!-- Left Side Image Area -->
-        <div class="col-lg-6 d-flex flex-column justify-content-center mb-3">
-          <div class="image-wrapper position-relative w-100">
-
-            <!-- Orange Backing Accent (Top-Left Corner) -->
-            <div class="orange-accent"></div>
-
-            <!-- Main Image -->
-            <div class="main-image-container position-relative aspect-ratio-36-37">
-              <img id="active-tab-img" src="images/Image.webp" alt="Badruka Campus"
-                class="img-fluid rounded-4 max-height-800 h-100">
-
-              <!-- Bottom Floating Card -->
-              <div
-                class="floating-banner d-flex flex-column flex-md-row  align-items-center justify-content-between rounded-3 px-3 py-2 shadow-sm">
-                <span class="banner-text fw-semibold d-flex align-items-center gap-3 gap-md-2">
-                  <span class="sparkle-icon"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="31"
-                      viewBox="0 0 31 31" fill="none">
-                      <path
-                        d="M14.1618 0.655216C14.4828 -0.21827 15.7182 -0.218271 16.0391 0.655216L19.5089 10.0985C19.6101 10.3739 19.8272 10.591 20.1026 10.6922L29.5459 14.1619C30.4193 14.4829 30.4193 15.7183 29.5459 16.0392L20.1026 19.509C19.8272 19.6102 19.6101 19.8273 19.5089 20.1027L16.0391 29.546C15.7182 30.4194 14.4828 30.4194 14.1618 29.546L10.6921 20.1027C10.5909 19.8273 10.3738 19.6102 10.0984 19.509L0.655125 16.0392C-0.218362 15.7183 -0.218362 14.4829 0.655124 14.1619L10.0984 10.6922C10.3738 10.591 10.5909 10.3739 10.6921 10.0985L14.1618 0.655216Z"
-                        fill="#FFE29A" />
-                    </svg></span> Ready to Experience Badruka?
-                </span>
-                <a href="#heroFormCol" class="apply-btn-sm d-inline-flex align-items-center text-md gap-2">Apply Now
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <mask id="mask0_811_202" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
-                      height="20">
-                      <rect width="20" height="20" fill="#D9D9D9" />
-                    </mask>
-                    <g mask="url(#mask0_811_202)">
-                      <path
-                        d="M13.479 10.8332H4.16646C3.93035 10.8332 3.73244 10.7533 3.57271 10.5936C3.41299 10.4339 3.33313 10.236 3.33313 9.99985C3.33313 9.76374 3.41299 9.56582 3.57271 9.4061C3.73244 9.24637 3.93035 9.16651 4.16646 9.16651H13.479L9.39563 5.08318C9.22896 4.91651 9.1491 4.72207 9.15605 4.49985C9.16299 4.27762 9.2498 4.08318 9.41646 3.91651C9.58313 3.76374 9.77757 3.68387 9.9998 3.67693C10.222 3.66999 10.4165 3.74985 10.5831 3.91651L16.0831 9.41651C16.1665 9.49985 16.2255 9.59012 16.2602 9.68735C16.2949 9.78457 16.3123 9.88874 16.3123 9.99985C16.3123 10.111 16.2949 10.2151 16.2602 10.3123C16.2255 10.4096 16.1665 10.4998 16.0831 10.5832L10.5831 16.0832C10.4304 16.236 10.2394 16.3123 10.0102 16.3123C9.78105 16.3123 9.58313 16.236 9.41646 16.0832C9.2498 15.9165 9.16646 15.7186 9.16646 15.4894C9.16646 15.2603 9.2498 15.0623 9.41646 14.8957L13.479 10.8332Z"
-                        fill="white" />
-                    </g>
-                  </svg></a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="tabs-container d-flex flex-column gap-3" id="customTabList">
-
-            <!-- Tab 01 -->
-            <div class="tab-item active rounded-3 p-3" data-index="0" data-img="images/Image.webp">
-              <div class="d-flex align-items-center gap-3">
-                <span class="tab-num">01</span>
-                <div class="flex-grow-1">
-                  <span class="pill-badge mb-2 mb-md-3">STRONG ROI</span>
-                  <h5 class="tab-title fw-bold text-dark mb-2 mb-md-3">Value For Money</h5>
-                  <p class="tab-desc text-secondary mb-0 mt-1 pb-2 pb-md-3">
-                    A management programme must create value beyond the classroom. BSM focuses on ROI, career outcomes,
-                    and employability, ensuring value for money in the PGDM.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tab 02 -->
-            <div class="tab-item rounded-3 p-3" data-index="1" data-img="images/Image-1.webp">
-              <div class="d-flex align-items-center gap-3">
-                <span class="tab-num">02</span>
-                <div>
-                  <span class="pill-badge mb-2 mb-md-3">FUTURE-READY</span>
-                  <h5 class="tab-title fw-bold text-dark mb-2 mb-md-3">AI-powered PGDM</h5>
-                  <p class="tab-desc text-secondary mb-0 mt-1 pb-2 pb-md-3">
-                    Artificial Intelligence is not treated as a standalone elective. It is integrated into the learning
-                    experience so students develop the ability to understand and apply AI across business functions.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tab 03 -->
-            <div class="tab-item rounded-3 p-3" data-index="2" data-img="images/Image-5.webp">
-              <div class="d-flex align-items-center gap-3">
-                <span class="tab-num">03</span>
-                <div>
-                  <span class="pill-badge mb-2 mb-md-3">OWNERSHIP</span>
-                  <h5 class="tab-title fw-bold text-dark mb-2 mb-md-3">A Student-driven Ecosystem</h5>
-                  <p class="tab-desc text-secondary mb-0 mt-1 pb-2 pb-md-3">
-                    Students are active contributors to campus life. Clubs, committees, events and student-led
-                    initiatives create opportunities to take ownership, make decisions, collaborate and lead
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tab 04 -->
-            <div class="tab-item rounded-3 p-3" data-index="3" data-img="images/Image-3.webp">
-              <div class="d-flex align-items-center gap-3">
-                <span class="tab-num">04</span>
-                <div>
-                  <span class="pill-badge mb-2 mb-md-3">APPLIED LEARNING</span>
-                  <h5 class="tab-title fw-bold text-dark mb-2 mb-md-3">Pracademic, Block-taught Pedagogy</h5>
-                  <p class="tab-desc text-secondary mb-0 mt-1 pb-2 pb-md-3">
-                    BSM combines practitioner-led teaching with an intensive block format, enabling deeper engagement
-                    with subjects and connecting concepts to real business contexts.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tab 05 -->
-            <div class="tab-item rounded-3 p-3" data-index="4" data-img="images/Image-2.webp">
-              <div class="d-flex align-items-center gap-3">
-                <span class="tab-num">05</span>
-                <div>
-                  <span class="pill-badge mb-2 mb-md-3">ENVIRONMENT</span>
-                  <h5 class="tab-title fw-bold text-dark mb-2 mb-md-3">14-acre, Lush-green Campus</h5>
-                  <p class="tab-desc text-secondary mb-0 mt-1 pb-2 pb-md-3">
-                    The residential BSM campus provides an immersive setting for learning, collaboration and student
-                    life, with a 14-acre green environment designed to support focus and interaction. </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tab 06 -->
-            <div class="tab-item rounded-3 p-3" data-index="5" data-img="images/Image-4.webp">
-              <div class="d-flex align-items-center gap-3">
-                <span class="tab-num">06</span>
-                <div>
-                  <span class="pill-badge mb-2 mb-md-3">ACCESS TO INDUSTRY</span>
-                  <h5 class="tab-title fw-bold text-dark mb-2 mb-md-3">The Hyderabad Advantage</h5>
-                  <p class="tab-desc text-secondary mb-0 mt-1 pb-2 pb-md-3">
-                    Located in one of India's leading technology and business hubs, BSM offers proximity to a growing
-                    ecosystem of GCCs, technology companies, startups and established businesses. </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <section class="pgdm-audience-section">
-    <div class="container">
-      <!-- Heading -->
-
-      <div class="row justify-content-center mb-5">
-        <div class="col-lg-8 text-center">
-          <h2 class="section-title">Who This <span>PGDM</span> Is For</h2>
-          <p class="section-desc">Wherever You're Starting From, Your Future Starts Here.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="pgdm-card pgdm-card-yellow">
-            <!-- Background Image -->
-            <div class="pgdm-card-bg">
-              <img src="images/bg-image-1.webp" alt="Background" />
-            </div>
-            <div class="pgdm-content">
-              <h3>
-                Final-Year Student
-                <span><b>or</b> Recent Graduate?</span>
-              </h3>
-              <div class="pgdm-highlight">
-                You're Looking For
-                <strong> More Than Just Your First Job. </strong>
-              </div>
-
-              <p>
-                Seek a career with growth, industry exposure, and a business school that prepares you for the real
-                world.
-              </p>
-
-              <a href="#heroFormCol" class="pgdm-btn d-inline-flex align-items-center" data-enq-trigger>
-                Save Your Spot
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 9h8"></path>
-                  <path d="M10 4l5 5-5 5"></path>
-                </svg>
-              </a>
-            </div>
-            <div class="pgdm-student">
-              <img src="images/students-1.webp" alt="Students" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row g-4 mt-1">
-        <div class="col-lg-5">
-          <div class="pgdm-card pgdm-card-pink">
-            <div class="pgdm-card-bg">
-              <img src="images/bg-image-2.webp" alt="" />
-            </div>
-            <div class="pgdm-content card-2-content">
-              <h4>Early Career Professional?</h4>
-              <small> Ready to grow beyond execution? </small>
-              <h5>You'll Benefit From</h5>
-              <ul>
-                <li>Leadership-focused Learning</li>
-                <li>AI & Business Strategy Integration</li>
-                <li>Corporate Mentorship</li>
-                <li>Practical Business Frameworks</li>
-              </ul>
-            </div>
-            <div class="pgdm-student">
-              <img src="images/students-2.webp" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-7">
-          <div class="pgdm-card pgdm-card-blue">
-            <div class="pgdm-card-bg">
-              <img src="images/bg-image-3.webp" alt="" />
-            </div>
-            <div class="pgdm-content text-white card-2-content">
-              <h4>
-                Gain More Than Just a
-                <span> Management Degree </span>
-              </h4>
-              <p>
-                Seek a career with growth, industry exposure, and a business school that prepares you for the real
-                world.
-              </p>
-
-              <a href="#heroFormCol" class="pgdm-btn d-inline-flex align-items-center" data-enq-trigger>
-                Know More
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 9h8"></path>
-                  <path d="M10 4l5 5-5 5"></path>
-                </svg>
-              </a>
-            </div>
-            <div class="pgdm-student">
-              <img src="images/students-3.webp" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="curriculum-section" style="background: #fefbf7">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="section-title">
-            The Pracademic
-            <span>PGDM</span>
-          </h2>
-          <p class="section-desc">Every project and experience prepares you to be a confident, AI-native leader.</p>
-        </div>
-      </div>
-      <div class="row g-4 mt-2">
-        <div class="col-lg-6">
-          <div class="curriculum-card curriculum-card-yellow">
-            <div class="curriculum-bg">
-              <img src="images/card-img-1.webp" alt="Year 1 Background" />
-            </div>
-            <div class="curriculum-content">
-              <img src="images/year-tag-1.webp" alt="Year 2 Background" class="img-fluid mb-3"
-                style="max-width: 80px" />
-
-              <h3>Build Your <span> Foundation</span></h3>
-              <p>
-                Develop a strong understanding of business, management, strategy and emerging technologies while
-                building the mindset required to solve real-world business challenges.
-              </p>
-            </div>
-            <div class="curriculum-image curriculum-image-1">
-              <img src="images/stundens-5.webp" alt="Year 1 Student" />
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="curriculum-card curriculum-card-blue">
-            <div class="curriculum-bg">
-              <img src="images/card-img-2.webp" alt="Year 2 Background" />
-            </div>
-            <div class="curriculum-content text-white white-content-box">
-              <img src="images/year-tag-2.webp" alt="Year 2 Background" class="img-fluid mb-3"
-                style="max-width: 80px" />
-              <h3>Build Your <span> Expertise </span></h3>
-              <p>
-                Choose your specialization, deepen your industry knowledge and apply your learning through advanced
-                electives, practical exposure and corporate experiences.
-              </p>
-            </div>
-            <div class="curriculum-image curriculum-image-2">
-              <img src="images/stundens-4.webp" alt="Year 2 Students" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center mt-4">
-        <div class="col-12">
-          <div class="curriculum-status-box justify-content-between">
-            <div class="total-credits-box">
-              <h3>114 Credits <img src="images/stars_2.svg" /></h3>
-              <span class="d-block"> One Career Advantage. </span>
-            </div>
-            <div class="other-stats-info d-flex">
-              <div class="d-flex">
-                <div>18</div>
-                <div>
-                  <h4>(54 Credits)</h4>
-                  <span>One Career Advantage.</span>
-                </div>
-              </div>
-              <div class="d-flex">
-                <div>12</div>
-                <div>
-                  <h4>(15 Credits)</h4>
-                  <span>Essential Skills Modules</span>
-                </div>
-              </div>
-              <div class="d-flex">
-                <div>14</div>
-                <div>
-                  <h4>(45 Credits)</h4>
-                  <span>Electives</span>
-                </div>
+              <div class="curriculum-image curriculum-image-2">
+                <img src="images/stundens-4.webp" alt="Year 2 Students" />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <section class="bsm-campus-section" id="campus-life">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="section-title">
-            More Than a
-            <span>Business School</span>
-          </h2>
-          <p class="section-desc">At Badruka, growth extends beyond class. Experiences shape leaders.</p>
-        </div>
-      </div>
-      <div class="row g-4 mt-4">
-        <div class="col-xl-4 col-lg-6">
-          <div class="bsm-campus-card bsm-campus-card-pink">
-            <div class="bsm-campus-bg">
-              <img src="images/card-bg-10.webp" alt="Background" />
-            </div>
-            <div class="bsm-campus-content">
-              <h3>45%</h3>
-              <h4>Women Students</h4>
-              <p>Building a diverse and collaborative learning environment.</p>
-            </div>
-            <div class="bsm-campus-student">
-              <img src="images/card-img-11.webp" alt="Women Students" />
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-6">
-          <div class="bsm-campus-card bsm-campus-card-blue">
-            <div class="bsm-campus-bg">
-              <img src="images/card-bg-12.webp" alt="Background" />
-            </div>
-            <div class="bsm-campus-content">
-              <h3>12+</h3>
-              <h4>States Represented</h4>
-              <p>A classroom enriched with ideas, cultures and perspectives from across India.</p>
-            </div>
-            <div class="bsm-campus-student">
-              <img src="images/card-img-12.webp" alt="Students" />
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-12">
-          <div class="bsm-campus-card bsm-campus-campus">
-            <div class="bsm-campus-content">
-              <h3 class="campus-heading mb-3">
-                Residential
-                <br />
-                Campus
-              </h3>
-              <p>Learn, collaborate, and grow in an immersive community.</p>
-            </div>
-            <div class="bsm-campus-image">
-              <img src="images/card-img-13.webp" alt="Residential Campus" class="campus-slide active" />
-              <img src="images/residentials-img-2.webp" alt="Residential Campus" class="campus-slide" />
-              <img src="images/residentials-img-3.webp" alt="Residential Campus" class="campus-slide" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bsm-testimonial-section" id="student-stories" style="background: #fefbf7">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-7 col-lg-8 text-center">
-          <h2 class="section-title">
-            Hear It From Those
-            <span>Who've Lived It.</span>
-          </h2>
-          <p class="section-desc">
-            BSM journeys foster growth and career readiness. See how students achieved goals.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="bsm-testimonial-slider">
-      <div class="bsm-left-shadow"></div>
-      <div class="bsm-right-shadow"></div>
-      <div class="bsm-testimonial-track">
-        <div class="bsm-testimonial-card">
-          <div class="bsm-quote-icon">
-            <img src="images/quote.webp" alt="" />
-          </div>
-          <p>
-            The faculty and teaching methods are truly pushing me to grow every day, not just academically but also
-            personally. I find myself learning a lot and, more importantly, learning how to learn.
-          </p>
-          <div class="bsm-user d-flex align-items-center">
-            <!-- <img src="images/user-img-1.webp" alt="" /> -->
-            <div>
-              <h4>Neehaareka Ande</h4>
-              <span>Student of BSM</span>
-            </div>
-          </div>
-        </div>
-        <div class="bsm-testimonial-card">
-          <div class="bsm-quote-icon">
-            <img src="images/quote.webp" alt="" />
-          </div>
-          <p>
-            I initially thought BSM would be all theory and frameworks, but it turned out to be a hands-on, creative
-            journey into how real businesses think and evolve. It's helped me see strategy not just as planning, but
-            as storytelling with impact.
-          </p>
-          <div class="bsm-user d-flex align-items-center">
-            <!-- <img src="images/user-img-2.webp" alt="" /> -->
-            <div>
-              <h4>Karthik Nair</h4>
-              <span>Student of BSM</span>
-            </div>
-          </div>
-        </div>
-        <div class="bsm-testimonial-card">
-          <div class="bsm-quote-icon">
-            <img src="images/quote.webp" alt="" />
-          </div>
-          <p>
-            In other institutions, reaching a professor or department head after class can be a bureaucratic hurdle.
-            Here, the lack of hierarchy is real. Approachable faculty and industry mentors make learning practical,
-            relevant, and meaningful every day.
-          </p>
-          <div class="bsm-user d-flex align-items-center">
-            <!-- <img src="images/user-img-3.webp" alt="" />  -->
-            <div>
-              <h4>Akhil C</h4>
-              <span>Student of BSM</span>
-            </div>
-          </div>
-        </div>
-        <div class="bsm-testimonial-card">
-          <div class="bsm-quote-icon">
-            <img src="images/quote.webp" alt="" />
-          </div>
-          <p>
-            As part of the founding batch, what stands out most is the feeling of Student Ownership. This focus on
-            holistic development—communication, leadership, and personal growth—has been most real in my experience.
-          </p>
-          <div class="bsm-user d-flex align-items-center">
-            <!-- <img src="images/user-img-4.webp" alt="" /> -->
-            <div>
-              <h4>Bhavana Janga</h4>
-              <span>Student of BSM</span>
-            </div>
-          </div>
-        </div>
-        <div class="bsm-testimonial-card">
-          <div class="bsm-quote-icon">
-            <img src="images/quote.webp" alt="" />
-          </div>
-          <p>
-            This hands-on exposure, combined with industry-connected learning, is preparing us for far more than just
-            jobs. When I recommend BSM, I highlight the Faculty & Resources first, because they make the learning
-            experience truly exceptional.
-          </p>
-          <div class="bsm-user d-flex align-items-center">
-            <!-- <img src="images/user-img-5.webp" alt="" /> -->
-            <div>
-              <h4>Shruthi V</h4>
-              <span>Student of BSM</span>
-            </div>
-          </div>
-        </div>
-        <div class="bsm-testimonial-card">
-          <div class="bsm-quote-icon">
-            <img src="images/quote.webp" alt="" />
-          </div>
-          <p>
-            The collaborative projects challenge us to think outside the box and work as a team. The diversity in
-            perspectives enriches our discussions and helps us build essential skills for the future.
-          </p>
-          <div class="bsm-user d-flex align-items-center">
-            <!-- <img src="images/user-img-6.webp" alt="" /> -->
-            <div>
-              <h4>Vikram Singh</h4>
-              <span>Student of BSM</span>
-            </div>
-          </div>
-        </div>
-        <div class="bsm-testimonial-card">
-          <div class="bsm-quote-icon">
-            <img src="images/quote.webp" alt="" />
-          </div>
-          <p>
-            The faculty and teaching methods are truly pushing me to grow every day, not just academically but also
-            personally. I find myself learning a lot and, more importantly, learning how to learn.
-          </p>
-          <div class="bsm-user d-flex align-items-center">
-            <!-- <img src="images/user-img-1.webp" alt="" /> -->
-            <div>
-              <h4>Neehaareka Ande</h4>
-              <span>Student of BSM</span>
-            </div>
-          </div>
-        </div>
-        <div class="bsm-testimonial-card">
-          <div class="bsm-quote-icon">
-            <img src="images/quote.webp" alt="" />
-          </div>
-          <p>
-            I initially thought BSM would be all theory and frameworks, but it turned out to be a hands-on, creative
-            journey into how real businesses think and evolve. It's helped me see strategy not just as planning, but
-            as storytelling with impact.
-          </p>
-          <div class="bsm-user d-flex align-items-center">
-            <!-- <img src="images/user-img-2.webp" alt="" /> -->
-            <div>
-              <h4>Karthik Nair</h4>
-              <span>Student of BSM</span>
-            </div>
-          </div>
-        </div>
-        <div class="bsm-testimonial-card">
-          <div class="bsm-quote-icon">
-            <img src="images/quote.webp" alt="" />
-          </div>
-          <p>
-            In other institutions, reaching a professor or department head after class can be a bureaucratic hurdle.
-            Here, the lack of hierarchy is real. Approachable faculty and industry mentors make learning practical,
-            relevant, and meaningful every day.
-          </p>
-          <div class="bsm-user d-flex align-items-center">
-            <!-- <img src="images/user-img-3.webp" alt="" />  -->
-            <div>
-              <h4>Akhil C</h4>
-              <span>Student of BSM</span>
-            </div>
-          </div>
-        </div>
-        <div class="bsm-testimonial-card">
-          <div class="bsm-quote-icon">
-            <img src="images/quote.webp" alt="" />
-          </div>
-          <p>
-            As part of the founding batch, what stands out most is the feeling of Student Ownership. This focus on
-            holistic development—communication, leadership, and personal growth—has been most real in my experience.
-          </p>
-          <div class="bsm-user d-flex align-items-center">
-            <!-- <img src="images/user-img-4.webp" alt="" /> -->
-            <div>
-              <h4>Bhavana Janga</h4>
-              <span>Student of BSM</span>
-            </div>
-          </div>
-        </div>
-        <div class="bsm-testimonial-card">
-          <div class="bsm-quote-icon">
-            <img src="images/quote.webp" alt="" />
-          </div>
-          <p>
-            This hands-on exposure, combined with industry-connected learning, is preparing us for far more than just
-            jobs. When I recommend BSM, I highlight the Faculty & Resources first, because they make the learning
-            experience truly exceptional.
-          </p>
-          <div class="bsm-user d-flex align-items-center">
-            <!-- <img src="images/user-img-5.webp" alt="" /> -->
-            <div>
-              <h4>Shruthi V</h4>
-              <span>Student of BSM</span>
-            </div>
-          </div>
-        </div>
-        <div class="bsm-testimonial-card">
-          <div class="bsm-quote-icon">
-            <img src="images/quote.webp" alt="" />
-          </div>
-          <p>
-            The collaborative projects challenge us to think outside the box and work as a team. The diversity in
-            perspectives enriches our discussions and helps us build essential skills for the future.
-          </p>
-          <div class="bsm-user d-flex align-items-center">
-            <!-- <img src="images/user-img-6.webp" alt="" /> -->
-            <div>
-              <h4>Vikram Singh</h4>
-              <span>Student of BSM</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="career-cta-section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-12">
-          <div class="career-cta-card">
-            <div class="career-cta-bg">
-              <img src="images/section-bg-6.webp" alt="Background" />
-            </div>
-            <div class="row align-items-end g-0 h-100">
-              <div class="col-lg-5">
-                <div class="career-cta-content">
-                  <h2>
-                    Where Ambition
-                    <span> Meets Opportunity. </span>
-                  </h2>
-                  <p>
-                    From global brands to high-growth startups, BSM graduates are building careers across
-                    <b> consulting, FMCG, fintech, analytics, technology, and more. </b>
-                  </p>
-                  <a href="#heroFormCol" class="career-cta-btn d-inline-flex align-items-center" data-enq-trigger>
-                    Save Your Spot
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                      <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </a>
-                </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-12">
+            <div class="curriculum-status-box justify-content-between">
+              <div class="total-credits-box">
+                <h3>114 Credits <img src="images/stars_2.svg" /></h3>
+                <span class="d-block"> One Career Advantage. </span>
               </div>
-              <div class="col-lg-7">
-                <div class="career-cta-right">
-                  <div class="career-cta-student">
-                    <img src="images/student-img-22.webp" alt="Student" />
+              <div class="other-stats-info d-flex">
+                <div class="d-flex">
+                  <div>18</div>
+                  <div>
+                    <h4>(54 Credits)</h4>
+                    <span>One Career Advantage.</span>
                   </div>
-                  <div class="accreditation marquee where-meet-marquee">
-                    <div class="marquee-content">
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-1.webp" alt="" />
-                      </div>
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-2.webp" alt="" />
-                      </div>
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-3.webp" alt="" />
-                      </div>
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-4.webp" alt="" />
-                      </div>
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-5.webp" alt="" />
-                      </div>
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-6.webp" alt="" />
-                      </div>
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-img-7.webp" alt="" />
-                      </div>
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-img-8.webp" alt="" />
-                      </div>
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-img-9.webp" alt="" />
-                      </div>
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-img-10.webp" alt="" />
-                      </div>
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-img-11.webp" alt="" />
-                      </div>
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-img-12.webp" alt="" />
-                      </div>
-                      <div class="logo-card d-flex align-items-center justify-content-center">
-                        <img src="images/Logo-img-13.webp" alt="" />
+                </div>
+                <div class="d-flex">
+                  <div>12</div>
+                  <div>
+                    <h4>(15 Credits)</h4>
+                    <span>Essential Skills Modules</span>
+                  </div>
+                </div>
+                <div class="d-flex">
+                  <div>14</div>
+                  <div>
+                    <h4>(45 Credits)</h4>
+                    <span>Electives</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bsm-campus-section" id="campus-life">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="section-title">
+              More Than a
+              <span>Business School</span>
+            </h2>
+            <p class="section-desc">At Badruka, growth extends beyond class. Experiences shape leaders.</p>
+          </div>
+        </div>
+        <div class="row g-4 mt-4">
+          <div class="col-xl-4 col-lg-6">
+            <div class="bsm-campus-card bsm-campus-card-pink">
+              <div class="bsm-campus-bg">
+                <img src="images/card-bg-10.webp" alt="Background" />
+              </div>
+              <div class="bsm-campus-content">
+                <h3>45%</h3>
+                <h4>Women Students</h4>
+                <p>Building a diverse and collaborative learning environment.</p>
+              </div>
+              <div class="bsm-campus-student">
+                <img src="images/card-img-11.webp" alt="Women Students" />
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <div class="bsm-campus-card bsm-campus-card-blue">
+              <div class="bsm-campus-bg">
+                <img src="images/card-bg-12.webp" alt="Background" />
+              </div>
+              <div class="bsm-campus-content">
+                <h3>12+</h3>
+                <h4>States Represented</h4>
+                <p>A classroom enriched with ideas, cultures and perspectives from across India.</p>
+              </div>
+              <div class="bsm-campus-student">
+                <img src="images/card-img-12.webp" alt="Students" />
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-12">
+            <div class="bsm-campus-card bsm-campus-campus">
+              <div class="bsm-campus-content">
+                <h3 class="campus-heading mb-3">
+                  Residential
+                  <br />
+                  Campus
+                </h3>
+                <p>Learn, collaborate, and grow in an immersive community.</p>
+              </div>
+              <div class="bsm-campus-image">
+                <img src="images/card-img-13.webp" alt="Residential Campus" class="campus-slide active" />
+                <img src="images/residentials-img-2.webp" alt="Residential Campus" class="campus-slide" />
+                <img src="images/residentials-img-3.webp" alt="Residential Campus" class="campus-slide" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bsm-testimonial-section" id="student-stories" style="background: #fefbf7">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-7 col-lg-8 text-center">
+            <h2 class="section-title">
+              Hear It From Those
+              <span>Who've Lived It.</span>
+            </h2>
+            <p class="section-desc">
+              BSM journeys foster growth and career readiness. See how students achieved goals.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bsm-testimonial-slider">
+        <div class="bsm-left-shadow"></div>
+        <div class="bsm-right-shadow"></div>
+        <div class="bsm-testimonial-track">
+          <div class="bsm-testimonial-card">
+            <div class="bsm-quote-icon">
+              <img src="images/quote.webp" alt="" />
+            </div>
+            <p>
+              The faculty and teaching methods are truly pushing me to grow every day, not just academically but also
+              personally. I find myself learning a lot and, more importantly, learning how to learn.
+            </p>
+            <div class="bsm-user d-flex align-items-center">
+              <!-- <img src="images/user-img-1.webp" alt="" /> -->
+              <div>
+                <h4>Neehaareka Ande</h4>
+                <span>Student of BSM</span>
+              </div>
+            </div>
+          </div>
+          <div class="bsm-testimonial-card">
+            <div class="bsm-quote-icon">
+              <img src="images/quote.webp" alt="" />
+            </div>
+            <p>
+              I initially thought BSM would be all theory and frameworks, but it turned out to be a hands-on, creative
+              journey into how real businesses think and evolve. It's helped me see strategy not just as planning, but
+              as storytelling with impact.
+            </p>
+            <div class="bsm-user d-flex align-items-center">
+              <!-- <img src="images/user-img-2.webp" alt="" /> -->
+              <div>
+                <h4>Karthik Nair</h4>
+                <span>Student of BSM</span>
+              </div>
+            </div>
+          </div>
+          <div class="bsm-testimonial-card">
+            <div class="bsm-quote-icon">
+              <img src="images/quote.webp" alt="" />
+            </div>
+            <p>
+              In other institutions, reaching a professor or department head after class can be a bureaucratic hurdle.
+              Here, the lack of hierarchy is real. Approachable faculty and industry mentors make learning practical,
+              relevant, and meaningful every day.
+            </p>
+            <div class="bsm-user d-flex align-items-center">
+              <!-- <img src="images/user-img-3.webp" alt="" />  -->
+              <div>
+                <h4>Akhil C</h4>
+                <span>Student of BSM</span>
+              </div>
+            </div>
+          </div>
+          <div class="bsm-testimonial-card">
+            <div class="bsm-quote-icon">
+              <img src="images/quote.webp" alt="" />
+            </div>
+            <p>
+              As part of the founding batch, what stands out most is the feeling of Student Ownership. This focus on
+              holistic development—communication, leadership, and personal growth—has been most real in my experience.
+            </p>
+            <div class="bsm-user d-flex align-items-center">
+              <!-- <img src="images/user-img-4.webp" alt="" /> -->
+              <div>
+                <h4>Bhavana Janga</h4>
+                <span>Student of BSM</span>
+              </div>
+            </div>
+          </div>
+          <div class="bsm-testimonial-card">
+            <div class="bsm-quote-icon">
+              <img src="images/quote.webp" alt="" />
+            </div>
+            <p>
+              This hands-on exposure, combined with industry-connected learning, is preparing us for far more than just
+              jobs. When I recommend BSM, I highlight the Faculty & Resources first, because they make the learning
+              experience truly exceptional.
+            </p>
+            <div class="bsm-user d-flex align-items-center">
+              <!-- <img src="images/user-img-5.webp" alt="" /> -->
+              <div>
+                <h4>Shruthi V</h4>
+                <span>Student of BSM</span>
+              </div>
+            </div>
+          </div>
+          <div class="bsm-testimonial-card">
+            <div class="bsm-quote-icon">
+              <img src="images/quote.webp" alt="" />
+            </div>
+            <p>
+              The collaborative projects challenge us to think outside the box and work as a team. The diversity in
+              perspectives enriches our discussions and helps us build essential skills for the future.
+            </p>
+            <div class="bsm-user d-flex align-items-center">
+              <!-- <img src="images/user-img-6.webp" alt="" /> -->
+              <div>
+                <h4>Vikram Singh</h4>
+                <span>Student of BSM</span>
+              </div>
+            </div>
+          </div>
+          <div class="bsm-testimonial-card">
+            <div class="bsm-quote-icon">
+              <img src="images/quote.webp" alt="" />
+            </div>
+            <p>
+              The faculty and teaching methods are truly pushing me to grow every day, not just academically but also
+              personally. I find myself learning a lot and, more importantly, learning how to learn.
+            </p>
+            <div class="bsm-user d-flex align-items-center">
+              <!-- <img src="images/user-img-1.webp" alt="" /> -->
+              <div>
+                <h4>Neehaareka Ande</h4>
+                <span>Student of BSM</span>
+              </div>
+            </div>
+          </div>
+          <div class="bsm-testimonial-card">
+            <div class="bsm-quote-icon">
+              <img src="images/quote.webp" alt="" />
+            </div>
+            <p>
+              I initially thought BSM would be all theory and frameworks, but it turned out to be a hands-on, creative
+              journey into how real businesses think and evolve. It's helped me see strategy not just as planning, but
+              as storytelling with impact.
+            </p>
+            <div class="bsm-user d-flex align-items-center">
+              <!-- <img src="images/user-img-2.webp" alt="" /> -->
+              <div>
+                <h4>Karthik Nair</h4>
+                <span>Student of BSM</span>
+              </div>
+            </div>
+          </div>
+          <div class="bsm-testimonial-card">
+            <div class="bsm-quote-icon">
+              <img src="images/quote.webp" alt="" />
+            </div>
+            <p>
+              In other institutions, reaching a professor or department head after class can be a bureaucratic hurdle.
+              Here, the lack of hierarchy is real. Approachable faculty and industry mentors make learning practical,
+              relevant, and meaningful every day.
+            </p>
+            <div class="bsm-user d-flex align-items-center">
+              <!-- <img src="images/user-img-3.webp" alt="" />  -->
+              <div>
+                <h4>Akhil C</h4>
+                <span>Student of BSM</span>
+              </div>
+            </div>
+          </div>
+          <div class="bsm-testimonial-card">
+            <div class="bsm-quote-icon">
+              <img src="images/quote.webp" alt="" />
+            </div>
+            <p>
+              As part of the founding batch, what stands out most is the feeling of Student Ownership. This focus on
+              holistic development—communication, leadership, and personal growth—has been most real in my experience.
+            </p>
+            <div class="bsm-user d-flex align-items-center">
+              <!-- <img src="images/user-img-4.webp" alt="" /> -->
+              <div>
+                <h4>Bhavana Janga</h4>
+                <span>Student of BSM</span>
+              </div>
+            </div>
+          </div>
+          <div class="bsm-testimonial-card">
+            <div class="bsm-quote-icon">
+              <img src="images/quote.webp" alt="" />
+            </div>
+            <p>
+              This hands-on exposure, combined with industry-connected learning, is preparing us for far more than just
+              jobs. When I recommend BSM, I highlight the Faculty & Resources first, because they make the learning
+              experience truly exceptional.
+            </p>
+            <div class="bsm-user d-flex align-items-center">
+              <!-- <img src="images/user-img-5.webp" alt="" /> -->
+              <div>
+                <h4>Shruthi V</h4>
+                <span>Student of BSM</span>
+              </div>
+            </div>
+          </div>
+          <div class="bsm-testimonial-card">
+            <div class="bsm-quote-icon">
+              <img src="images/quote.webp" alt="" />
+            </div>
+            <p>
+              The collaborative projects challenge us to think outside the box and work as a team. The diversity in
+              perspectives enriches our discussions and helps us build essential skills for the future.
+            </p>
+            <div class="bsm-user d-flex align-items-center">
+              <!-- <img src="images/user-img-6.webp" alt="" /> -->
+              <div>
+                <h4>Vikram Singh</h4>
+                <span>Student of BSM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="career-cta-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-12">
+            <div class="career-cta-card">
+              <div class="career-cta-bg">
+                <img src="images/section-bg-6.webp" alt="Background" />
+              </div>
+              <div class="row align-items-end g-0 h-100">
+                <div class="col-lg-5">
+                  <div class="career-cta-content">
+                    <h2>
+                      Where Ambition
+                      <span> Meets Opportunity. </span>
+                    </h2>
+                    <p>
+                      From global brands to high-growth startups, BSM graduates are building careers across
+                      <b> consulting, FMCG, fintech, analytics, technology, and more. </b>
+                    </p>
+                    <a href="#heroFormCol" class="career-cta-btn d-inline-flex align-items-center" data-enq-trigger>
+                      Save Your Spot
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <path
+                          d="M13 6L19 12L13 18"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="career-cta-right">
+                    <div class="career-cta-student">
+                      <img src="images/student-img-22.webp" alt="Student" />
+                    </div>
+                    <div class="accreditation marquee where-meet-marquee">
+                      <div class="marquee-content">
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-1.webp" alt="" />
+                        </div>
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-2.webp" alt="" />
+                        </div>
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-3.webp" alt="" />
+                        </div>
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-4.webp" alt="" />
+                        </div>
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-5.webp" alt="" />
+                        </div>
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-6.webp" alt="" />
+                        </div>
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-img-7.webp" alt="" />
+                        </div>
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-img-8.webp" alt="" />
+                        </div>
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-img-9.webp" alt="" />
+                        </div>
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-img-10.webp" alt="" />
+                        </div>
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-img-11.webp" alt="" />
+                        </div>
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-img-12.webp" alt="" />
+                        </div>
+                        <div class="logo-card d-flex align-items-center justify-content-center">
+                          <img src="images/Logo-img-13.webp" alt="" />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1100,967 +1137,1071 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="student-stories-section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <h2 class="section-title">
-            Student Stories
-            <span>That Inspire.</span>
-          </h2>
-          <p class="section-desc">Students share their growth and defining moments at BSM.</p>
+    </section>
+    <section class="student-stories-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <h2 class="section-title">
+              Student Stories
+              <span>That Inspire.</span>
+            </h2>
+            <p class="section-desc">Students share their growth and defining moments at BSM.</p>
+          </div>
         </div>
-      </div>
-      <div class="row g-3 mt-4">
-        <!-- Card 1 -->
-        <div class="col-lg-3 col-md-6">
-          <div class="leader-card story-card">
-            <a href="https://youtube.com/shorts/QyFOJb4kO7c" target="_blank" rel="noopener"
-              aria-label="Play Akshai Jani's story">
-              <div class="leader-image story-thumb" style="
+        <div class="row g-3 mt-4">
+          <!-- Card 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="leader-card story-card">
+              <a
+                href="https://youtube.com/shorts/QyFOJb4kO7c"
+                target="_blank"
+                rel="noopener"
+                aria-label="Play Akshai Jani's story"
+              >
+                <div
+                  class="leader-image story-thumb"
+                  style="
                     background-image: url('https://img.youtube.com/vi/QyFOJb4kO7c/maxresdefault.jpg');
                     background-size: cover;
                     background-position: center;
-                  ">
-                <div class="story-play-wrap">
-                  <div class="story-play-btn">
-                    <img src="images/youtube-play-icon.svg" alt="Play" class="story-play-icon" />
+                  "
+                >
+                  <div class="story-play-wrap">
+                    <div class="story-play-btn">
+                      <img src="images/youtube-play-icon.svg" alt="Play" class="story-play-icon" />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="leader-content">
-                <h3>
-                  Akshay Jaini
-                  <span class="story-quote d-inline-block align-top"><img src="images/format_quote.svg"
-                      class="img-fluid" /></span>
-                </h3>
-                <p>
-                  Akshay Jaini made the Dean’s Merit List and won a Gold Medal in Finance, highlighting mentorship and
-                  excellence.
-                </p>
-              </div>
-            </a>
+                <div class="leader-content">
+                  <h3>
+                    Akshay Jaini
+                    <span class="story-quote d-inline-block align-top"
+                      ><img src="images/format_quote.svg" class="img-fluid"
+                    /></span>
+                  </h3>
+                  <p>
+                    Akshay Jaini made the Dean’s Merit List and won a Gold Medal in Finance, highlighting mentorship and
+                    excellence.
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Card 2 -->
-        <div class="col-lg-3 col-md-6">
-          <div class="leader-card story-card">
-            <a href="https://youtube.com/shorts/HK6gIHhYvxU" target="_blank" rel="noopener"
-              aria-label="Play Aishu's story">
-              <div class="leader-image story-thumb" style="
+          <!-- Card 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="leader-card story-card">
+              <a
+                href="https://youtube.com/shorts/HK6gIHhYvxU"
+                target="_blank"
+                rel="noopener"
+                aria-label="Play Aishu's story"
+              >
+                <div
+                  class="leader-image story-thumb"
+                  style="
                     background-image: url('https://img.youtube.com/vi/HK6gIHhYvxU/maxresdefault.jpg');
                     background-size: cover;
                     background-position: center;
-                  ">
-                <div class="story-play-wrap">
-                  <div class="story-play-btn">
-                    <img src="images/youtube-play-icon.svg" alt="Play" class="story-play-icon" />
+                  "
+                >
+                  <div class="story-play-wrap">
+                    <div class="story-play-btn">
+                      <img src="images/youtube-play-icon.svg" alt="Play" class="story-play-icon" />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="leader-content">
-                <h3>
-                  Aishu Yadav
-                  <span class="story-quote d-inline-block align-top"><img src="images/format_quote.svg"
-                      class="img-fluid" /></span>
-                </h3>
-                <p>
-                  Aishu’s journey shows BSM’s collaborative learning. Students gain valuable experiences through
-                  activities.
-                </p>
-              </div>
-            </a>
+                <div class="leader-content">
+                  <h3>
+                    Aishu Yadav
+                    <span class="story-quote d-inline-block align-top"
+                      ><img src="images/format_quote.svg" class="img-fluid"
+                    /></span>
+                  </h3>
+                  <p>
+                    Aishu’s journey shows BSM’s collaborative learning. Students gain valuable experiences through
+                    activities.
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Card 3 -->
-        <div class="col-lg-3 col-md-6">
-          <div class="leader-card story-card">
-            <a href="https://youtube.com/shorts/i89vHZJkdK8" target="_blank" rel="noopener"
-              aria-label="Play Dhivyapriya Uday's story">
-              <div class="leader-image story-thumb" style="
+          <!-- Card 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="leader-card story-card">
+              <a
+                href="https://youtube.com/shorts/i89vHZJkdK8"
+                target="_blank"
+                rel="noopener"
+                aria-label="Play Dhivyapriya Uday's story"
+              >
+                <div
+                  class="leader-image story-thumb"
+                  style="
                     background-image: url('https://img.youtube.com/vi/i89vHZJkdK8/maxresdefault.jpg');
                     background-size: cover;
                     background-position: center;
-                  ">
-                <div class="story-play-wrap">
-                  <div class="story-play-btn">
-                    <img src="images/youtube-play-icon.svg" alt="Play" class="story-play-icon" />
+                  "
+                >
+                  <div class="story-play-wrap">
+                    <div class="story-play-btn">
+                      <img src="images/youtube-play-icon.svg" alt="Play" class="story-play-icon" />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="leader-content">
-                <h3>
-                  Dhivyapriya Uday
-                  <span class="story-quote d-inline-block align-top"><img src="images/format_quote.svg"
-                      class="img-fluid" /></span>
-                </h3>
-                <p>
-                  Dhivyapriya joined BSM from Chennai, facing new challenges. Her project journey built her confidence
-                  as a team player.
-                </p>
-              </div>
-            </a>
+                <div class="leader-content">
+                  <h3>
+                    Dhivyapriya Uday
+                    <span class="story-quote d-inline-block align-top"
+                      ><img src="images/format_quote.svg" class="img-fluid"
+                    /></span>
+                  </h3>
+                  <p>
+                    Dhivyapriya joined BSM from Chennai, facing new challenges. Her project journey built her confidence
+                    as a team player.
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Card 4 -->
-        <div class="col-lg-3 col-md-6">
-          <div class="leader-card story-card">
-            <a href="https://youtube.com/shorts/66GmZYcHA78" target="_blank" rel="noopener"
-              aria-label="Play Satyakrishna's story">
-              <div class="leader-image story-thumb" style="
+          <!-- Card 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="leader-card story-card">
+              <a
+                href="https://youtube.com/shorts/66GmZYcHA78"
+                target="_blank"
+                rel="noopener"
+                aria-label="Play Satyakrishna's story"
+              >
+                <div
+                  class="leader-image story-thumb"
+                  style="
                     background-image: url('https://img.youtube.com/vi/66GmZYcHA78/maxresdefault.jpg');
                     background-size: cover;
                     background-position: center;
-                  ">
-                <div class="story-play-wrap">
-                  <div class="story-play-btn">
-                    <img src="images/youtube-play-icon.svg" alt="Play" class="story-play-icon" />
+                  "
+                >
+                  <div class="story-play-wrap">
+                    <div class="story-play-btn">
+                      <img src="images/youtube-play-icon.svg" alt="Play" class="story-play-icon" />
+                    </div>
+                  </div>
+                </div>
+                <div class="leader-content">
+                  <h3>
+                    Satyakrishna
+                    <span class="story-quote d-inline-block align-top"
+                      ><img src="images/format_quote.svg" class="img-fluid"
+                    /></span>
+                  </h3>
+                  <p>
+                    With BSM’s focused approach, Satyakrishna gained confidence for his career. He is now a Sales
+                    Trainee at Café Coffee Day.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="leaders-section" style="background: #fefbf7">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-7 col-lg-8 text-center">
+            <h2 class="section-title">
+              Learn From
+              <span>Those Who've Led</span>
+            </h2>
+            <p class="section-desc">Guided by leaders who've built businesses, not just taught them.</p>
+          </div>
+        </div>
+        <div class="leaders-slider-wrapper mt-4">
+          <button class="leaders-prev d-flex align-items-center justify-content-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M15 18L9 12L15 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="swiper leadersSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="leader-card">
+                  <div class="leader-image">
+                    <img src="images/lead-img-1.webp" alt="" />
+                  </div>
+                  <div class="leader-content">
+                    <h3>Dr. Shailesh Rastogi</h3>
+                    <p>Director, BSM, Hyderabad Ph.D. in Accounting & Finance</p>
                   </div>
                 </div>
               </div>
-              <div class="leader-content">
+              <div class="swiper-slide">
+                <div class="leader-card">
+                  <div class="leader-image">
+                    <img src="images/lead-img-2.webp" alt="" />
+                  </div>
+                  <div class="leader-content">
+                    <h3>Sheikha Alia</h3>
+                    <p>Senior Data Scientist Oracle, MBA, New York Institute of Technology</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="leader-card">
+                  <div class="leader-image">
+                    <img src="images/lead-img-3.webp" alt="" />
+                  </div>
+                  <div class="leader-content">
+                    <h3>Dr. Devprasad Ghosh</h3>
+                    <p>Associate Professor, Badruka School of Management; PhD, IIM Lucknow</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="leader-card">
+                  <div class="leader-image">
+                    <img src="images/lead-img-4.webp" alt="" />
+                  </div>
+                  <div class="leader-content">
+                    <h3>Vineeta Tikekar</h3>
+                    <p>Consumer Behavior Educationist & Corporate Trainer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="leader-card">
+                  <div class="leader-image">
+                    <img src="images/lead-img-5.webp" alt="" />
+                  </div>
+                  <div class="leader-content">
+                    <h3>Dr. Tojin T. Eapen</h3>
+                    <p>Professor of Innovation and AI, Founder of CForesight, PhD.(UNC Chapel Hill)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="leader-card">
+                  <div class="leader-image">
+                    <img src="images/lead-img-6.webp" alt="" />
+                  </div>
+                  <div class="leader-content">
+                    <h3>Srikant Sastri</h3>
+                    <p>Co-Founder and Board Member, Crayon Data (Singapore); PGDM, IIM Calcutta</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="leader-card">
+                  <div class="leader-image">
+                    <img src="images/lead-img-7.webp" alt="" />
+                  </div>
+                  <div class="leader-content">
+                    <h3>Mubeen Rafat</h3>
+                    <p>Former Visiting Faculty, ISB; Former Director, Center for Economics and Finance, ASCI</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="leader-card">
+                  <div class="leader-image">
+                    <img src="images/lead-img-8.webp" alt="" />
+                  </div>
+                  <div class="leader-content">
+                    <h3>Ramesh Loganathan</h3>
+                    <p>Prof. of Co-Innovation, IIIT-Hyderabad; Former Chief Innovation Officer, Telangana</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="leaders-next d-flex align-items-center justify-content-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 18L15 12L9 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="bsm-testimonial-section bsm-gallery-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-7 col-lg-8 text-center">
+            <h2 class="section-title">
+              A Campus That
+              <span>Thinks Ahead.</span>
+            </h2>
+            <p class="section-desc">Every conversation here is about Learning, Living & Leading.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 1 — scrolls left -->
+      <div class="bsm-gallery-slider mt-5">
+        <div class="bsm-left-shadow"></div>
+        <div class="bsm-right-shadow"></div>
+        <div class="bsm-gallery-track bsm-gallery-track--left">
+          <div class="bsm-gallery-item"><img src="images/img-gallery-1.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-2.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-3.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-4.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-5.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-6.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-7.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-8.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-9.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-10.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-11.webp" alt="Campus Life" /></div>
+          <!-- duplicate set for seamless loop -->
+          <div class="bsm-gallery-item"><img src="images/img-gallery-1.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-2.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-3.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-4.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-5.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-6.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-7.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-8.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-9.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-10.webp" alt="Campus Life" /></div>
+          <div class="bsm-gallery-item"><img src="images/img-gallery-11.webp" alt="Campus Life" /></div>
+        </div>
+      </div>
+    </section>
+    <section class="scholarship-section" id="scholarships" style="background: #fefbf7">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-7 col-lg-8 text-center">
+            <h2 class="section-title">
+              Scholarships &
+              <span>Financial Support</span>
+            </h2>
+            <p class="section-desc">Your Potential Should Define Your Future, Not Your Finances.</p>
+          </div>
+        </div>
+        <div class="row g-4 mt-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="scholarship-card scholarship-card-pink">
+              <div class="scholarship-content">
+                <div class="scholarship-icon d-sm-none d-flex align-items-center mb-3">
+                  <img src="images/prize-icon.svg" alt="" />
+                </div>
                 <h3>
-                  Satyakrishna
-                  <span class="story-quote d-inline-block align-top"><img src="images/format_quote.svg"
-                      class="img-fluid" /></span>
+                  Merit-Based
+                  <span> Scholarship </span>
                 </h3>
                 <p>
-                  With BSM’s focused approach, Satyakrishna gained confidence for his career. He is now a Sales
-                  Trainee at Café Coffee Day.
+                  Recognising outstanding academic achievement, entrance exam performance, and exceptional overall
+                  potential.
                 </p>
+                <strong> For high-performing students with strong academics. </strong>
               </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="leaders-section" style="background: #fefbf7">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-7 col-lg-8 text-center">
-          <h2 class="section-title">
-            Learn From
-            <span>Those Who've Led</span>
-          </h2>
-          <p class="section-desc">Guided by leaders who've built businesses, not just taught them.</p>
-        </div>
-      </div>
-      <div class="leaders-slider-wrapper mt-4">
-        <button class="leaders-prev d-flex align-items-center justify-content-center">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </button>
-        <div class="swiper leadersSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="leader-card">
-                <div class="leader-image">
-                  <img src="images/lead-img-1.webp" alt="" />
-                </div>
-                <div class="leader-content">
-                  <h3>Dr. Shailesh Rastogi</h3>
-                  <p>Director, BSM, Hyderabad Ph.D. in Accounting & Finance</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="leader-card">
-                <div class="leader-image">
-                  <img src="images/lead-img-2.webp" alt="" />
-                </div>
-                <div class="leader-content">
-                  <h3>Sheikha Alia</h3>
-                  <p>Senior Data Scientist Oracle, MBA, New York Institute of Technology</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="leader-card">
-                <div class="leader-image">
-                  <img src="images/lead-img-3.webp" alt="" />
-                </div>
-                <div class="leader-content">
-                  <h3>Dr. Devprasad Ghosh</h3>
-                  <p>Associate Professor, Badruka School of Management; PhD, IIM Lucknow</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="leader-card">
-                <div class="leader-image">
-                  <img src="images/lead-img-4.webp" alt="" />
-                </div>
-                <div class="leader-content">
-                  <h3>Vineeta Tikekar</h3>
-                  <p>Consumer Behavior Educationist & Corporate Trainer</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="leader-card">
-                <div class="leader-image">
-                  <img src="images/lead-img-5.webp" alt="" />
-                </div>
-                <div class="leader-content">
-                  <h3>Dr. Tojin T. Eapen</h3>
-                  <p>Professor of Innovation and AI, Founder of CForesight, PhD.(UNC Chapel Hill)</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="leader-card">
-                <div class="leader-image">
-                  <img src="images/lead-img-6.webp" alt="" />
-                </div>
-                <div class="leader-content">
-                  <h3>Srikant Sastri</h3>
-                  <p>Co-Founder and Board Member, Crayon Data (Singapore); PGDM, IIM Calcutta</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="leader-card">
-                <div class="leader-image">
-                  <img src="images/lead-img-7.webp" alt="" />
-                </div>
-                <div class="leader-content">
-                  <h3>Mubeen Rafat</h3>
-                  <p>Former Visiting Faculty, ISB; Former Director, Center for Economics and Finance, ASCI</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="leader-card">
-                <div class="leader-image">
-                  <img src="images/lead-img-8.webp" alt="" />
-                </div>
-                <div class="leader-content">
-                  <h3>Ramesh Loganathan</h3>
-                  <p>Prof. of Co-Innovation, IIIT-Hyderabad; Former Chief Innovation Officer, Telangana</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="leaders-next d-flex align-items-center justify-content-center">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
-  <section class="bsm-testimonial-section bsm-gallery-section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-7 col-lg-8 text-center">
-          <h2 class="section-title">
-            A Campus That
-            <span>Thinks Ahead.</span>
-          </h2>
-          <p class="section-desc">Every conversation here is about Learning, Living & Leading.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Row 1 — scrolls left -->
-    <div class="bsm-gallery-slider mt-5">
-      <div class="bsm-left-shadow"></div>
-      <div class="bsm-right-shadow"></div>
-      <div class="bsm-gallery-track bsm-gallery-track--left">
-        <div class="bsm-gallery-item"><img src="images/img-gallery-1.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-2.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-3.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-4.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-5.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-6.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-7.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-8.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-9.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-10.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-11.webp" alt="Campus Life" /></div>
-        <!-- duplicate set for seamless loop -->
-        <div class="bsm-gallery-item"><img src="images/img-gallery-1.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-2.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-3.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-4.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-5.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-6.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-7.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-8.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-9.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-10.webp" alt="Campus Life" /></div>
-        <div class="bsm-gallery-item"><img src="images/img-gallery-11.webp" alt="Campus Life" /></div>
-      </div>
-    </div>
-  </section>
-  <section class="scholarship-section" id="scholarships" style="background: #fefbf7">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-7 col-lg-8 text-center">
-          <h2 class="section-title">
-            Scholarships &
-            <span>Financial Support</span>
-          </h2>
-          <p class="section-desc">Your Potential Should Define Your Future, Not Your Finances.</p>
-        </div>
-      </div>
-      <div class="row g-4 mt-4">
-        <div class="col-lg-4 col-md-6">
-          <div class="scholarship-card scholarship-card-pink">
-            <div class="scholarship-content">
-              <div class="scholarship-icon d-sm-none d-flex align-items-center mb-3">
+              <div class="scholarship-icon d-sm-flex d-none align-items-center justify-content-center">
                 <img src="images/prize-icon.svg" alt="" />
               </div>
-              <h3>
-                Merit-Based
-                <span> Scholarship </span>
-              </h3>
-              <p>
-                Recognising outstanding academic achievement, entrance exam performance, and exceptional overall
-                potential.
-              </p>
-              <strong> For high-performing students with strong academics. </strong>
-            </div>
-            <div class="scholarship-icon d-sm-flex d-none align-items-center justify-content-center">
-              <img src="images/prize-icon.svg" alt="" />
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="scholarship-card scholarship-card-blue">
-            <div class="scholarship-content">
-              <div class="scholarship-icon d-sm-none d-flex align-items-center mb-3">
+          <div class="col-lg-4 col-md-6">
+            <div class="scholarship-card scholarship-card-blue">
+              <div class="scholarship-content">
+                <div class="scholarship-icon d-sm-none d-flex align-items-center mb-3">
+                  <img src="images/cash-icon.svg" alt="" />
+                </div>
+                <h3>Need-Based <span> Scholarship </span></h3>
+                <p>Supporting talented students who demonstrate both academic promise and financial need.</p>
+                <strong> Designed to ensure deserving talent never misses an opportunity. </strong>
+              </div>
+              <div class="scholarship-icon d-sm-flex d-none align-items-center justify-content-center">
                 <img src="images/cash-icon.svg" alt="" />
               </div>
-              <h3>Need-Based <span> Scholarship </span></h3>
-              <p>Supporting talented students who demonstrate both academic promise and financial need.</p>
-              <strong> Designed to ensure deserving talent never misses an opportunity. </strong>
-            </div>
-            <div class="scholarship-icon d-sm-flex d-none align-items-center justify-content-center">
-              <img src="images/cash-icon.svg" alt="" />
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-12">
-          <div class="scholarship-card scholarship-card-yellow">
-            <div class="scholarship-content">
-              <div class="scholarship-icon d-sm-none d-flex align-items-center mb-3">
+          <div class="col-lg-4 col-md-12">
+            <div class="scholarship-card scholarship-card-yellow">
+              <div class="scholarship-content">
+                <div class="scholarship-icon d-sm-none d-flex align-items-center mb-3">
+                  <img src="images/shield-icon.svg" alt="" />
+                </div>
+                <h3>
+                  Scholarship for
+                  <span> Defence Wards </span>
+                </h3>
+                <p>
+                  Honouring the families of those who serve the nation by extending special scholarship opportunities to
+                  eligible candidates.
+                </p>
+              </div>
+              <div class="scholarship-icon d-sm-flex d-none align-items-center justify-content-center">
                 <img src="images/shield-icon.svg" alt="" />
               </div>
-              <h3>
-                Scholarship for
-                <span> Defence Wards </span>
-              </h3>
-              <p>
-                Honouring the families of those who serve the nation by extending special scholarship opportunities to
-                eligible candidates.
-              </p>
-            </div>
-            <div class="scholarship-icon d-sm-flex d-none align-items-center justify-content-center">
-              <img src="images/shield-icon.svg" alt="" />
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="final-cta-section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-12">
-          <div class="final-cta-card">
-            <!-- Background Grid Image -->
-            <div class="final-cta-bg">
-              <img src="images/grid-bg.webp" alt="" />
+    </section>
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-12">
+            <div class="final-cta-card">
+              <!-- Background Grid Image -->
+              <div class="final-cta-bg">
+                <img src="images/grid-bg.webp" alt="" />
+              </div>
+              <div class="final-cta-circle">
+                <img src="images/circle-bg.webp" alt="" />
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="final-cta-content text-center">
+                    <h2>
+                      In two years,
+                      <span> you'll be grateful for starting now. </span>
+                    </h2>
+                    <p>
+                      Every successful career begins with one decision. Make yours count with a PGDM that combines
+                      academic excellence, industry exposure, and AI-native business education.
+                    </p>
+                    <a href="#heroFormCol" class="final-cta-btn d-inline-flex align-items-center" data-enq-trigger>
+                      Apply for PGDM Admissions 2027-29
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <path
+                          d="M13 6L19 12L13 18"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Student Image -->
+              <div class="final-cta-students">
+                <img src="images/student-img-78.webp" alt="Students" />
+              </div>
             </div>
-            <div class="final-cta-circle">
-              <img src="images/circle-bg.webp" alt="" />
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="final-cta-content text-center">
-                  <h2>
-                    In two years,
-                    <span> you'll be grateful for starting now. </span>
-                  </h2>
-                  <p>
-                    Every successful career begins with one decision. Make yours count with a PGDM that combines
-                    academic excellence, industry exposure, and AI-native business education.
-                  </p>
-                  <a href="#heroFormCol" class="final-cta-btn d-inline-flex align-items-center" data-enq-trigger>
-                    Apply for PGDM Admissions 2027-29
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-bsm">
+      <div class="container">
+        <div class="footer-bsm-wrapper">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-9">
+              <div class="footer-bsm-left">
+                <h2>
+                  Ready to
+                  <span>Lead the Future?</span>
+                </h2>
+                <p>Apply for BSM's AI-Native PGDM and take the first step toward a successful career.</p>
+                <div class="footer-bsm-action d-flex align-items-center flex-wrap">
+                  <a href="#" class="footer-bsm-logo d-flex align-items-center justify-content-center">
+                    <img src="images/footer-logo.png" alt="Badruka" />
+                  </a>
+                  <a href="#heroFormCol" class="footer-bsm-btn d-inline-flex align-items-center" data-enq-trigger>
+                    Save Your Spot
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                       <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                      <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
+                      <path
+                        d="M13 6L19 12L13 18"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
                     </svg>
                   </a>
                 </div>
               </div>
             </div>
-            <!-- Student Image -->
-            <div class="final-cta-students">
-              <img src="images/student-img-78.webp" alt="Students" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="footer-bsm">
-    <div class="container">
-      <div class="footer-bsm-wrapper">
-        <div class="row align-items-center gy-5">
-          <div class="col-lg-9">
-            <div class="footer-bsm-left">
-              <h2>
-                Ready to
-                <span>Lead the Future?</span>
-              </h2>
-              <p>Apply for BSM's AI-Native PGDM and take the first step toward a successful career.</p>
-              <div class="footer-bsm-action d-flex align-items-center flex-wrap">
-                <a href="#" class="footer-bsm-logo d-flex align-items-center justify-content-center">
-                  <img src="images/footer-logo.png" alt="Badruka" />
-                </a>
-                <a href="#heroFormCol" class="footer-bsm-btn d-inline-flex align-items-center" data-enq-trigger>
-                  Save Your Spot
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
+            <div class="col-lg-3">
+              <div class="footer-bsm-address">
+                <span> Address </span>
+                <p>Dabilpur Village, Medchal, Hyderabad, Telangana 501401</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="footer-bsm-address">
-              <span> Address </span>
-              <p>Dabilpur Village, Medchal, Hyderabad, Telangana 501401</p>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bsm-divider"></div>
-        <div class="footer-bsm-bottom">
-          <div class="row align-items-center gy-3">
-            <div class="col-md-6">
-              <p class="footer-bsm-copy">© 2026 Badruka School of Management. All Rights Reserved.</p>
-            </div>
+          <div class="footer-bsm-divider"></div>
+          <div class="footer-bsm-bottom">
+            <div class="row align-items-center gy-3">
+              <div class="col-md-6">
+                <p class="footer-bsm-copy">© 2026 Badruka School of Management. All Rights Reserved.</p>
+              </div>
 
-            <div class="col-md-6 text-md-end">
-              <p class="footer-bsm-credit">
-                Designed &amp; Developed By
-                <a href="https://mediagarh.com/" target="_blank"> Mediagarh </a>
-              </p>
+              <div class="col-md-6 text-md-end">
+                <p class="footer-bsm-credit">
+                  Designed &amp; Developed By
+                  <a href="https://mediagarh.com/" target="_blank"> Mediagarh </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <script type="text/javascript">
-    var s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = 'https://widgets.in6.nopaperforms.com/emwgts.js';
-    document.body.appendChild(s);
-  </script>
-</body>
-<!-- ====================================================
+    </footer>
+    <script type="text/javascript">
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = 'https://widgets.in6.nopaperforms.com/emwgts.js';
+      document.body.appendChild(s);
+    </script>
+  </body>
+  <!-- ====================================================
        ADMISSIONS ENQUIRY SIDE PANEL
   ===================================================== -->
-<!--
+  <!--
     Desktop: fixed right-center. The whole unit (tab + panel) slides
     in/out together. Tab is glued to the left edge of the panel.
     Mobile: hidden — replaced by a fixed bottom bar.
   -->
-<div class="enq-unit" id="enqUnit">
-  <!-- Tab — attached to left side of the panel -->
-  <button class="enq-tab" id="enqTab" aria-label="Toggle Admissions Enquiry">
-    <span>ADMISSIONS ENQUIRY</span>
-    <svg class="enq-tab-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none">
-      <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
-      <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-        stroke-linejoin="round" />
-    </svg>
-  </button>
-  <!-- Panel -->
-  <div class="enq-panel" id="enqPanel" role="dialog" aria-label="Admissions Enquiry Form">
-    <div class="enq-panel-header">
-      <h3>Admissions Enquiry</h3>
-      <button class="enq-close" id="enqClose" aria-label="Close panel">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-          <path d="M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-          <path d="M6 6L18 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-        </svg>
-      </button>
-    </div>
-    <div class="enq-panel-body">
-      <div class="npf_wgts" data-height="500px" data-w="2c523b7f72c9ddba16bab6282227217b"></div>
-    </div>
-  </div>
-</div>
-
-<!-- Mobile bottom bar (shown only on mobile) -->
-<div class="enq-mobile-bar" id="enqMobileBar">
-  <a href="#heroFormCol" class="enq-mobile-btn">
-    ADMISSIONS ENQUIRY
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-      <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
-      <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-        stroke-linejoin="round" />
-    </svg>
-  </a>
-</div>
-<div class="brochure-overlay" id="brochureOverlay" role="dialog" aria-modal="true" aria-labelledby="brochureModalTitle">
-  <!-- Close sits outside modal so overflow:hidden can't clip it -->
-  <button class="brochure-close" id="brochureClose" aria-label="Close">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-      <path d="M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-      <path d="M6 6L18 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-    </svg>
-  </button>
-
-  <div class="brochure-modal">
-    <!-- Left decorative panel -->
-    <div class="brochure-modal-left" aria-hidden="true">
-      <div class="brochure-modal-glow"></div>
-      <img src="images/bsm-logo.webp" alt="BSM Logo" class="brochure-logo" />
-      <p class="brochure-tagline">AI-Native Business Education<br /><span>Backed by a 70+ Year Legacy</span></p>
-      <ul class="brochure-highlights">
-        <li><i class="bi bi-check-circle-fill"></i> AICTE Approved PGDM</li>
-        <li><i class="bi bi-check-circle-fill"></i> Fully Residential Campus</li>
-        <li><i class="bi bi-check-circle-fill"></i> 15.5 LPA Highest Package</li>
-        <li><i class="bi bi-check-circle-fill"></i> 100% Placement Support</li>
-      </ul>
-    </div>
-
-    <!-- Right form panel -->
-    <div class="brochure-modal-right">
-      <h2 class="brochure-form-title" id="brochureModalTitle">PGDM at BSM | Admissions Open</h2>
-      <p class="brochure-form-sub">An AI-native, industry-aligned management program for future-ready leaders.</p>
-
-      <form id="home-brochure-form" name="email-form" data-name="Email Form" method="get" novalidate>
-        <div class="brochure-field-group">
-          <input class="brochure-input" maxlength="256" name="fullName" placeholder="Full Name" type="text"
-            id="fullName" required autocomplete="name" />
-        </div>
-        <div class="brochure-field-group">
-          <input class="brochure-input" maxlength="256" name="email" placeholder="Email Address" type="email"
-            id="brochureEmail" required autocomplete="email" />
-        </div>
-        <div class="brochure-field-group">
-          <input class="brochure-input" maxlength="15" name="phone" placeholder="Phone Number" type="tel"
-            id="brochurePhone" required autocomplete="tel" />
-        </div>
-
-        <div class="brochure-field-row">
-          <div class="brochure-field-group">
-            <input class="brochure-input" maxlength="100" name="city" placeholder="City" type="text" id="brochureCity"
-              required autocomplete="address-level2" />
-          </div>
-          <div class="brochure-field-group">
-            <input class="brochure-input" maxlength="100" name="state" placeholder="State" type="text"
-              id="brochureState" required autocomplete="address-level1" />
-          </div>
-        </div>
-
-        <button type="submit" class="brochure-submit" id="brochureSubmit">
-          <span class="brochure-submit-text">
-            Download Brochure
-            <i class="bi bi-download ms-2"></i>
-          </span>
-          <span class="brochure-submit-loading" hidden>
-            <span class="brochure-spinner"></span>
-            Please wait…
-          </span>
+  <div class="enq-unit" id="enqUnit">
+    <!-- Tab — attached to left side of the panel -->
+    <button class="enq-tab" id="enqTab" aria-label="Toggle Admissions Enquiry">
+      <span>ADMISSIONS ENQUIRY</span>
+      <svg class="enq-tab-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none">
+        <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+        <path
+          d="M13 6L19 12L13 18"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <!-- Panel -->
+    <div class="enq-panel" id="enqPanel" role="dialog" aria-label="Admissions Enquiry Form">
+      <div class="enq-panel-header">
+        <h3>Admissions Enquiry</h3>
+        <button class="enq-close" id="enqClose" aria-label="Close panel">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+            <path d="M6 6L18 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+          </svg>
         </button>
-
-        <p class="brochure-privacy">
-          <i class="bi bi-shield-lock-fill"></i>
-          Your information is safe with us. No spam, ever.
-        </p>
-      </form>
+      </div>
+      <div class="enq-panel-body">
+        <div class="npf_wgts" data-height="500px" data-w="2c523b7f72c9ddba16bab6282227217b"></div>
+      </div>
     </div>
   </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const leadersSwiper = new Swiper('.leadersSwiper', {
-    loop: true,
-    speed: 900,
-    spaceBetween: 20,
-    slidesPerView: 4,
-    grabCursor: true,
-    centeredSlides: false,
-    watchOverflow: true,
-    observer: true,
-    observeParents: true,
-    preloadImages: false,
-    lazy: true,
-    navigation: {
-      nextEl: '.leaders-next',
-      prevEl: '.leaders-prev',
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
 
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-    },
+  <!-- Mobile bottom bar (shown only on mobile) -->
+  <div class="enq-mobile-bar" id="enqMobileBar">
+    <a href="#heroFormCol" class="enq-mobile-btn">
+      ADMISSIONS ENQUIRY
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+        <path
+          d="M13 6L19 12L13 18"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+  </div>
+  <div
+    class="brochure-overlay"
+    id="brochureOverlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="brochureModalTitle"
+  >
+    <!-- Close sits outside modal so overflow:hidden can't clip it -->
+    <button class="brochure-close" id="brochureClose" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+      </svg>
+    </button>
 
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 16,
+    <div class="brochure-modal">
+      <!-- Left decorative panel -->
+      <div class="brochure-modal-left" aria-hidden="true">
+        <div class="brochure-modal-glow"></div>
+        <img src="images/bsm-logo.webp" alt="BSM Logo" class="brochure-logo" />
+        <p class="brochure-tagline">AI-Native Business Education<br /><span>Backed by a 70+ Year Legacy</span></p>
+        <ul class="brochure-highlights">
+          <li><i class="bi bi-check-circle-fill"></i> AICTE Approved PGDM</li>
+          <li><i class="bi bi-check-circle-fill"></i> Fully Residential Campus</li>
+          <li><i class="bi bi-check-circle-fill"></i> 15.5 LPA Highest Package</li>
+          <li><i class="bi bi-check-circle-fill"></i> 100% Placement Support</li>
+        </ul>
+      </div>
+
+      <!-- Right form panel -->
+      <div class="brochure-modal-right">
+        <h2 class="brochure-form-title" id="brochureModalTitle">PGDM at BSM | Admissions Open</h2>
+        <p class="brochure-form-sub">An AI-native, industry-aligned management program for future-ready leaders.</p>
+
+        <form id="home-brochure-form" name="email-form" data-name="Email Form" method="get" novalidate>
+          <div class="brochure-field-group">
+            <input
+              class="brochure-input"
+              maxlength="256"
+              name="fullName"
+              placeholder="Full Name"
+              type="text"
+              id="fullName"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="brochure-field-group">
+            <input
+              class="brochure-input"
+              maxlength="256"
+              name="email"
+              placeholder="Email Address"
+              type="email"
+              id="brochureEmail"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="brochure-field-group">
+            <input
+              class="brochure-input"
+              maxlength="15"
+              name="phone"
+              placeholder="Phone Number"
+              type="tel"
+              id="brochurePhone"
+              required
+              autocomplete="tel"
+            />
+          </div>
+
+          <div class="brochure-field-row">
+            <div class="brochure-field-group">
+              <input
+                class="brochure-input"
+                maxlength="100"
+                name="city"
+                placeholder="City"
+                type="text"
+                id="brochureCity"
+                required
+                autocomplete="address-level2"
+              />
+            </div>
+            <div class="brochure-field-group">
+              <input
+                class="brochure-input"
+                maxlength="100"
+                name="state"
+                placeholder="State"
+                type="text"
+                id="brochureState"
+                required
+                autocomplete="address-level1"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="brochure-submit" id="brochureSubmit">
+            <span class="brochure-submit-text"> Submit </span>
+            <span class="brochure-submit-loading" hidden>
+              <span class="brochure-spinner"></span>
+              Please wait…
+            </span>
+          </button>
+
+          <p class="brochure-privacy">
+            <i class="bi bi-shield-lock-fill"></i>
+            Your information is safe with us. No spam, ever.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const leadersSwiper = new Swiper('.leadersSwiper', {
+      loop: true,
+      speed: 900,
+      spaceBetween: 20,
+      slidesPerView: 4,
+      grabCursor: true,
+      centeredSlides: false,
+      watchOverflow: true,
+      observer: true,
+      observeParents: true,
+      preloadImages: false,
+      lazy: true,
+      navigation: {
+        nextEl: '.leaders-next',
+        prevEl: '.leaders-prev',
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
 
-      576: {
-        slidesPerView: 2,
-        spaceBetween: 18,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
       },
 
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 18,
+        },
+
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 22,
+        },
+
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
       },
+    });
+  </script>
+  <script>
+    (function () {
+      var unit = document.getElementById('enqUnit');
+      var tab = document.getElementById('enqTab');
+      var closeBtn = document.getElementById('enqClose');
+      var heroEl = document.querySelector('.hero-section');
 
-      992: {
-        slidesPerView: 3,
-        spaceBetween: 22,
-      },
+      var isOpen = false;
+      var manualClose = false;
+      var inHero = false;
 
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-    },
-  });
-</script>
-<script>
-  (function () {
-    var unit = document.getElementById('enqUnit');
-    var tab = document.getElementById('enqTab');
-    var closeBtn = document.getElementById('enqClose');
-    var heroEl = document.querySelector('.hero-section');
-
-    var isOpen = false;
-    var manualClose = false;
-    var inHero = false;
-
-    /* ── helpers ─────────────────────────────────── */
-    function isMobile() {
-      return window.innerWidth < 768;
-    }
-
-    function openPanel() {
-      if (isMobile()) return;
-      if (isOpen) return; // already open — no flicker
-      isOpen = true;
-      unit.classList.add('enq--open');
-      tab.setAttribute('aria-expanded', 'true');
-    }
-
-    function closePanel() {
-      if (!isOpen) return; // already closed — no flicker
-      isOpen = false;
-      unit.classList.remove('enq--open');
-      tab.setAttribute('aria-expanded', 'false');
-    }
-
-    function scrollToForm() {
-      var formCol = document.getElementById('heroFormCol');
-      if (formCol) {
-        formCol.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      /* ── helpers ─────────────────────────────────── */
+      function isMobile() {
+        return window.innerWidth < 768;
       }
-    }
 
-    /* ── IntersectionObserver — hero in/out of view ── */
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          var wasInHero = inHero;
-          inHero = entry.isIntersecting;
+      function openPanel() {
+        if (isMobile()) return;
+        if (isOpen) return; // already open — no flicker
+        isOpen = true;
+        unit.classList.add('enq--open');
+        tab.setAttribute('aria-expanded', 'true');
+      }
+
+      function closePanel() {
+        if (!isOpen) return; // already closed — no flicker
+        isOpen = false;
+        unit.classList.remove('enq--open');
+        tab.setAttribute('aria-expanded', 'false');
+      }
+
+      function scrollToForm() {
+        var formCol = document.getElementById('heroFormCol');
+        if (formCol) {
+          formCol.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      /* ── IntersectionObserver — hero in/out of view ── */
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            var wasInHero = inHero;
+            inHero = entry.isIntersecting;
+            if (isMobile()) return;
+
+            if (inHero && !wasInHero) {
+              // Hero just came into view — open only if not manually closed
+              if (!manualClose) openPanel();
+            } else if (!inHero && wasInHero) {
+              // Hero left view — close and reset manualClose for next entry
+              closePanel();
+              manualClose = false;
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      if (heroEl) observer.observe(heroEl);
+
+      /* ── Scroll: close only when scrolled > 600px from top ── */
+      var scrollTimer = null;
+      window.addEventListener(
+        'scroll',
+        function () {
           if (isMobile()) return;
 
-          if (inHero && !wasInHero) {
-            // Hero just came into view — open only if not manually closed
-            if (!manualClose) openPanel();
-          } else if (!inHero && wasInHero) {
-            // Hero left view — close and reset manualClose for next entry
+          var scrollY = window.scrollY || window.pageYOffset;
+
+          // Only collapse on scroll when we're deep (past 600px)
+          if (scrollY > 600 && isOpen) closePanel();
+
+          // After scroll settles, reopen if still inside hero and not manually closed
+          clearTimeout(scrollTimer);
+          scrollTimer = setTimeout(function () {
+            if (!isMobile() && inHero && !manualClose && !isOpen) openPanel();
+          }, 600);
+        },
+        { passive: true },
+      );
+
+      /* ── Tab click (desktop toggle) ── */
+      if (tab) {
+        tab.addEventListener('click', function () {
+          if (isOpen) {
+            manualClose = true;
             closePanel();
+          } else {
             manualClose = false;
+            openPanel();
           }
         });
-      },
-      { threshold: 0.12 },
-    );
+      }
 
-    if (heroEl) observer.observe(heroEl);
-
-    /* ── Scroll: close only when scrolled > 600px from top ── */
-    var scrollTimer = null;
-    window.addEventListener(
-      'scroll',
-      function () {
-        if (isMobile()) return;
-
-        var scrollY = window.scrollY || window.pageYOffset;
-
-        // Only collapse on scroll when we're deep (past 600px)
-        if (scrollY > 600 && isOpen) closePanel();
-
-        // After scroll settles, reopen if still inside hero and not manually closed
-        clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(function () {
-          if (!isMobile() && inHero && !manualClose && !isOpen) openPanel();
-        }, 600);
-      },
-      { passive: true },
-    );
-
-    /* ── Tab click (desktop toggle) ── */
-    if (tab) {
-      tab.addEventListener('click', function () {
-        if (isOpen) {
+      /* ── Close button ── */
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
           manualClose = true;
           closePanel();
+        });
+      }
+
+      /* ── Escape key ── */
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && isOpen) {
+          manualClose = true;
+          closePanel();
+        }
+      });
+
+      /* ── [data-enq-trigger] — every CTA button ── */
+      document.addEventListener('click', function (e) {
+        var trigger = e.target.closest('[data-enq-trigger]');
+        if (!trigger) return;
+        e.preventDefault();
+
+        if (isMobile()) {
+          /* Mobile: scroll to inline form in hero */
+          scrollToForm();
         } else {
+          /* Desktop: open the side panel */
           manualClose = false;
+          openPanel();
+          /* Also scroll to hero so IntersectionObserver keeps it in sync */
+          if (!inHero && heroEl) {
+            heroEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+
+      /* ── Re-evaluate on resize (desktop ↔ mobile switch) ── */
+      window.addEventListener('resize', function () {
+        if (isMobile()) {
+          closePanel();
+        } else if (inHero && !manualClose) {
           openPanel();
         }
       });
-    }
+    })();
+  </script>
+  <!-- Brochure Popup Script -->
+  <script>
+    (function () {
+      var overlay = document.getElementById('brochureOverlay');
+      var openBtn = document.getElementById('openBrochurePopup');
+      var closeBtn = document.getElementById('brochureClose');
+      var form = document.getElementById('home-brochure-form');
+      var submitBtn = document.getElementById('brochureSubmit');
+      var submitText = submitBtn.querySelector('.brochure-submit-text');
+      var submitLoading = submitBtn.querySelector('.brochure-submit-loading');
 
-    /* ── Close button ── */
-    if (closeBtn) {
-      closeBtn.addEventListener('click', function () {
-        manualClose = true;
-        closePanel();
-      });
-    }
+      var SCRIPT_URL =
+        'https://script.google.com/macros/s/AKfycby-WVBwzlHikSq5UztcJPAtnuu0xfprUaMioMbR2I8RHshMS_F7rK0gMo6EKTww_K67/exec';
+      var PDF_URL = 'https://www.bsm.edu.in/wp-content/uploads/2026/01/Print-File-Brochure-BSM.pdf';
 
-    /* ── Escape key ── */
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && isOpen) {
-        manualClose = true;
-        closePanel();
+      function openPopup() {
+        overlay.classList.add('brochure--active');
+        document.body.classList.add('brochure-no-scroll');
+        overlay.querySelector('.brochure-modal').focus();
       }
-    });
 
-    /* ── [data-enq-trigger] — every CTA button ── */
-    document.addEventListener('click', function (e) {
-      var trigger = e.target.closest('[data-enq-trigger]');
-      if (!trigger) return;
-      e.preventDefault();
-
-      if (isMobile()) {
-        /* Mobile: scroll to inline form in hero */
-        scrollToForm();
-      } else {
-        /* Desktop: open the side panel */
-        manualClose = false;
-        openPanel();
-        /* Also scroll to hero so IntersectionObserver keeps it in sync */
-        if (!inHero && heroEl) {
-          heroEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+      function closePopup() {
+        overlay.classList.remove('brochure--active');
+        document.body.classList.remove('brochure-no-scroll');
+        form.reset();
+        setLoading(false);
       }
-    });
 
-    /* ── Re-evaluate on resize (desktop ↔ mobile switch) ── */
-    window.addEventListener('resize', function () {
-      if (isMobile()) {
-        closePanel();
-      } else if (inHero && !manualClose) {
-        openPanel();
+      function setLoading(state) {
+        submitBtn.disabled = state;
+        submitText.hidden = state;
+        submitLoading.hidden = !state;
       }
-    });
-  })();
-</script>
-<!-- Brochure Popup Script -->
-<script>
-  (function () {
-    var overlay = document.getElementById('brochureOverlay');
-    var openBtn = document.getElementById('openBrochurePopup');
-    var closeBtn = document.getElementById('brochureClose');
-    var form = document.getElementById('home-brochure-form');
-    var submitBtn = document.getElementById('brochureSubmit');
-    var submitText = submitBtn.querySelector('.brochure-submit-text');
-    var submitLoading = submitBtn.querySelector('.brochure-submit-loading');
 
-    var SCRIPT_URL =
-      'https://script.google.com/macros/s/AKfycby-WVBwzlHikSq5UztcJPAtnuu0xfprUaMioMbR2I8RHshMS_F7rK0gMo6EKTww_K67/exec';
-    var PDF_URL = 'https://www.bsm.edu.in/wp-content/uploads/2026/01/Print-File-Brochure-BSM.pdf';
-
-    function openPopup() {
-      overlay.classList.add('brochure--active');
-      document.body.classList.add('brochure-no-scroll');
-      overlay.querySelector('.brochure-modal').focus();
-    }
-
-    function closePopup() {
-      overlay.classList.remove('brochure--active');
-      document.body.classList.remove('brochure-no-scroll');
-      form.reset();
-      setLoading(false);
-    }
-
-    function setLoading(state) {
-      submitBtn.disabled = state;
-      submitText.hidden = state;
-      submitLoading.hidden = !state;
-    }
-
-    /* Open on Download Brochure click */
-    if (openBtn) {
-      openBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        openPopup();
-      });
-    }
-
-    /* Close on X button */
-    if (closeBtn) {
-      closeBtn.addEventListener('click', closePopup);
-    }
-
-    /* Close on overlay backdrop click */
-    overlay.addEventListener('click', function (e) {
-      if (e.target === overlay) closePopup();
-    });
-
-    /* Close on Escape */
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && overlay.classList.contains('brochure--active')) {
-        closePopup();
-      }
-    });
-
-    /* Form submission */
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      var fullName = form.elements['fullName'].value.trim();
-      var email = form.elements['email'].value.trim();
-      var phone = form.elements['phone'].value.trim();
-      var city = form.elements['city'].value.trim();
-      var state = form.elements['state'].value.trim();
-
-      if (!fullName || !email || !phone || !city || !state) return;
-
-      setLoading(true);
-
-      var fd = new FormData();
-      fd.append('form_type', 'brochure');
-      fd.append('full_name', fullName);
-      fd.append('email', email);
-      fd.append('mobile', phone);
-      fd.append('city', city);
-      fd.append('state', state);
-      fd.append('page_url', window.location.href);
-
-      fetch(SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: fd,
-      })
-        .then(function () {
-          window.open(PDF_URL, '_blank');
-          setTimeout(function () {
-            window.location.href = 'thank-you.html';
-          }, 700);
-        })
-        .catch(function (err) {
-          console.error('Brochure form error:', err);
-          window.open(PDF_URL, '_blank');
-          setTimeout(function () {
-            window.location.href = 'thank-you.html';
-          }, 700);
+      /* Open on Download Brochure click */
+      if (openBtn) {
+        openBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          openPopup();
         });
-    });
-  })();
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const tabs = document.querySelectorAll(".tab-item");
-    const activeImage = document.getElementById("active-tab-img");
-    let currentIndex = 0;
-    const intervalTime = 4000; // 4 seconds delay for autoplay
-    let autoPlayTimer;
+      }
 
-    // Switch Active Tab and Image
-    function activateTab(index) {
-      // Active class toggle on tabs
-      tabs.forEach((tab) => tab.classList.remove("active"));
-      const selectedTab = tabs[index];
-      selectedTab.classList.add("active");
+      /* Close on X button */
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closePopup);
+      }
 
-      // Fade out effect on image before change
-      activeImage.classList.add("img-fade-out");
+      /* Close on overlay backdrop click */
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closePopup();
+      });
 
-      setTimeout(() => {
-        const newImgSrc = selectedTab.getAttribute("data-img");
-        activeImage.src = newImgSrc;
-        activeImage.classList.remove("img-fade-out");
-      }, 180);
-
-      currentIndex = index;
-    }
-
-    // Autoplay function
-    function startAutoplay() {
-      autoPlayTimer = setInterval(() => {
-        let nextIndex = (currentIndex + 1) % tabs.length;
-        activateTab(nextIndex);
-      }, intervalTime);
-    }
-
-    // Reset autoplay timer on manual user click
-    function resetAutoplay() {
-      clearInterval(autoPlayTimer);
-      startAutoplay();
-    }
-
-    // Click handler for tabs
-    tabs.forEach((tab, index) => {
-      tab.addEventListener("click", function () {
-        if (currentIndex !== index) {
-          activateTab(index);
-          resetAutoplay();
+      /* Close on Escape */
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && overlay.classList.contains('brochure--active')) {
+          closePopup();
         }
       });
+
+      /* Form submission */
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var fullName = form.elements['fullName'].value.trim();
+        var email = form.elements['email'].value.trim();
+        var phone = form.elements['phone'].value.trim();
+        var city = form.elements['city'].value.trim();
+        var state = form.elements['state'].value.trim();
+
+        if (!fullName || !email || !phone || !city || !state) return;
+
+        setLoading(true);
+
+        var fd = new FormData();
+        fd.append('form_type', 'brochure');
+        fd.append('full_name', fullName);
+        fd.append('email', email);
+        fd.append('mobile', phone);
+        fd.append('city', city);
+        fd.append('state', state);
+        fd.append('page_url', window.location.href);
+
+        fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: fd,
+        })
+          .then(function () {
+            window.open(PDF_URL, '_blank');
+            setTimeout(function () {
+              window.location.href = 'thank-you.html';
+            }, 700);
+          })
+          .catch(function (err) {
+            console.error('Brochure form error:', err);
+            window.open(PDF_URL, '_blank');
+            setTimeout(function () {
+              window.location.href = 'thank-you.html';
+            }, 700);
+          });
+      });
+    })();
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabs = document.querySelectorAll('.tab-item');
+      const activeImage = document.getElementById('active-tab-img');
+      let currentIndex = 0;
+      const intervalTime = 4000; // 4 seconds delay for autoplay
+      let autoPlayTimer;
+
+      // Switch Active Tab and Image
+      function activateTab(index) {
+        // Active class toggle on tabs
+        tabs.forEach((tab) => tab.classList.remove('active'));
+        const selectedTab = tabs[index];
+        selectedTab.classList.add('active');
+
+        // Fade out effect on image before change
+        activeImage.classList.add('img-fade-out');
+
+        setTimeout(() => {
+          const newImgSrc = selectedTab.getAttribute('data-img');
+          activeImage.src = newImgSrc;
+          activeImage.classList.remove('img-fade-out');
+        }, 180);
+
+        currentIndex = index;
+      }
+
+      // Autoplay function
+      function startAutoplay() {
+        autoPlayTimer = setInterval(() => {
+          let nextIndex = (currentIndex + 1) % tabs.length;
+          activateTab(nextIndex);
+        }, intervalTime);
+      }
+
+      // Reset autoplay timer on manual user click
+      function resetAutoplay() {
+        clearInterval(autoPlayTimer);
+        startAutoplay();
+      }
+
+      // Click handler for tabs
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', function () {
+          if (currentIndex !== index) {
+            activateTab(index);
+            resetAutoplay();
+          }
+        });
+      });
+
+      // Start autoplay on page load
+      startAutoplay();
     });
-
-    // Start autoplay on page load
-    startAutoplay();
-  });</script>
-<!-- Campus fade slider -->
-<script>
-  (function () {
-    var slides = document.querySelectorAll('.bsm-campus-image .campus-slide');
-    if (slides.length < 2) return;
-    var current = 0;
-    setInterval(function () {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 3500);
-  })();
-</script>
-
+  </script>
+  <!-- Campus fade slider -->
+  <script>
+    (function () {
+      var slides = document.querySelectorAll('.bsm-campus-image .campus-slide');
+      if (slides.length < 2) return;
+      var current = 0;
+      setInterval(function () {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 3500);
+    })();
+  </script>
 </html>
