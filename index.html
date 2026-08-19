@@ -414,14 +414,14 @@
     <section class="slb-section section-padding">
       <div class="container">
         <div class="row align-items-center g-4">
-          <div class="col-12 d-flex align-items-center justify-content-center flex-column text-center mb-4">
+          <div class="col-12 d-flex align-items-center justify-content-center flex-column text-center mb-5">
             <h2 class="section-title mb-2">What Sets <span>BSM</span> Apart</h2>
             <p class="slb-subtitle">The Six Bsm Differentiators</p>
           </div>
         </div>
-        <div class="row align-items-stretch g-4 g-md-5">
+        <div class="row align-items-stretch g-4 g-md-3">
           <!-- Left Side Image Area -->
-          <div class="col-lg-6 d-flex flex-column justify-content-center mb-3">
+          <div class="col-lg-6 d-flex flex-column mb-3 mt-0">
             <div class="image-wrapper position-relative w-100">
               <!-- Orange Backing Accent (Top-Left Corner) -->
               <div class="orange-accent"></div>
@@ -429,10 +429,17 @@
               <!-- Main Image -->
               <div class="main-image-container position-relative aspect-ratio-36-37">
                 <img
+                  id="tab-img-back"
+                  src="images/Image.webp"
+                  alt=""
+                  aria-hidden="true"
+                  class="img-fluid rounded-4 max-height-800 h-100 tab-img-layer tab-img-layer--back"
+                />
+                <img
                   id="active-tab-img"
                   src="images/Image.webp"
                   alt="Badruka Campus"
-                  class="img-fluid rounded-4 max-height-800 h-100"
+                  class="img-fluid rounded-4 max-height-800 h-100 tab-img-layer tab-img-layer--front"
                 />
 
                 <!-- Bottom Floating Card -->
@@ -450,7 +457,10 @@
                     </span>
                     Ready to Experience Badruka?
                   </span>
-                  <a href="#heroFormCol" class="apply-btn-sm d-inline-flex align-items-center text-md gap-2"
+                  <a
+                    href="#heroFormCol"
+                    data-enq-trigger
+                    class="apply-btn-sm d-inline-flex align-items-center text-md gap-2"
                     >Apply Now
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                       <mask
@@ -2139,7 +2149,8 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const tabs = document.querySelectorAll('.tab-item');
-      const activeImage = document.getElementById('active-tab-img');
+      const activeImage = document.getElementById('active-tab-img'); // front layer
+      const backImage = document.getElementById('tab-img-back'); // back layer
       let currentIndex = 0;
       const intervalTime = 4000; // 4 seconds delay for autoplay
       let autoPlayTimer;
@@ -2151,14 +2162,22 @@
         const selectedTab = tabs[index];
         selectedTab.classList.add('active');
 
-        // Fade out effect on image before change
-        activeImage.classList.add('img-fade-out');
+        // Crossfade: load new image on back layer, fade out front layer
+        const newImgSrc = selectedTab.getAttribute('data-img');
 
-        setTimeout(() => {
-          const newImgSrc = selectedTab.getAttribute('data-img');
-          activeImage.src = newImgSrc;
-          activeImage.classList.remove('img-fade-out');
-        }, 180);
+        // 1. Put the new image on the back layer (instantly, hidden behind front)
+        backImage.src = newImgSrc;
+
+        // 2. Once back image is loaded, fade the front layer out to reveal it
+        backImage.onload = function () {
+          activeImage.classList.add('fade-out');
+
+          // 3. After fade completes, swap src to front, reset both layers
+          setTimeout(() => {
+            activeImage.src = newImgSrc;
+            activeImage.classList.remove('fade-out');
+          }, 460);
+        };
 
         currentIndex = index;
       }

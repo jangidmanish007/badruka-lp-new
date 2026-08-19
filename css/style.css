@@ -654,7 +654,6 @@ h6 {
 }
 
 @keyframes floating {
-
   0%,
   100% {
     transform: translateY(0);
@@ -697,12 +696,14 @@ h6 {
   position: absolute;
   inset: -150%;
   z-index: 1;
-  background: conic-gradient(from 0deg,
-      transparent 0deg,
-      transparent 280deg,
-      #f58220 315deg,
-      #ffb06a 335deg,
-      #f58220 360deg);
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 280deg,
+    #f58220 315deg,
+    #ffb06a 335deg,
+    #f58220 360deg
+  );
   animation: rotateBorder 5s linear infinite;
   will-change: transform;
 }
@@ -1506,7 +1507,7 @@ IMAGE POSITION
   padding-left: 70px;
 }
 
-.other-stats-info>div {
+.other-stats-info > div {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1514,7 +1515,7 @@ IMAGE POSITION
 
 /* Number */
 
-.other-stats-info>div>div:first-child {
+.other-stats-info > div > div:first-child {
   font-family: 'Satoshi', sans-serif;
   font-size: 32px;
   font-weight: 700;
@@ -1919,10 +1920,12 @@ CARD GLOW
   position: absolute;
   inset: 0;
   border-radius: 22px;
-  background: radial-gradient(circle at top right,
+  background: radial-gradient(
+    circle at top right,
 
-      rgba(255, 255, 255, 0.18),
-      transparent 65%);
+    rgba(255, 255, 255, 0.18),
+    transparent 65%
+  );
   opacity: 0;
   transition: 0.45s;
   pointer-events: none;
@@ -3254,7 +3257,6 @@ BOTTOM
 }
 
 @media (max-width: 991px) {
-
   /* Scholarship */
   .scholarship-section {
     padding: 70px 0;
@@ -3650,7 +3652,6 @@ BOTTOM
 }
 
 @media (max-width: 767px) {
-
   /* Scholarship */
   .scholarship-section {
     padding: 60px 0;
@@ -4014,7 +4015,7 @@ BOTTOM
     gap: 20px;
   }
 
-  .other-stats-info>div>div:first-child {
+  .other-stats-info > div > div:first-child {
     font-size: 26px;
   }
 
@@ -4230,7 +4231,6 @@ BOTTOM
 }
 
 @media (max-width: 576px) {
-
   /* Scholarship */
   .scholarship-card {
     padding: 20px;
@@ -4346,11 +4346,11 @@ BOTTOM
     padding: 18px;
   }
 
-  .other-stats-info>div {
+  .other-stats-info > div {
     flex: 0 0 calc(50% - 10px);
   }
 
-  .other-stats-info>div>div:first-child {
+  .other-stats-info > div > div:first-child {
     font-size: 22px;
   }
 
@@ -4452,7 +4452,7 @@ BOTTOM
     font-size: 22px;
   }
 
-  .other-stats-info>div {
+  .other-stats-info > div {
     flex: 0 0 100%;
   }
 
@@ -4813,7 +4813,6 @@ BOTTOM
 
 /* ── RESPONSIVE ── */
 @media (max-width: 767px) {
-
   /* Hide desktop side panel entirely on mobile */
   .enq-unit {
     display: none !important;
@@ -5506,7 +5505,6 @@ body.brochure-no-scroll {
 }
 
 @keyframes pulse-star {
-
   0%,
   100% {
     transform: scale(1);
@@ -5878,6 +5876,7 @@ body.brochure-no-scroll {
 
 .main-image-container {
   z-index: 1;
+  position: relative;
 }
 
 .main-image-container img {
@@ -5896,9 +5895,36 @@ body.brochure-no-scroll {
   aspect-ratio: 36 / 37 !important;
 }
 
-/* Image Fade Animation */
+/* Image Crossfade Animation */
+.tab-img-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transition: opacity 0.45s ease;
+  will-change: opacity;
+}
+
+.tab-img-layer--back {
+  z-index: 1;
+  opacity: 1;
+}
+
+.tab-img-layer--front {
+  z-index: 2;
+  opacity: 1;
+}
+
+.tab-img-layer--front.fade-out {
+  opacity: 0;
+}
+
+/* legacy — kept harmless */
+#active-tab-img {
+}
 .img-fade-out {
-  opacity: 0.2;
 }
 
 /* Floating Bottom Banner */
@@ -5908,7 +5934,7 @@ body.brochure-no-scroll {
   left: 50%;
   transform: translateX(-50%);
   width: 86%;
-  background-color: #FFF0C6;
+  background-color: #fff0c6;
   border: 1px solid #f8e3b6;
   z-index: 2;
   padding: 20px;
@@ -5938,9 +5964,10 @@ body.brochure-no-scroll {
 
 /* --- Right Tabs Styling --- */
 .tab-item {
-  background: #FFFBF0;
+  background: #fffbf0;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid transparent;
 }
 
 .tab-num {
@@ -5953,8 +5980,8 @@ body.brochure-no-scroll {
 .pill-badge {
   display: inline-block;
   border-radius: 50px;
-  background: rgba(241, 102, 37, 0.10);
-  color: #F16625;
+  background: rgba(241, 102, 37, 0.1);
+  color: #f16625;
   font-family: Inter;
   font-size: 10px;
   font-style: normal;
@@ -5980,21 +6007,37 @@ body.brochure-no-scroll {
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition:
+    max-height 0.4s ease,
+    opacity 0.35s ease,
+    margin-top 0.3s ease,
+    padding-bottom 0.3s ease;
   /* 157.143% */
 }
 
-/* Inactive State: Hide Paragraph Description */
+/* Inactive State: Hide Paragraph Description with smooth collapse */
 .tab-item:not(.active) .tab-desc {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0 !important;
+  padding-bottom: 0 !important;
+  pointer-events: none;
+}
+
+/* Active tab desc — smooth expand */
+.tab-item.active .tab-desc {
+  max-height: 200px;
+  opacity: 1;
 }
 
 /* Active Tab State */
 .tab-item.active {
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.10);
-  background: #FFF;
-  box-shadow: 0 7px 29px 0 rgba(100, 100, 111, 0.10);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  box-shadow: 0 7px 29px 0 rgba(100, 100, 111, 0.1);
 }
 
 .tab-item.active .tab-num {
