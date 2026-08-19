@@ -5355,6 +5355,8 @@ body.brochure-no-scroll {
   background: #fff;
   position: relative;
   overflow: hidden;
+  padding: 70px 0px 0px 0px;
+  min-height: 1150px;
 }
 
 /* ── SUBTITLE ── */
@@ -5896,6 +5898,14 @@ body.brochure-no-scroll {
 }
 
 /* Image Crossfade Animation */
+.tab-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
 .tab-img-layer {
   position: absolute;
   inset: 0;
@@ -5930,13 +5940,13 @@ body.brochure-no-scroll {
 /* Floating Bottom Banner */
 .floating-banner {
   position: absolute;
-  bottom: -20px;
+  bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
   width: 86%;
   background-color: #fff0c6;
   border: 1px solid #f8e3b6;
-  z-index: 2;
+  z-index: 3;
   padding: 20px;
 }
 
@@ -6047,7 +6057,7 @@ body.brochure-no-scroll {
 /* Responsive Rules */
 @media (max-width: 991px) {
   .banner-text {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .tab-title {
@@ -6058,9 +6068,14 @@ body.brochure-no-scroll {
     height: 380px;
   }
 
+  .tab-img-wrap {
+    height: 380px;
+  }
+
   .floating-banner {
     width: 92%;
     font-size: 0.85rem;
+    bottom: -30px;
   }
 }
 
